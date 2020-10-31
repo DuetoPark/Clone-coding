@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Instagram - clone </title>
+
+    <link rel="stylesheet" href="./align.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1 class="title">
+          <a href="01-main.html">
+            <img src="./assets/title.png" alt="Instagram">
+          </a>
+        </h1>
+
+        <div class="user-search">
+          <strong class="sr-only">Search</strong>
+          <input type="text" maxlength="40" placeholder="검색"/>
+          <!-- 플레이스 홀더 옆 돋보기 아이콘 -->
+          <div class="user-search-option" aria-hidden="true">
+            <i class="fas fa-search "></i>
+            <button type="button" class="user-search-cancel"></button>
+          </div>
+        </div>
+
+        <nav>
+          <h2 class="sr-only">menu</h2>
+          <ul class="menu">
+            <li class="menu-lists">
+              <span class="sr-only">Currunt page</span>
+              <a href="#"><img src="./assets/home.png" alt="Home"></a>
+            </li>
+            <li class="menu-lists">
+              <a href="#"><img src="./assets/direct.png" alt="Direct"></a>
+            </li>
+            <li class="menu-lists" lang="ko">
+              <a href="#"><img src="./assets/finding.png" alt="사람찾기"></a>
+            </li>
+            <li class="menu-lists">
+              <a href="#"><img src="./assets/feed.png" alt="Feed"></a>
+            </li>
+            <li class="menu-lists">
+              <a href="#"><img src="./assets/user.jpg" alt="User-profile" id="user-image"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <script src="https://kit.fontawesome.com/e1a55f7ebf.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
