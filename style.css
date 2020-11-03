@@ -14,20 +14,38 @@
   visibility: hidden;
 }
 
-header{
-  height:54px;
+body{
+  height:2000px;
+  background-color: #FAFAFA;
+}
+
+/*=================================
+ Header
+  -Title
+  -User search
+  -menu
+===================================*/
+header.instagram-header{
+  position: fixed;
+  z-index: 1;
+  top:0;
+  width:100%;
   border-bottom: 1px solid #DBDBDB;
+  background-color: #FFFFFF;
 }
 
 .header-container{
-  width:100%;
-  height: 100%;
+  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width:935px;
+  height:54px;
+  margin:0 auto;
 }
 
+
+/* Header - Title */
 .title a{
   display: flex;
   justify-content: center;
@@ -41,56 +59,17 @@ header{
   height:auto;
 }
 
-.user-search{
-  position: relative;
-}
 
-.user-search input{
-  width: 205px;
-  height:28px;
-  background-color: #FAFAFA;
-  border: 1px solid #DBDBDB;
-  border-radius: 3px;
-  outline: none;
-  padding:3px 26px;
-}
-
-.user-search-option i,
-.user-search-cancel{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-}
-
-.user-search-option i{
-  display: block;
-  font-size: 10px;
-  color:#C7C7C7;
-  left:10px;
-}
-
-.user-search-cancel{
-  right:10px;
-  width:16px;
-  height:16px;
-  background-image: url("./assets/close.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-}
-
+/* Header - Menu */
 .menu{
   display: flex;
-  flex-direction: row;
-  list-style: none;
 }
 
 .menu-lists{
+  display: block;
   width: 22px;
   height:22px;
-  margin-right: 28px;
+  margin-right: 20px;
 }
 
 .menu-lists img{
@@ -99,6 +78,422 @@ header{
   height:auto;
 }
 
-#user-image{
+.profile-image{
+  width:100%;
+  height: 100%;
+  margin: 0;
+  border: none;
   border-radius: 50%;
+  outline: none;
+  background-image: url('./assets/user.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+
+
+/* Header - User search */
+.user-search{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-search input{
+  width: 215px;
+  height:28px;
+  padding-left: 26px;
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  outline: none;
+}
+
+.user-search-option i,
+.user-search-cancel{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  padding:0;
+}
+
+.user-search-option i{
+  font-size: 10px;
+  color:#C7C7C7;
+  left:10px;
+}
+
+.user-search-cancel{
+  right:7px;
+  width:14px;
+  height:14px;
+  padding-left: 1px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color:#C7C7C7;
+  color:#FFFFFF;
+  cursor: pointer;
+}
+
+/* =================================================
+Main
+  -Section1) Follow lists
+  -Section2) Follow feed
+     o Article) Follow Feed Lists
+      * Header) User profile
+      * Upload image
+      * Section) Feed Content
+        ㄴHeader) User action
+        ㄴSection) User comment
+      * Footer) Leave comment
+==================================================== */
+main{
+  padding-top: 84px;
+}
+
+main > div{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Section1) Follow list */
+.follow-list{
+  display: flex;
+  align-items: center;
+  width:614px;
+  height:118px;
+  padding:16px 18px;
+  margin-bottom: 24px;
+  border:1px solid #DBDBDB;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+}
+
+.user-card{
+  margin-right: 18px;
+}
+
+.user-status{
+  width:66px;
+  height:66px;
+  padding:2px;
+  margin: 0 auto 4px auto;
+  border-radius: 50%;
+  background-image: url('./assets/status.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.user-image{
+  width:62px;
+  height:62px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.user-image-frame{
+  position: relative;
+  width:58px;
+  height:58px;
+  overflow: hidden;
+  border:1px solid #DBDBDB;
+  border-radius: 50%;
+}
+
+.user-image img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width:100%;
+  height:auto;
+}
+
+.user-id{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.166666666666667;
+  color:#8E8E8E;
+}
+
+
+/* Section2) Follow feed */
+.follow-feed{
+  width:614px;
+}
+
+
+/* Article(Follow Feed Lists) */
+.follow-feed-lists{
+  width:100%;
+  border:1px solid #DBDBDB;
+  border-radius: 3px;
+  margin-bottom: 60px;
+  background-color: #FFFFFF;
+}
+
+
+/* Article - Header(User Profile) */
+.feed-header,
+.user-profile a{
+  display: flex;
+  align-items: center;
+}
+
+.feed-header{
+  position: relative;
+  padding:16px;
+}
+
+.user-profile a{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.285714285714286;
+  text-decoration: none;
+  color:#262626;
+}
+
+.profile-image-frame{
+  position: relative;
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  margin-right: 14px;
+  overflow: hidden;
+}
+
+.profile-image-frame img{
+  position: absolute;
+  width:32px;
+  height:auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.feed-modal-button{
+  position: absolute;
+  right:12px;
+  width:24px;
+  height:24px;
+  border: none;
+  outline: none;
+  cursor:pointer;
+  background-color: #FFFFFF;
+  background-image: url('./assets/option.png');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center center;
+}
+
+
+/* Feed Option Modal */
+.black_bg{
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+.modal-wrap{
+  display: none;
+
+}
+
+.feed-option{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:400px;
+  padding:0;
+  border-radius: 14px;
+  background-color: #ffffff;
+  list-style: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+li.feed-option-lists{
+  border-bottom: 1px solid #DBDBDB;
+}
+
+.feed-option-lists button,
+.feed-option-lists a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #FFFFFF;
+  color:#262626;
+  cursor: pointer;
+}
+
+.feed-option li:first-child button,
+.feed-option li:nth-child(2) button{
+  font-weight: 700;
+  color:#ED4956;
+}
+
+.feed-option-lists a{
+  text-decoration: none;
+}
+
+/* Article - Image */
+.upload-image{
+  display: block;
+  width:100%;
+  height: auto;
+  margin-bottom: 4px;
+}
+
+
+/* Article - Section */
+.feed-content{
+  padding:0 16px 8px 16px;
+  border-bottom:1px solid #EDEDED;
+}
+
+
+/* Article - Section - Header(User action) */
+.feed-content-header{
+  margin-bottom: 8px;
+}
+
+.user-action{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-action span{
+  position: relative;
+  left:-8px;
+}
+
+.user-action > button{
+  position: relative;
+  right:-8px;
+}
+
+.user-action-items{
+  width:40px;
+  height:40px;
+  padding:8px;
+  border: none;
+  outline: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.user-action-items img{
+  display: block;
+  width:100%;
+  height: auto;
+}
+
+.like-count{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.285714285714286;
+  color:#262626;
+}
+
+
+/* Article - Section - Section(User comment) */
+.user-comment ol{
+  padding:0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.user-comment-lists{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.user-comment-lists a{
+  margin-right: 4px;
+  font-weight: 600;
+  color:#262626;
+  line-height: 1.285714285714286;
+  text-decoration: none;
+}
+
+.user-comment-lists::after{
+  content:'';
+  display: inline-block;
+  position: absolute;
+  right:0;
+  width:12px;
+  height:12px;
+  background-color: #FFFFFF;
+  background-image: url('./assets/feed.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-comment ol li:first-child::after{
+  content:'';
+  display: inline-block;
+  background-image: url('');
+}
+
+.user-comment-upload-time{
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1.7;
+  color:#8E8E8E;
+}
+
+
+/* Article - Footer(Leave comment) */
+.leave-comment{
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding:0 16px;
+}
+
+.leave-comment textarea{
+  width:100%;
+  height: 1.5em;
+  resize: none;
+  padding:0;
+  border: none;
+  outline:none;
+  font-family: "Malgun Gothic";
+  font-size: 14px;
+  line-height: 1.5;
+  overflow:hidden;
+}
+
+.leave-comment textarea::placeholder{
+  font-family: "Malgun Gothic";
+}
+
+.leave-comment-button{
+  width:28px;
+  padding: 0;
+  border:none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 600;
+  color:#B1DEFC;
+  cursor: pointer;
 }
