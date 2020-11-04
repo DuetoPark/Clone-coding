@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Instagram - clone </title>
 
+    <link rel="stylesheet" href="./etc-style.css">
+    <link rel="stylesheet" href="./modal-style.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
+
   <body>
     <header class="instagram-header">
       <div class="header-container">
@@ -53,7 +57,7 @@
     <main>
       <div>
         <div class="main-content">
-          <section class="follow-list">
+          <section class="follow-list square-frame">
             <h1 class="sr-only">Follow list</h1>
 
             <div class="user-card">
@@ -83,7 +87,7 @@
           <section class="follow-feed">
             <h1 class="sr-only">Follow Feed</h1>
 
-            <article class="follow-feed-lists">
+            <article class="follow-feed-lists square-frame">
               <h1 class="sr-only">New Feed</h1>
 
               <header class="feed-header">
@@ -100,9 +104,9 @@
                   class="feed-modal-button"
                   aria-label="Feed option button"></button>
 
-                <div class="black_bg"></div>
+                <div class="black_bg fade"></div>
                 <div class="modal-wrap">
-                  <ul class="feed-option">
+                  <ul class="feed-option fade">
                     <li class="feed-option-lists">
                       <button type="button">신고</button>
                     </li>
@@ -187,8 +191,8 @@
               </footer>
             </article>
 
-            <article class="follow-feed-lists">
-              <h1 class="sr-only">New Feed</h1>
+            <article class="follow-feed-lists square-frame">
+              <h1 class="sr-only">Uploaded Feed</h1>
 
               <header class="feed-header">
                 <h1 class="user-profile">
@@ -201,7 +205,7 @@
                 </h1>
 
                 <button type="button"
-                  class="feed-option-button"
+                  class="feed-modal-button"
                   aria-label="Feed option button"></button>
               </header>
 
@@ -259,32 +263,163 @@
                 </form>
               </footer>
             </article>
-
           </section>
-        </div>
-        <div class="aside-content">
 
+          <footer class="square-frame">
+            <h1 class="sr-only">Recommend card</h1>
+
+            <header class="recommend-header">
+              <span>회원님을 위한 추천</span>
+              <a href="#">모두 보기</a>
+            </header>
+
+            <seciton class="user-card-container">
+              <div class="recommend-user-card square-frame">
+                <div class="recommend-user-img bg-img" id="soup-jo"></div>
+
+                <div class="recommend-user-id">
+                  <strong>Soup_Jo</strong>
+                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                </div>
+
+                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+              </div>
+
+              <div class="recommend-user-card square-frame">
+                <div class="recommend-user-img bg-img" id="standing-min"></div>
+
+                <div class="recommend-user-id">
+                  <strong>Standing_min</strong>
+                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                </div>
+
+                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+              </div>
+
+              <div class="recommend-user-card square-frame">
+                <div class="recommend-user-img bg-img" id="spongebob"></div>
+
+                <div class="recommend-user-id">
+                  <strong>Bob</strong>
+                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                </div>
+
+                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+              </div>
+            </seciton>
+          </footer>
         </div>
+
+        <aside>
+          <h2 class="sr-only">My profile and Recommend List</h2>
+
+          <div class="aside-content">
+            <section class="my-profile">
+              <h1>
+                <img src="./assets/user.jpg" alt="dueto park's profile image">
+              </h1>
+
+              <div>
+                <a href="#">duetopark</a>
+                <strong>박인혜</strong>
+              </div>
+
+              <!-- account modal button -->
+              <button type="button"
+                class="account-modal btn-white"
+                aria-label="계정 전환">전환</button>
+
+              <div class="modal-wrap">
+                <div class="account-modal-content">
+                  <header>
+                    계정 전환
+                    <button type="button" class="account modal_close">&times;</button>
+                  </header>
+
+                  <div class="account-modal">
+                    <span class="sr-only">Log in Account</span>
+                    <img src="./assets/default.png" alt="duetopark">
+                    duetopark
+                    <span class="checked"></span>
+                  </div>
+
+                  <button type="button" class="log-in">기존 계정으로 로그인</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="aside-recommend">
+              <h2>회원님을 위한 추천</h2>
+              <a href="#">모두 보기</a>
+
+              <ul>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="zendaya" class="bg-img">
+                  <strong>zendaya</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="selenaqomez" class="bg-img">
+                  <strong>selenaqomez</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="hachi_08" class="bg-img">
+                  <strong>hachi_08</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="iamhalsey" class="bg-img">
+                  <strong>iamhalsey</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="yejinhand" class="bg-img">
+                  <strong>yejinhand</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+                <li class="aside-recommend-lists">
+                  <img src="./assets/default.png" alt="yoanaloves" class="bg-img">
+                  <strong>yoanaloves</strong>
+                  <button type="button" class="btn-white">팔로우</button>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </aside>
       </div>
 
     </main>
 
+    <footer></footer>
     <script src="https://kit.fontawesome.com/e1a55f7ebf.js" crossorigin="anonymous"></script>
     <script>
       window.onload = function() {
+      //
+      //   $(".feed-modal-button").click(function () {
+      //     $(".modal-wrap").fadeIn("fast");
+      //     $(".black_bg").fadeIn("fast");
+      //   });
+      //
+      //   $(".modal_close").click(function () {
+      //     $(".modal-wrap").fadeOut("fast");
+      //     $(".black_bg").fadeOut("fast");
+      //   });
 
-      function onClick() {
-          document.querySelector('.modal-wrap').style.display ='block';
-          document.querySelector('.black_bg').style.display ='block';
-      }
-      function offClick() {
-          document.querySelector('.modal-wrap').style.display ='none';
-          document.querySelector('.black_bg').style.display ='none';
-      }
+      function onClick(){
+        document.querySelector(".modal-wrap").style.display='block';
+        document.querySelector(".black_bg").style.display='block';
+      };
+      function offClick(){
+        document.querySelector(".modal-wrap").style.display='none';
+        document.querySelector(".black_bg").style.display='none';
+      };
 
-      document.querySelector('.feed-modal-button').addEventListener('click', onClick);
-      document.querySelector('.modal_close').addEventListener('click', offClick);
-
+      $(".feed-modal-button").click(function () {
+          onClick();
+        });
+      // document.querySelector('.feed-modal-button').addEventListener('click',onClick);
+      document.querySelector('.modal_close').addEventListener('click',offClick);
       };
     </script>
   </body>
