@@ -65,14 +65,44 @@ li{
 /* Common CSS */
 .frame-white{
   padding:16px;
-  margin-bottom: 60px;
   border:1px solid #DBDBDB;
   border-radius: 3px;
   background-color: #FFFFFF;
 }
 
+.frame-trans{
+  padding:16px;
+  background-color: transparent;
+}
+
+.btn-blue{
+  width:122px;
+  height:30px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #0095F6;
+  font-size: 14px;
+  font-weight: 600;
+  color:#FFFFFF;
+  cursor: pointer;
+}
+
+.btn-white{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.166666666666667;
+  color:#0095F6;
+  cursor: pointer;
+}
+
+
+
 /* Header */
-header{
+body > header{
   position: sticky;
   z-index: 1;
   top:0;
@@ -148,6 +178,7 @@ header .col-12{
 body > .container{
   padding:0;
 }
+
 /* Main - New-story */
 main .row:first-child{
   margin-bottom: 24px;
@@ -157,6 +188,7 @@ main .row:first-child{
   display: flex;
   align-items: center;
   height:118px;
+  margin-bottom: 16px;
 }
 
 .user-card{
@@ -275,6 +307,18 @@ main .row:first-child{
 
 
 /* Main - Feed Lists(Section) */
+main > section{
+  margin-bottom: 12px;
+}
+
+main > section .row{
+  margin-bottom: 15px;
+}
+
+main > section .row:last-child{
+  margin-bottom: 0;
+}
+
 .upload-image{
   display: block;
   width:100%;
@@ -282,7 +326,8 @@ main .row:first-child{
   margin-bottom: 4px;
 }
 
-.feed-content{
+.feed-button-group,
+.feed-comment{
   padding:0 16px 8px 16px;
 }
 
@@ -337,13 +382,12 @@ main .row:first-child{
 
 .feed-comment-lists{
   position: relative;
-  display: flex;
-  align-items: center;
   margin-bottom: 4px;
   text-align: left;
 }
 
 .feed-comment-lists a{
+  display: inline-block;
   margin-right: 4px;
   font-weight: 600;
   color:#262626;
@@ -358,6 +402,7 @@ main .row:first-child{
   right:0;
   width:12px;
   height:12px;
+  margin: 3px 0 3px 8px;
   background-image: url('./assets/feed.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -383,163 +428,10 @@ main .row:first-child{
 }
 
 
-/* >= 768px (Desktop) */
-@media screen and (min-width:768px) {
-  /* Common CSS */
-  .square-frame{
-    padding:16px;
-    margin-bottom: 60px;
-    border:1px solid #DBDBDB;
-    border-radius: 3px;
-    background-color: #FFFFFF;
-  }
-
-
-  /* Header */
-  header{
-    margin-bottom: 30px;
-  }
-  /* Header - User search */
-  .user-search{
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .user-search input{
-    width: 215px;
-    height:28px;
-    padding-left: 26px;
-    border: 1px solid #DBDBDB;
-    border-radius: 3px;
-    background-color: #FAFAFA;
-    outline: none;
-  }
-
-  .user-search-etc i,
-  .user-search-cancel{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    padding:0;
-  }
-
-  .user-search-etc i{
-    font-size: 10px;
-    color:#C7C7C7;
-    left:10px;
-  }
-
-  .user-search-cancel{
-    right:7px;
-    width:14px;
-    height:14px;
-    padding-left: 1px;
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    background-color:#C7C7C7;
-    color:#FFFFFF;
-    cursor: pointer;
-  }
-
-  /* Main */
-  body > .container{
-    padding:0 15px;
-  }
-
-  .feed-header{
-    border-bottom: 1px solid #DBDBDB;
-  }
-
-  .user-action-items{
-    background-color: #FFFFFF;
-  }
-
-
-
-  /* Main - Feed Lists(Section) */
-  .feed-content{
-    border-bottom:1px solid #EDEDED;
-  }
-
-
-  /* Main - Feed Lists(Footer) */
-  .feed-content-footer{
-    display: block;
-  }
-
-  .leave-comment{
-    display: flex;
-    align-items: center;
-    height: 55px;
-    padding:0 16px;
-  }
-
-  .leave-comment textarea{
-    width:100%;
-    height: 1.5em;
-    resize: none;
-    overflow: auto;
-    padding: 0;
-    border: none;
-    outline:none;
-    font-family: "Malgun Gothic";
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .leave-comment textarea::placeholder{
-    font-family: "Malgun Gothic";
-  }
-
-  .leave-comment-button{
-    width:28px;
-    padding: 0;
-    border:none;
-    outline: none;
-    background-color: transparent;
-    font-weight: 600;
-    color:#B1DEFC;
-    cursor: pointer;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =================================================
-Main
-  -Section1) Follow lists
-  -Section2) Follow feed
-     o Article) Follow Feed Lists
-      * Header) User profile
-      * Upload image
-      * Section) Feed Content
-        ㄴHeader) User action
-        ㄴSection) User comment
-      * Footer) Leave comment
-  -footer) Recommend Card
-    * Header)
-    * Section) Recommend User Card
-==================================================== */
-
-
-/* Footer - Header */
-footer.square-frame {
+/* Main - Footer(Header) */
+footer.frame-white {
   height:280px;
-  padding: 20px 24px;
+  padding: 12px 17.5px;
   margin:0;
   border-radius: 4px;
 }
@@ -561,6 +453,7 @@ footer.square-frame {
 
 .user-card-container{
   display: flex;
+  overflow: hidden;
 }
 
 .recommend-user-card {
@@ -568,7 +461,7 @@ footer.square-frame {
   flex-direction: column;
   align-items: center;
   width:174px;
-  padding: 20px;
+  padding: 16px;
   margin:0;
   margin-right: 20px;
   border-radius: 4px;
@@ -576,7 +469,13 @@ footer.square-frame {
 }
 
 .recommend-user-img{
-  margin-bottom: 20px;
+  width:77px;
+  height:77px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 8px;
 }
 
 #soup-jo{
@@ -637,142 +536,306 @@ footer.square-frame {
   cursor: pointer;
 }
 
-/*====================================
- Aside
-  - Section(My Profile)
-  - Section(Recommend Lists)
- ===================================*/
-aside{
-  width:293px;
-  height:2000px;
+
+/* Aside - Recommend Lists */
+.col-md-4{
+  display: none;
 }
 
 
-/* Aside - Section(My Profile) */
-.aside-content{
-  position: sticky;
-  top:50%;
-  left:32px;
+/* >= 768px (Desktop) */
+@media screen and (min-width:768px) {
+  /* Common CSS */
+  .frame-trans{
+    border:1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+  }
 
-}
-
-.my-profile{
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width:293px;
-  height: 56px;
-  margin-bottom: 29px;
-}
-
-.my-profile div{
-  position: absolute;
-  left:76px;
-  top:50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.285714285714286;
-}
-
-.my-profile h1{
-  position: relative;
-  width:56px;
-  height:56px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.my-profile img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width:100%;
-  height: auto;
-  margin-right: 20px;
-}
-
-.my-profile div a{
-  text-decoration: none;
-  color:#262626;
-  margin-bottom: 4px;
-}
-
-.my-profile div strong{
-  text-decoration: none;
-  color:#8E8E8E;
-}
+  .btn-blue{
+    width:134px;
+  }
 
 
-/* Aside - Section(Recommend Lists) */
-.aside-recommend{
-  position: relative;
-  width:293px;
-  height: 293px;
-}
 
-.aside-recommend h2{
-  position: relative;
-  left: -3px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #8E8E8E;
-}
+  /* Header */
+  body > header{
+    margin-bottom: 30px;
+  }
 
-.aside-recommend a{
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: #262626;
-  text-decoration: none;
-}
 
-.aside-recommend ul{
-  position: relative;
-  left: -16px;
-  padding:0;
+  /* Header - User search */
+  .user-search{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-}
+  .user-search input{
+    width: 215px;
+    height:28px;
+    padding-left: 26px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    outline: none;
+  }
 
-.aside-recommend-lists{
-  position: relative;
-  display: flex;
-  height: 48px;
-  padding:8px 16px;
-}
+  .user-search-etc i,
+  .user-search-cancel{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding:0;
+  }
 
-.aside-recommend-lists img{
-  width:32px;
-  height:32px;
-  margin-right: 12px;
-  border: 1px solid #DBDBDB;
-}
+  .user-search-etc i{
+    font-size: 10px;
+    color:#C7C7C7;
+    left:10px;
+  }
 
-.aside-recommend-lists strong{
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color:#262626;
-}
+  .user-search-cancel{
+    right:7px;
+    width:14px;
+    height:14px;
+    padding-left: 1px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color:#C7C7C7;
+    color:#FFFFFF;
+    cursor: pointer;
+  }
 
-.aside-recommend-lists strong::after{
-  content: 'Instagram 추천';
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
-  color:#8E8E8E;
-}
+  /* Main */
+  body > .container{
+    padding:0 15px;
+  }
 
-.aside-recommend-lists button{
-  position: absolute;
-  right:-16px;
-  top:50%;
-  transform: translateY(-50%);
+  .new-story{
+    margin-bottom: 24px;
+  }
+
+  .feed-header{
+    border-bottom: 1px solid #DBDBDB;
+    margin:0;
+  }
+
+  .user-action-items{
+    background-color: #FFFFFF;
+  }
+
+
+
+  /* Main - Feed Lists(Section) */
+  main > section,
+  main > section .row{
+    margin-bottom: 60px;
+  }
+
+  .feed-content{
+    border-bottom:1px solid #EDEDED;
+  }
+
+  /* Main - Feed Lists(Footer) */
+  .feed-content-footer{
+    display: block;
+  }
+
+  .leave-comment{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding:0 16px;
+  }
+
+  .leave-comment textarea{
+    width:100%;
+    height: 1.5em;
+    resize: none;
+    overflow: auto;
+    padding: 0;
+    border: none;
+    outline:none;
+    font-family: "Malgun Gothic";
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .leave-comment textarea::placeholder{
+    font-family: "Malgun Gothic";
+  }
+
+  .leave-comment-button{
+    width:30px;
+    padding: 0;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+    color:#B1DEFC;
+    cursor: pointer;
+  }
+
+
+  /* Main - Footer(Header) */
+  footer.frame-white {
+    padding: 20px 24px;
+  }
+
+  .recommend-user-card {
+    padding: 20px;
+  }
+
+  .recommend-user-img{
+    width:54px;
+    height:54px;
+    margin-bottom: 20px
+  }
+
+
+  /* Aside - My Profile */
+  aside{
+    width:293px;
+    top: 110px;
+  }
+
+  .aside-content{
+    position: sticky;
+    top:50%;
+    left:32px;
+
+  }
+
+  .my-profile{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:293px;
+    height: 56px;
+    margin-bottom: 29px;
+  }
+
+  .my-profile div{
+    position: absolute;
+    left:76px;
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+  }
+
+  .my-profile h1{
+    position: relative;
+    width:56px;
+    height:56px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .my-profile img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .my-profile div a{
+    text-decoration: none;
+    color:#262626;
+    margin-bottom: 4px;
+  }
+
+  .my-profile div strong{
+    text-decoration: none;
+    color:#8E8E8E;
+  }
+
+
+  /* Aside - Recommend Lists */
+  .col-md-4{
+    display: block;
+  }
+
+  aside{
+    position: fixed;
+  }
+
+  .aside-recommend{
+    position: relative;
+    width:293px;
+    height: 293px;
+  }
+
+  .aside-recommend h2{
+    position: relative;
+    left: -3px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8E8E8E;
+  }
+
+  .aside-recommend a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #262626;
+    text-decoration: none;
+  }
+
+  .aside-recommend ul{
+    position: relative;
+    left: -16px;
+    padding:0;
+
+  }
+
+  .aside-recommend-lists{
+    position: relative;
+    display: flex;
+    height: 48px;
+    padding:8px 16px;
+  }
+
+  .aside-recommend-lists img{
+    width:32px;
+    height:32px;
+    margin-right: 12px;
+    border: 1px solid #DBDBDB;
+  }
+
+  .aside-recommend-lists strong{
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color:#262626;
+  }
+
+  .aside-recommend-lists strong::after{
+    content: 'Instagram 추천';
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color:#8E8E8E;
+  }
+
+  .aside-recommend-lists button{
+    position: absolute;
+    right:-16px;
+    top:50%;
+    transform: translateY(-50%);
+  }
 }
