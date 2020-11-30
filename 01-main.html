@@ -65,10 +65,10 @@
       <div class="row">
         <div class="col-12 col-md-8">
           <main>
-            <div class="row">
-              <div class="col-12">
-                <section class="new-story frame-white">
-                  <h1 class="sr-only">새로 올라온 피드 스토리</h1>
+            <header class="new-story frame-white">
+              <h1 class="sr-only">새로 올라온 피드 스토리</h1>
+              <div class="row">
+                <div class="col-12">
                   <div class="user-card">
                     <div class="new-mark">
                       <div class="user-image">
@@ -90,15 +90,16 @@
                     </div>
                     <strong class="user-id">Moon_joyyy</strong>
                   </div>
-                </section>
+                </div>
               </div>
-            </div>
+
+            </header>
 
             <section>
               <h1 class="sr-only">새로 올라온 피드</h1>
               <div class="row">
                 <div class="col-12">
-                  <article class="feed-lists square-frame">
+                  <article class="feed-lists frame-trans">
                     <h1 class="sr-only">웨스트카우 킴의 새 피드</h1>
                     <header class="feed-header">
                       <h1 class="feed-user">
@@ -185,7 +186,7 @@
                           </li>
                           <li class="feed-comment-lists">
                             <a href="#">Moon_Joyyy</a>
-                            <span>너무 귀여워서 우리집 벽 부셨더니 원룸됐어🔥</span>
+                            너무 귀여워서 우리집 벽 부셨더니 원룸됐어🔥
                           </li>
                         </ol>
                         <span class="feed-comment-upload-time">1일 전</span>
@@ -196,265 +197,168 @@
                       <span class="sr-only">댓글 달기</span>
                       <form class="leave-comment" action="index.html" method="post">
                         <textarea placeholder="댓글 달기..."></textarea>
-                        <button type="button" class="leave-comment-button">게시</button>
+                        <button type="submit" class="leave-comment-button">게시</button>
+                      </form>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <article class="feed-lists frame-trans">
+                    <h1 class="sr-only">문 조이의 새 피드</h1>
+                    <header class="feed-header">
+                      <h1 class="feed-user">
+                        <a href="#">
+                          <span class="image-frame">
+                            <img src="./assets/moon_joy.jpg" alt="Moon Joyyy">
+                          </span>
+                          Moon_Joyyy
+                        </a>
+                      </h1>
+
+                      <button type="button"
+                        class="feed-modal-button"
+                        aria-label="Feed option button"></button>
+
+                      <div class="black_bg fade"></div>
+                      <div class="modal-wrap">
+                        <ul class="feed-option fade">
+                          <li class="feed-option-lists">
+                            <button type="button">신고</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">팔로우 취소</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <a href="#">게시물로 이동</a>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">공유하기</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">링크 복사</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">퍼가기</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button" class="modal_close">취소</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </header>
+
+                    <section class="feed-content">
+                      <h1 class="sr-only">피드 내용</h1>
+                      <img src="./assets/moon_upload.jpg" class="upload-image" alt="Upload image">
+
+                      <div class="feed-button-group">
+                        <strong class="sr-only">피드 버튼 그룹</strong>
+                        <div class="user-action">
+                          <span>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/feed.png" alt="좋아요 버튼">
+                            </button>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/comment.png" alt="해당 피드로 이동">
+                            </button>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/direct.png" alt="다이렉트 메세지 전송">
+                            </button>
+                          </span>
+
+                          <button type="button" class="user-action-items">
+                            <img src="./assets/bookmark.png" alt="책깔피">
+                          </button>
+                        </div>
+
+                        <strong class="like-count">
+                          좋아요 <span>1,752</span>개
+                        </strong>
+                      </div>
+
+                      <div class="feed-comment">
+                        <h1 class="sr-only">피드 댓글</h1>
+                        <ol>
+                          <li class="feed-comment-lists">
+                            <a href="#">Moon_Joyyy</a>
+                            <span>unsplash에 있는 사진으로 인스타 느낌내기😎</span>
+                          </li>
+                          <li class="feed-comment-lists">
+                            <a href="#">WestCow_Kim</a>
+                            <span>✨✨✨</span>
+                          </li>
+                        </ol>
+                        <span class="feed-comment-upload-time">4일 전</span>
+                      </div>
+                    </section>
+
+                    <footer class="feed-content-footer">
+                      <span class="sr-only">댓글 달기</span>
+                      <form class="leave-comment" action="index.html" method="post">
+                        <textarea placeholder="댓글 달기..."></textarea>
+                        <button type="submit" class="leave-comment-button">게시</button>
                       </form>
                     </footer>
                   </article>
                 </div>
               </div>
             </section>
+
+            <footer class="frame-white">
+              <div class="row">
+                <div class="col-12">
+                  <header class="recommend-header">
+                    <span>회원님을 위한 추천</span>
+                    <a href="#">모두 보기</a>
+                  </header>
+
+                  <seciton class="user-card-container">
+                    <div class="recommend-user-card frame-white">
+                      <div class="recommend-user-img bg-img" id="soup-jo"></div>
+
+                      <div class="recommend-user-id">
+                        <strong>Soup_Jo</strong>
+                        <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                      </div>
+
+                      <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+                    </div>
+
+                    <div class="recommend-user-card frame-white">
+                      <div class="recommend-user-img bg-img" id="standing-min"></div>
+
+                      <div class="recommend-user-id">
+                        <strong>Standing_min</strong>
+                        <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                      </div>
+
+                      <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+                    </div>
+
+                    <div class="recommend-user-card frame-white">
+                      <div class="recommend-user-img bg-img" id="spongebob"></div>
+
+                      <div class="recommend-user-id">
+                        <strong>Bob</strong>
+                        <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
+                      </div>
+
+                      <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
+                    </div>
+                  </seciton>
+                </div>
+              </div>
+            </footer>
           </main>
-
-          <footer>
-            <div class="row">
-              <div class="col-12 col-md-8">
-
-              </div>
-            </div>
-          </footer>
         </div>
+
         <div class="col-12 col-md-4">
-          <aside class="">
+          <aside>
+            <h2 class="sr-only">내 프로필과 추천 리스트</h2>
 
-          </aside>
-        </div>
-      </div>
-    </div>
-
-
-    <main>
-      <div>
-        <div class="main-content">
-          <section class="follow-feed">
-            <h1 class="sr-only">Follow Feed</h1>
-
-            <article class="feed-lists square-frame">
-              <h1 class="sr-only">New Feed</h1>
-
-              <header class="feed-header">
-                <h1 class="feed-user">
-                  <a href="#">
-                    <span class="image-frame">
-                      <img src="./assets/westcow-kim.jpg" alt="West-Cow Kim">
-                    </span>
-                    WestCow_Kim
-                  </a>
-                </h1>
-
-                <button type="button"
-                  class="feed-modal-button"
-                  aria-label="Feed option button"></button>
-
-                <div class="black_bg fade"></div>
-                <div class="modal-wrap">
-                  <ul class="feed-option fade">
-                    <li class="feed-option-lists">
-                      <button type="button">신고</button>
-                    </li>
-                    <li class="feed-option-lists">
-                      <button type="button">팔로우 취소</button>
-                    </li>
-                    <li class="feed-option-lists">
-                      <a href="#">게시물로 이동</a>
-                    </li>
-                    <li class="feed-option-lists">
-                      <button type="button">공유하기</button>
-                    </li>
-                    <li class="feed-option-lists">
-                      <button type="button">링크 복사</button>
-                    </li>
-                    <li class="feed-option-lists">
-                      <button type="button">퍼가기</button>
-                    </li>
-                    <li class="feed-option-lists">
-                      <button type="button" class="modal_close">취소</button>
-                    </li>
-                  </ul>
-                </div>
-              </header>
-
-              <img src="./assets/westcow-upload.jpg" class="upload-image" alt="Upload image">
-
-              <section class="feed-content">
-                <h1 class="sr-only">Feed Content</h1>
-
-                <header class="feed-button-group">
-                  <span class="sr-only">Feed user action</span>
-                  <div class="user-action">
-                    <span>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/feed.png" alt="Like button">
-                      </button>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/comment.png" alt="Go to this feed">
-                      </button>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/direct.png" alt="Send direct message">
-                      </button>
-                    </span>
-
-                    <button type="button" class="user-action-items">
-                      <img src="./assets/bookmark.png" alt="Bookmark">
-                    </button>
-                  </div>
-
-                  <strong lang="ko" class="like-count">
-                    좋아요 <span>1,752</span>개
-                  </strong>
-                </header>
-
-                <section lang="ko" class="feed-comment">
-                  <h1 class="sr-only">피드 댓글</h1>
-                  <ol>
-                    <li class="feed-comment-lists">
-                      <a href="#">WestCow_Kim</a>
-                      <span>unsplash에 있는 강아지 사진💜💜</span>
-                    </li>
-                    <li class="feed-comment-lists">
-                      <a href="#">duetopark</a>
-                      <span>😊귀여워요😊</span>
-                    </li>
-                    <li class="feed-comment-lists">
-                      <a href="#">Moon_Joyyy</a>
-                      <span>너무 귀여워서 우리집 벽 부셨더니 원룸됐어🔥</span>
-                    </li>
-                  </ol>
-                  <span class="feed-comment-upload-time">1일 전</span>
-                </section>
-              </section>
-
-              <footer class="feed-content-footer" lang="ko">
-                <span class="sr-only">댓글 달기</span>
-                <form class="leave-comment" action="index.html" method="post">
-                  <textarea placeholder="댓글 달기..."></textarea>
-                  <button type="button" class="leave-comment-button">게시</button>
-                </form>
-              </footer>
-            </article>
-
-            <article class="feed-lists square-frame">
-              <h1 class="sr-only">Uploaded Feed</h1>
-
-              <header class="feed-header">
-                <h1 class="feed-user">
-                  <a href="#">
-                    <span class="image-frame">
-                      <img src="./assets/moon_joy.jpg" alt="Moon Joyyy">
-                    </span>
-                    Moon_Joyyy
-                  </a>
-                </h1>
-
-                <button type="button"
-                  class="feed-modal-button"
-                  aria-label="Feed option button"></button>
-              </header>
-
-              <img src="./assets/moon_upload.jpg" class="upload-image" alt="Upload image">
-
-              <section class="feed-content">
-                <h1 class="sr-only">Feed Content</h1>
-
-                <header class="feed-button-group">
-                  <span class="sr-only">Feed user action</span>
-                  <div class="user-action">
-                    <span>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/feed.png" alt="Like button">
-                      </button>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/comment.png" alt="Go to this feed">
-                      </button>
-                      <button type="button" class="user-action-items">
-                        <img src="./assets/direct.png" alt="Send direct message">
-                      </button>
-                    </span>
-
-                    <button type="button" class="user-action-items">
-                      <img src="./assets/bookmark.png" alt="Bookmark">
-                    </button>
-                  </div>
-
-                  <strong lang="ko" class="like-count">
-                    좋아요 <span>1,752</span>개
-                  </strong>
-                </header>
-
-                <section lang="ko" class="feed-comment">
-                  <h1 class="sr-only">피드 댓글</h1>
-                  <ol>
-                    <li class="feed-comment-lists">
-                      <a href="#">Moon_Joyyy</a>
-                      <span>unsplash에 있는 사진으로 인스타 느낌내기😎</span>
-                    </li>
-                    <li class="feed-comment-lists">
-                      <a href="#">WestCow_Kim</a>
-                      <span>✨✨✨</span>
-                    </li>
-                  </ol>
-                  <span class="feed-comment-upload-time">4일 전</span>
-                </section>
-              </section>
-
-              <footer class="feed-content-footer" lang="ko">
-                <span class="sr-only">댓글 달기</span>
-                <form class="leave-comment" action="index.html" method="post">
-                  <textarea placeholder="댓글 달기..."></textarea>
-                  <button type="button" class="leave-comment-button">게시</button>
-                </form>
-              </footer>
-            </article>
-          </section>
-
-          <footer class="square-frame">
-            <h1 class="sr-only">Recommend card</h1>
-
-            <header class="recommend-header">
-              <span>회원님을 위한 추천</span>
-              <a href="#">모두 보기</a>
-            </header>
-
-            <seciton class="user-card-container">
-              <div class="recommend-user-card square-frame">
-                <div class="recommend-user-img bg-img" id="soup-jo"></div>
-
-                <div class="recommend-user-id">
-                  <strong>Soup_Jo</strong>
-                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
-                </div>
-
-                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
-              </div>
-
-              <div class="recommend-user-card square-frame">
-                <div class="recommend-user-img bg-img" id="standing-min"></div>
-
-                <div class="recommend-user-id">
-                  <strong>Standing_min</strong>
-                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
-                </div>
-
-                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
-              </div>
-
-              <div class="recommend-user-card square-frame">
-                <div class="recommend-user-img bg-img" id="spongebob"></div>
-
-                <div class="recommend-user-id">
-                  <strong>Bob</strong>
-                  <span class="recommend-badge bg-img" aria-label="Strongly recommend"></span>
-                </div>
-
-                <button type="button" class="btn-blue" aria-label="Follow button">팔로우</button>
-              </div>
-            </seciton>
-          </footer>
-        </div>
-
-        <aside>
-          <h2 class="sr-only">My profile and Recommend List</h2>
-
-          <div class="aside-content">
             <section class="my-profile">
               <h1>
                 <img src="./assets/user.jpg" alt="dueto park's profile image">
@@ -526,13 +430,11 @@
                 </li>
               </ul>
             </section>
-          </div>
-        </aside>
+          </aside>
+        </div>
       </div>
+    </div>
 
-    </main>
-
-    <footer></footer>
     <script src="https://kit.fontawesome.com/e1a55f7ebf.js" crossorigin="anonymous"></script>
     <script>
       window.onload = function() {
