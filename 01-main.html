@@ -1,99 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Instagram - clone </title>
+    <title>인스타그램 - 클론</title>
 
     <link rel="stylesheet" href="./etc-style.css">
     <link rel="stylesheet" href="./modal-style.css">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./grid.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
     <header class="instagram-header">
-      <div class="header-container">
-        <h1 class="title">
-          <a href="01-main.html">
-            <img src="./assets/title.png" alt="Instagram">
-          </a>
-        </h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="instagram-title">
+              <a href="01-main.html">
+                <img src="./assets/title.png" alt="Instagram">
+              </a>
+            </h1>
 
-        <nav>
-          <h2 class="sr-only">menu</h2>
-          <span class="sr-only">Currunt page</span>
-          <ul class="menu">
-            <li class="menu-lists">
-              <a href="#"><img src="./assets/home.png" alt="Home"></a>
-            </li>
-            <li class="menu-lists">
-              <a href="#"><img src="./assets/direct.png" alt="Direct"></a>
-            </li>
-            <li class="menu-lists">
-              <a href="#"><img src="./assets/finding.png" alt="사람찾기"></a>
-            </li>
-            <li class="menu-lists">
-              <a href="#"><img src="./assets/feed.png" alt="Feed"></a>
-            </li>
-            <li class="menu-lists">
-              <button type="button" class="profile-image" aria-label="option"></button>
-            </li>
-          </ul>
-        </nav>
+            <nav>
+              <h2 class="sr-only">메뉴</h2>
+              <span class="sr-only">현재페이지</span>
+              <ul class="menu">
+                <li class="menu-lists">
+                  <a href="#"><img src="./assets/home.png" alt="홈"></a>
+                </li>
+                <li class="menu-lists">
+                  <a href="#"><img src="./assets/direct.png" alt="다이렉트"></a>
+                </li>
+                <li class="menu-lists">
+                  <a href="#"><img src="./assets/finding.png" alt="사람찾기"></a>
+                </li>
+                <li class="menu-lists">
+                  <a href="#"><img src="./assets/feed.png" alt="활동 피드"></a>
+                </li>
+                <li class="menu-lists">
+                  <button type="button" class="profile-image" aria-label="내 피드"></button>
+                </li>
+              </ul>
+            </nav>
 
-        <div class="user-search">
-          <strong class="sr-only">Search</strong>
-          <input type="text" maxlength="40" placeholder="검색"/>
+            <div class="user-search">
+              <strong class="sr-only">검색</strong>
+              <input type="text" maxlength="40" placeholder="검색"/>
 
-          <div class="user-search-option" aria-hidden="true">
-            <i class="fas fa-search"></i>
-            <button type="button" class="user-search-cancel">&times;</button>
+              <div class="user-search-etc">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <button type="button" class="user-search-cancel" aria-label="검색 취소">&times;</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <main>
+            <div class="row">
+              <div class="col-12">
+                <section class="new-story frame-white">
+                  <h1 class="sr-only">새로 올라온 피드 스토리</h1>
+                  <div class="user-card">
+                    <div class="new-mark">
+                      <div class="user-image">
+                        <div class="user-image-frame">
+                          <img src="./assets/westcow-kim.jpg" alt="Westcow Kim">
+                        </div>
+                      </div>
+                    </div>
+                    <strong class="user-id">WestCow_Kim</strong>
+                  </div>
+
+                  <div class="user-card">
+                    <div class="new-mark">
+                      <div class="user-image">
+                        <div class="user-image-frame">
+                          <img src="./assets/moon_joy.jpg" alt="Moon Joy">
+                        </div>
+                      </div>
+                    </div>
+                    <strong class="user-id">Moon_joyyy</strong>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <section>
+              <h1 class="sr-only">새로 올라온 피드</h1>
+              <div class="row">
+                <div class="col-12">
+                  <article class="feed-lists square-frame">
+                    <h1 class="sr-only">웨스트카우 킴의 새 피드</h1>
+                    <header class="feed-header">
+                      <h1 class="feed-user">
+                        <a href="#">
+                          <span class="image-frame">
+                            <img src="./assets/westcow-kim.jpg" alt="West-Cow Kim">
+                          </span>
+                          WestCow_Kim
+                        </a>
+                      </h1>
+
+                      <button type="button"
+                        class="feed-modal-button"
+                        aria-label="Feed option button"></button>
+
+                      <div class="black_bg fade"></div>
+                      <div class="modal-wrap">
+                        <ul class="feed-option fade">
+                          <li class="feed-option-lists">
+                            <button type="button">신고</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">팔로우 취소</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <a href="#">게시물로 이동</a>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">공유하기</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">링크 복사</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button">퍼가기</button>
+                          </li>
+                          <li class="feed-option-lists">
+                            <button type="button" class="modal_close">취소</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </header>
+
+
+                    <section class="feed-content">
+                      <h1 class="sr-only">피드 내용</h1>
+                      <img src="./assets/westcow-upload.jpg" class="upload-image" alt="Upload image">
+
+                      <div class="feed-button-group">
+                        <strong class="sr-only">피드 버튼 그룹</strong>
+                        <div class="user-action">
+                          <span>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/feed.png" alt="좋아요 버튼">
+                            </button>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/comment.png" alt="해당 피드로 이동">
+                            </button>
+                            <button type="button" class="user-action-items">
+                              <img src="./assets/direct.png" alt="다이렉트 메세지 전송">
+                            </button>
+                          </span>
+
+                          <button type="button" class="user-action-items">
+                            <img src="./assets/bookmark.png" alt="책깔피">
+                          </button>
+                        </div>
+
+                        <strong class="like-count">
+                          좋아요 <span>1,752</span>개
+                        </strong>
+                      </div>
+
+                      <div class="feed-comment">
+                        <h1 class="sr-only">피드 댓글</h1>
+                        <ol>
+                          <li class="feed-comment-lists">
+                            <a href="#">WestCow_Kim</a>
+                            <span>unsplash에 있는 강아지 사진💜💜</span>
+                          </li>
+                          <li class="feed-comment-lists">
+                            <a href="#">duetopark</a>
+                            <span>😊귀여워요😊</span>
+                          </li>
+                          <li class="feed-comment-lists">
+                            <a href="#">Moon_Joyyy</a>
+                            <span>너무 귀여워서 우리집 벽 부셨더니 원룸됐어🔥</span>
+                          </li>
+                        </ol>
+                        <span class="feed-comment-upload-time">1일 전</span>
+                      </div>
+                    </section>
+
+                    <footer class="feed-content-footer">
+                      <span class="sr-only">댓글 달기</span>
+                      <form class="leave-comment" action="index.html" method="post">
+                        <textarea placeholder="댓글 달기..."></textarea>
+                        <button type="button" class="leave-comment-button">게시</button>
+                      </form>
+                    </footer>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </main>
+
+          <footer>
+            <div class="row">
+              <div class="col-12 col-md-8">
+
+              </div>
+            </div>
+          </footer>
+        </div>
+        <div class="col-12 col-md-4">
+          <aside class="">
+
+          </aside>
+        </div>
+      </div>
+    </div>
+
+
     <main>
       <div>
         <div class="main-content">
-          <section class="follow-list square-frame">
-            <h1 class="sr-only">Follow list</h1>
-
-            <div class="user-card">
-              <div class="user-status">
-                <div class="user-image">
-                  <div class="user-image-frame">
-                    <img src="./assets/westcow-kim.jpg" alt="Westcow Kim">
-                  </div>
-                </div>
-              </div>
-              <strong class="user-id">WestCow_Kim</strong>
-            </div>
-
-            <div class="user-card">
-              <div class="user-status">
-                <div class="user-image">
-                  <div class="user-image-frame">
-                    <img src="./assets/moon_joy.jpg" alt="Moon Joy">
-                  </div>
-                </div>
-              </div>
-
-              <strong class="user-id">Moon_joyyy</strong>
-            </div>
-          </section>
-
           <section class="follow-feed">
             <h1 class="sr-only">Follow Feed</h1>
 
-            <article class="follow-feed-lists square-frame">
+            <article class="feed-lists square-frame">
               <h1 class="sr-only">New Feed</h1>
 
               <header class="feed-header">
-                <h1 class="user-profile">
+                <h1 class="feed-user">
                   <a href="#">
-                    <span class="profile-image-frame">
+                    <span class="image-frame">
                       <img src="./assets/westcow-kim.jpg" alt="West-Cow Kim">
                     </span>
                     WestCow_Kim
@@ -137,7 +278,7 @@
               <section class="feed-content">
                 <h1 class="sr-only">Feed Content</h1>
 
-                <header class="feed-content-header">
+                <header class="feed-button-group">
                   <span class="sr-only">Feed user action</span>
                   <div class="user-action">
                     <span>
@@ -162,23 +303,23 @@
                   </strong>
                 </header>
 
-                <section lang="ko" class="user-comment">
+                <section lang="ko" class="feed-comment">
                   <h1 class="sr-only">피드 댓글</h1>
                   <ol>
-                    <li class="user-comment-lists">
+                    <li class="feed-comment-lists">
                       <a href="#">WestCow_Kim</a>
                       <span>unsplash에 있는 강아지 사진💜💜</span>
                     </li>
-                    <li class="user-comment-lists">
+                    <li class="feed-comment-lists">
                       <a href="#">duetopark</a>
                       <span>😊귀여워요😊</span>
                     </li>
-                    <li class="user-comment-lists">
+                    <li class="feed-comment-lists">
                       <a href="#">Moon_Joyyy</a>
                       <span>너무 귀여워서 우리집 벽 부셨더니 원룸됐어🔥</span>
                     </li>
                   </ol>
-                  <span class="user-comment-upload-time">1일 전</span>
+                  <span class="feed-comment-upload-time">1일 전</span>
                 </section>
               </section>
 
@@ -191,13 +332,13 @@
               </footer>
             </article>
 
-            <article class="follow-feed-lists square-frame">
+            <article class="feed-lists square-frame">
               <h1 class="sr-only">Uploaded Feed</h1>
 
               <header class="feed-header">
-                <h1 class="user-profile">
+                <h1 class="feed-user">
                   <a href="#">
-                    <span class="profile-image-frame">
+                    <span class="image-frame">
                       <img src="./assets/moon_joy.jpg" alt="Moon Joyyy">
                     </span>
                     Moon_Joyyy
@@ -214,7 +355,7 @@
               <section class="feed-content">
                 <h1 class="sr-only">Feed Content</h1>
 
-                <header class="feed-content-header">
+                <header class="feed-button-group">
                   <span class="sr-only">Feed user action</span>
                   <div class="user-action">
                     <span>
@@ -239,19 +380,19 @@
                   </strong>
                 </header>
 
-                <section lang="ko" class="user-comment">
+                <section lang="ko" class="feed-comment">
                   <h1 class="sr-only">피드 댓글</h1>
                   <ol>
-                    <li class="user-comment-lists">
+                    <li class="feed-comment-lists">
                       <a href="#">Moon_Joyyy</a>
                       <span>unsplash에 있는 사진으로 인스타 느낌내기😎</span>
                     </li>
-                    <li class="user-comment-lists">
+                    <li class="feed-comment-lists">
                       <a href="#">WestCow_Kim</a>
                       <span>✨✨✨</span>
                     </li>
                   </ol>
-                  <span class="user-comment-upload-time">4일 전</span>
+                  <span class="feed-comment-upload-time">4일 전</span>
                 </section>
               </section>
 
@@ -395,17 +536,6 @@
     <script src="https://kit.fontawesome.com/e1a55f7ebf.js" crossorigin="anonymous"></script>
     <script>
       window.onload = function() {
-      //
-      //   $(".feed-modal-button").click(function () {
-      //     $(".modal-wrap").fadeIn("fast");
-      //     $(".black_bg").fadeIn("fast");
-      //   });
-      //
-      //   $(".modal_close").click(function () {
-      //     $(".modal-wrap").fadeOut("fast");
-      //     $(".black_bg").fadeOut("fast");
-      //   });
-
       function onClick(){
         document.querySelector(".modal-wrap").style.display='block';
         document.querySelector(".black_bg").style.display='block';
@@ -418,8 +548,7 @@
       $(".feed-modal-button").click(function () {
           onClick();
         });
-      // document.querySelector('.feed-modal-button').addEventListener('click',onClick);
-      document.querySelector('.modal_close').addEventListener('click',offClick);
+      document.querySelector('.modal_close').addEventListener('click', offClick);
       };
     </script>
   </body>

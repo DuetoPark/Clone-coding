@@ -3,19 +3,67 @@
   margin: 0;
 }
 
-.sr-only {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  visibility: hidden;
+body{
+  height:2000px;
+  background-color: #FAFAFA;
+  color:#262626;
 }
 
-.square-frame{
-  width:614px;
+/* Reset CSS */
+a{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea{
+  outline: none;
+  box-shadow: none;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active{
+  outline: none;
+  box-shadow: none;
+}
+
+ol,
+ul,
+li{
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+
+
+
+/* Custom Grid System - Fix countainer width */
+@media screen and (min-width:1200px) {
+  .container{
+    max-width: 960px !important;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container{
+    min-width: 960px !important;
+  }
+}
+
+
+/* <= 768px (Mobile & ipad) */
+/* Common CSS */
+.frame-white{
   padding:16px;
   margin-bottom: 60px;
   border:1px solid #DBDBDB;
@@ -23,51 +71,39 @@
   background-color: #FFFFFF;
 }
 
-body{
-  height:2000px;
-  background-color: #FAFAFA;
-}
-
-/*=================================
- Header
-  -Title
-  -User search
-  -menu
-===================================*/
-header.instagram-header{
-  position: fixed;
+/* Header */
+header{
+  position: sticky;
   z-index: 1;
   top:0;
   width:100%;
+  margin-bottom: 1px;
   border-bottom: 1px solid #DBDBDB;
   background-color: #FFFFFF;
 }
 
-.header-container{
+header .col-12{
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width:935px;
   height:54px;
   margin:0 auto;
 }
 
-
 /* Header - Title */
-.title a{
+.instagram-title a{
   display: flex;
   justify-content: center;
   align-items: center;
   width:103px;
 }
 
-.title img{
+.instagram-title img{
   display: block;
   width:100%;
   height:auto;
 }
-
 
 /* Header - Menu */
 .menu{
@@ -101,93 +137,37 @@ header.instagram-header{
   cursor: pointer;
 }
 
-
 /* Header - User search */
 .user-search{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display:none;
 }
 
-.user-search input{
-  width: 215px;
-  height:28px;
-  padding-left: 26px;
-  border: 1px solid #DBDBDB;
-  border-radius: 3px;
-  background-color: #FAFAFA;
-  outline: none;
-}
 
-.user-search-option i,
-.user-search-cancel{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
+
+/* Main */
+body > .container{
   padding:0;
 }
-
-.user-search-option i{
-  font-size: 10px;
-  color:#C7C7C7;
-  left:10px;
+/* Main - New-story */
+main .row:first-child{
+  margin-bottom: 24px;
 }
 
-.user-search-cancel{
-  right:7px;
-  width:14px;
-  height:14px;
-  padding-left: 1px;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  background-color:#C7C7C7;
-  color:#FFFFFF;
-  cursor: pointer;
-}
-
-/* =================================================
-Main
-  -Section1) Follow lists
-  -Section2) Follow feed
-     o Article) Follow Feed Lists
-      * Header) User profile
-      * Upload image
-      * Section) Feed Content
-        ㄴHeader) User action
-        ㄴSection) User comment
-      * Footer) Leave comment
-  -footer) Recommend Card
-    * Header)
-    * Section) Recommend User Card
-==================================================== */
-main{
-  padding-top: 84px;
-}
-
-main > div{
-  display: flex;
-  justify-content: center;
-}
-
-.main-content{
-  margin-right: 30px;
-}
-/* Section1) Follow list */
-.follow-list{
+.new-story{
   display: flex;
   align-items: center;
-  width:614px;
   height:118px;
-  margin-bottom: 24px;
 }
 
 .user-card{
   margin-right: 18px;
 }
 
-.user-status{
+.user-card:last-child{
+  margin-right: 0;
+}
+
+.new-mark{
   width:66px;
   height:66px;
   padding:2px;
@@ -232,19 +212,14 @@ main > div{
 }
 
 
-/* Section2) Follow feed */
-
-
-
-/* Article(Follow Feed Lists) */
-.follow-feed-lists{
+/* Main - Feed Lists */
+.feed-lists{
   padding:0;
 }
 
-
-/* Article - Header(User Profile) */
+/* Main - Feed Lists(Header) */
 .feed-header,
-.user-profile a{
+.feed-user a{
   display: flex;
   align-items: center;
 }
@@ -252,9 +227,11 @@ main > div{
 .feed-header{
   position: relative;
   padding:16px;
+  border:none;
+  background-color: transparent;
 }
 
-.user-profile a{
+.feed-user a{
   font-size: 14px;
   font-weight: 600;
   line-height: 1.285714285714286;
@@ -262,7 +239,7 @@ main > div{
   color:#262626;
 }
 
-.profile-image-frame{
+.image-frame{
   position: relative;
   width:32px;
   height:32px;
@@ -271,7 +248,7 @@ main > div{
   overflow: hidden;
 }
 
-.profile-image-frame img{
+.image-frame img{
   position: absolute;
   width:32px;
   height:auto;
@@ -287,7 +264,7 @@ main > div{
   border: none;
   outline: none;
   cursor:pointer;
-  background-color: #FFFFFF;
+  background-color: transparent;
   background-image: url('./assets/option.png');
   background-repeat: no-repeat;
   background-size: 16px 16px;
@@ -295,7 +272,9 @@ main > div{
 }
 
 
-/* Article - Image */
+
+
+/* Main - Feed Lists(Section) */
 .upload-image{
   display: block;
   width:100%;
@@ -303,16 +282,11 @@ main > div{
   margin-bottom: 4px;
 }
 
-
-/* Article - Section */
 .feed-content{
   padding:0 16px 8px 16px;
-  border-bottom:1px solid #EDEDED;
 }
 
-
-/* Article - Section - Header(User action) */
-.feed-content-header{
+.feed-button-group{
   margin-bottom: 8px;
 }
 
@@ -329,6 +303,7 @@ main > div{
 .user-action > button{
   position: relative;
   right:-8px;
+  background-color: transparent;
 }
 
 .user-action-items{
@@ -337,7 +312,7 @@ main > div{
   padding:8px;
   border: none;
   outline: none;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   cursor: pointer;
 }
 
@@ -354,15 +329,13 @@ main > div{
   color:#262626;
 }
 
-
-/* Article - Section - Section(User comment) */
-.user-comment ol{
+.feed-comment ol{
   padding:0;
   list-style: none;
   font-size: 14px;
 }
 
-.user-comment-lists{
+.feed-comment-lists{
   position: relative;
   display: flex;
   align-items: center;
@@ -370,7 +343,7 @@ main > div{
   text-align: left;
 }
 
-.user-comment-lists a{
+.feed-comment-lists a{
   margin-right: 4px;
   font-weight: 600;
   color:#262626;
@@ -378,26 +351,25 @@ main > div{
   text-decoration: none;
 }
 
-.user-comment-lists::after{
+.feed-comment-lists::after{
   content:'';
   display: inline-block;
   position: absolute;
   right:0;
   width:12px;
   height:12px;
-  background-color: #FFFFFF;
   background-image: url('./assets/feed.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.user-comment ol li:first-child::after{
+.feed-comment ol li:first-child::after{
   content:'';
   display: inline-block;
   background-image: url('');
 }
 
-.user-comment-upload-time{
+.feed-comment-upload-time{
   display: inline-block;
   font-size: 10px;
   line-height: 1.7;
@@ -405,41 +377,164 @@ main > div{
 }
 
 
-/* Article - Footer(Leave comment) */
-.leave-comment{
-  display: flex;
-  align-items: center;
-  height: 55px;
-  padding:0 16px;
+/* Main - Feed Lists(Footer) */
+.feed-content-footer{
+  display: none;
 }
 
-.leave-comment textarea{
-  width:100%;
-  height: 1.5em;
-  resize: none;
-  overflow: auto;
-  padding: 0;
-  border: none;
-  outline:none;
-  font-family: "Malgun Gothic";
-  font-size: 14px;
-  line-height: 1.5;
+
+/* >= 768px (Desktop) */
+@media screen and (min-width:768px) {
+  /* Common CSS */
+  .square-frame{
+    padding:16px;
+    margin-bottom: 60px;
+    border:1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+  }
+
+
+  /* Header */
+  header{
+    margin-bottom: 30px;
+  }
+  /* Header - User search */
+  .user-search{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .user-search input{
+    width: 215px;
+    height:28px;
+    padding-left: 26px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    outline: none;
+  }
+
+  .user-search-etc i,
+  .user-search-cancel{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding:0;
+  }
+
+  .user-search-etc i{
+    font-size: 10px;
+    color:#C7C7C7;
+    left:10px;
+  }
+
+  .user-search-cancel{
+    right:7px;
+    width:14px;
+    height:14px;
+    padding-left: 1px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color:#C7C7C7;
+    color:#FFFFFF;
+    cursor: pointer;
+  }
+
+  /* Main */
+  body > .container{
+    padding:0 15px;
+  }
+
+  .feed-header{
+    border-bottom: 1px solid #DBDBDB;
+  }
+
+  .user-action-items{
+    background-color: #FFFFFF;
+  }
+
+
+
+  /* Main - Feed Lists(Section) */
+  .feed-content{
+    border-bottom:1px solid #EDEDED;
+  }
+
+
+  /* Main - Feed Lists(Footer) */
+  .feed-content-footer{
+    display: block;
+  }
+
+  .leave-comment{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding:0 16px;
+  }
+
+  .leave-comment textarea{
+    width:100%;
+    height: 1.5em;
+    resize: none;
+    overflow: auto;
+    padding: 0;
+    border: none;
+    outline:none;
+    font-family: "Malgun Gothic";
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .leave-comment textarea::placeholder{
+    font-family: "Malgun Gothic";
+  }
+
+  .leave-comment-button{
+    width:28px;
+    padding: 0;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+    color:#B1DEFC;
+    cursor: pointer;
+  }
+
 }
 
-.leave-comment textarea::placeholder{
-  font-family: "Malgun Gothic";
-}
 
-.leave-comment-button{
-  width:28px;
-  padding: 0;
-  border:none;
-  outline: none;
-  background-color: transparent;
-  font-weight: 600;
-  color:#B1DEFC;
-  cursor: pointer;
-}
+
+
+
+
+
+
+
+
+
+
+/* =================================================
+Main
+  -Section1) Follow lists
+  -Section2) Follow feed
+     o Article) Follow Feed Lists
+      * Header) User profile
+      * Upload image
+      * Section) Feed Content
+        ㄴHeader) User action
+        ㄴSection) User comment
+      * Footer) Leave comment
+  -footer) Recommend Card
+    * Header)
+    * Section) Recommend User Card
+==================================================== */
+
 
 /* Footer - Header */
 footer.square-frame {
