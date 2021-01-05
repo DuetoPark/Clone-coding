@@ -85,6 +85,16 @@ li.feed-option-lists{
 
 /* Account Modal */
 /* modal wrap */
+.account-modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .account-modal-content{
   height:236px;
   border-radius: 12px;
@@ -107,7 +117,7 @@ li.feed-option-lists{
 /* Modal Header - Close Button */
 .account{
   position: absolute;
-  right: 0;
+  right: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
