@@ -369,28 +369,11 @@
                 <strong>박인혜</strong>
               </div>
 
-              <!-- account modal button -->
               <button type="button"
-                class="account-modal btn-white"
-                aria-label="계정 전환">전환</button>
-
-              <div class="modal-wrap">
-                <div class="account-modal-content">
-                  <header>
-                    계정 전환
-                    <button type="button" class="account modal_close">&times;</button>
-                  </header>
-
-                  <div class="account-modal">
-                    <span class="sr-only">Log in Account</span>
-                    <img src="./assets/default.png" alt="duetopark">
-                    duetopark
-                    <span class="checked"></span>
-                  </div>
-
-                  <button type="button" class="log-in">기존 계정으로 로그인</button>
-                </div>
-              </div>
+                class="account-modal-button btn-white"
+                aria-label="계정 전환">
+                전환
+              </button>
             </section>
 
             <section class="aside-recommend">
@@ -433,6 +416,39 @@
           </aside>
         </div>
       </div>
+
+
+      <div class="account-modal-container">
+        <div class="account-modal-content">
+          <header>
+            계정 전환
+            <button type="button" class="account modal_close">
+              <svg fill='#FFFFFF' height='18' width='18' viewBpx='0 0 18 18'>
+                <line x1="0" y1="0" x2="18" y2="18"
+                  stroke-linecap="round" stroke="#262626" stroke-width="2"/>
+                <line x1="0" y1="18" x2="18" y2="0"
+                  stroke-linecap="round" stroke="#262626" stroke-width="2"/>
+              </svg>
+            </button>
+          </header>
+
+          <div class="account-modal">
+            <span class="sr-only">Log in Account</span>
+            <img src="./assets/default.png" alt="duetopark">
+            duetopark
+            <div class="checked">
+              <svg fill='#0095f6' height='24' width='24' viewBpx='0 0 24 24'>
+                <line x1="6" y1="12" x2="10" y2="16"
+                  stroke-linecap="round" stroke="#FFFFFF" stroke-width="2"/>
+                <line x1="10" y1="16" x2="18" y2="8"
+                  stroke-linecap="round" stroke="#FFFFFF" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <button type="button" class="log-in">기존 계정으로 로그인</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://kit.fontawesome.com/e1a55f7ebf.js" crossorigin="anonymous"></script>
@@ -452,6 +468,29 @@
         });
       document.querySelector('.modal_close').addEventListener('click', offClick);
       };
+
+
+      // Account modal Event
+      let accountButton = document.querySelector('.account-modal-button');
+      let accountModal = document.querySelector('.account-modal-container');
+      let accountClose = document.querySelector('button.account.modal_close');
+
+      let openModal = function () {
+        accountModal.style.display = 'block';
+      }
+      function openModalHandler () {
+        openModal();
+      }
+      accountButton.addEventListener('click', openModalHandler);
+
+
+      let closeModal = function () {
+        accountModal.style.display = 'none';
+      }
+      function closeModalHandler () {
+        closeModal();
+      }
+      accountClose.addEventListener('click', closeModalHandler);
     </script>
   </body>
 </html>
