@@ -160,7 +160,7 @@ header .col-12{
   border: none;
   border-radius: 50%;
   outline: none;
-  background-image: url('./assets/user.jpg');
+  background-image: url('../assets/images/user.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -205,7 +205,7 @@ main .row:first-child{
   padding:2px;
   margin: 0 auto 4px auto;
   border-radius: 50%;
-  background-image: url('./assets/status.png');
+  background-image: url('../assets/images/status.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -297,7 +297,7 @@ main .row:first-child{
   outline: none;
   cursor:pointer;
   background-color: transparent;
-  background-image: url('./assets/option.png');
+  background-image: url('../assets/images/option.png');
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: center center;
@@ -403,7 +403,7 @@ main > section .row:last-child{
   width:12px;
   height:12px;
   margin: 3px 0 3px 8px;
-  background-image: url('./assets/feed.png');
+  background-image: url('../assets/images/feed.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -479,15 +479,15 @@ footer.frame-white {
 }
 
 #soup-jo{
-  background-image: url('./assets/soup-jo.jpg');
+  background-image: url('../assets/images/soup-jo.jpg');
 }
 
 #standing-min{
-  background-image: url('./assets/standing-min.jpg');
+  background-image: url('../assets/images/standing-min.jpg');
 }
 
 #spongebob{
-  background-image: url('./assets/spongebob.jpg');
+  background-image: url('../assets/images/spongebob.jpg');
 }
 
 .recommend-user-id{
@@ -520,7 +520,7 @@ footer.frame-white {
   display: block;
   width:18px;
   height: 18px;
-  background-image: url('./assets/badge.png');
+  background-image: url('../assets/images/badge.png');
 }
 
 .follow-button{
