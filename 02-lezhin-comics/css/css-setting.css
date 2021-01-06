@@ -1,0 +1,79 @@
+/* 구조
+css/default/ reset-css
+css/common/ common-css, bootstrap */
+
+
+/* 폰트
+-기본글꼴: Noto Sans KR(Regular, Medium) - CDN으로 불러와 사용
+-기본크기: 14px;
+-기본두께: 400; */
+
+
+/* 반응형 분기
+-모바일 <= 640px;
+-테블릿 <= 960px;
+-데스트탑 <=1280px;
+-와이드데스크탑 >=1280px */
+
+
+/* 색상
+배경: #FFFFFF;
+
+로고빨강: #ED1C24;
+랭킹 활성 빨강: #EB0026;
+랭킹: #EFF1F4;
+footer-mobile: #f7f8f9;
+footer-desktop: #3A3A3A, #313131;
+
+
+글씨색: #000000;
+
+더보기: #5A719A;
+작가명: #333333;
+xx화 무료: #707070;
+footer: #333333, #727272;
+*/
+
+
+/* Border
+border-radius
+-랭킹: 20px;
+-picture: 2px;
+
+Border
+-스토어: 1px solid #dbdee3; */
+
+
+/* 클래스명 지정
+common
+  -레이아웃(header, footer, main)
+  -layout: [최상위 폴더명]-[레이아웃 태그명]
+      예시) .lezhin-header, .lezhin-main, .lezhin-footer
+  -layout 내부: [최상위 폴더명]-[레이아웃 태그명]-[자식요소 태그명/데이터 성격]
+      #제목: title
+      #부제목: subtitle
+      #설명: desc
+        예시) .lezhin-header-title, .lezhin-header-nav, .lezhin-footer-cite
+      #ol, ul: [최상위 폴더명]-[레이아웃 태그명]-list
+      #li: [최상위 폴더명]-[레이아웃 태그명]-list-items
+        예시) .lezhin-header-nav-list, .lezhin-header-nav-list-items
+
+  -대상: main 태그 내부
+      #제목: main-title
+             main-article-title
+      #부제목: main-article-subtitle
+      #설명: main-article-desc
+      #나머지: mian-article-[태그명]
+
+
+
+개별파일
+  -대상: main 태그 내부
+  -규칙
+    #설명: [페이지 타이틀]-[article 주제]-desc
+              예시) .meta-type-desc
+    #예시: [페이지 타이틀]-[article 주제]-example
+    #내용: [페이지 타이틀]-[article 주제]-content
+    #가방같은 존재: [페이지 타이틀]-[article 주제]-container
+    #img/input div: [페이지 타이틀]-[*]-img-group
+    #나머지: [페이지 타이틀]-[*]-[태그명/데이터 성격] */
