@@ -135,12 +135,14 @@
 }
 
 
-/* Section - Main-Section-Banner */
-.main-section-banner{
-  position: relative; top:0; left: 0;
-  margin-bottom: 16px;
+/* Section */
+.main-section{
+  padding-top: 16px;
+  margin-bottom: 24px;
 }
 
+
+/* Section - Main-Section-Banner */
 .banner-images{
   width: 100%;
 }
