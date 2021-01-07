@@ -1,3 +1,168 @@
-.main-section-title{
+/* Header */
+.lezhin-header{
+  padding: 8px 0;
+}
 
+
+/* div */
+.lezhin-header > div{
+  display: flex;
+  padding: 0 8px;
+  margin-bottom: 8px;
+}
+
+
+/* LOGO */
+.lezhin-header-anchor{
+  position: relative; left: 0; top: 0;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  margin-right: auto;
+}
+
+.lezhin-header-anchor::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ED1C24;
+}
+
+.lezhin-header-anchor::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/jaymee.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 22px;
+  background-position: center center;
+}
+
+.lezhin-header-title{
+  position: absolute;
+  top: -100vw;
+  left: -100vh;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+
+/* DIV.lezhin-header-button-group */
+.lezhin-header-button-group{
+  display: flex;
+}
+
+.search-button{
+  background-image: url("../../assets/images/icon-search.svg");
+}
+
+.move-to-challenge{
+  background-image: url("../../assets/images/icon-challenge.svg");
+}
+
+.login-button{
+  position: relative; top: 0; left: 0;
+  width: 72px;
+  height: 48px;
+  padding: 0 8px;
+  background-image: url("../../assets/images/icon-login.svg");
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-button > span{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.search-button,
+.move-to-challenge,
+.login-button{
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* Navigation */
+.lezhin-header-nav-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lezhin-header-nav-list-items{
+  position: relative; top: 0; left: 0;
+  display: flex;
+  width: 100%;
+}
+
+.lezhin-header-nav-list-items > a{
+  position: relative; top: 0; left: 0;
+  padding: 0 8px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3.428571428571429;
+  white-space: nowrap;
+}
+
+
+/* Header-button */
+.header-button{
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+/* Main */
+.lezhin-main{
+  padding: 0 8px;
+  margin-bottom: 48px;
+}
+
+
+/* Section - Main-Section-Banner */
+.main-section-banner{
+  position: relative; top:0; left: 0;
+  margin-bottom: 16px;
+}
+
+.banner-images{
+  width: 100%;
+}
+
+.slider-button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../../assets/images/banner_arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pre-button{
+  background-position: right;
+  left: 32px;
+}
+
+.next-button{
+  right: 32px;
 }
