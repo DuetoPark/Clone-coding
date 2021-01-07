@@ -1,0 +1,185 @@
+/* >=640px (태블릿) */
+@media screen and (min-width: 640px) {
+  /* Header */
+  .lezhin-header{
+    padding: 0 16px;
+  }
+
+  /* LOGO */
+  .lezhin-header-anchor{
+    left: -4px;
+  }
+
+  /* Navigation */
+  .lezhin-header-nav{
+    padding: 0 8px;
+  }
+
+
+  /* Main */
+  .lezhin-main{
+    padding: 0 16px;
+  }
+
+
+  /* Section - Main-Section-Banner */
+  .slider-button{
+    display: block;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  .banner:hover .slider-button{
+    opacity: 1;
+  }
+}
+
+
+/* >=960px (데스크탑) */
+@media screen and (min-width: 960px) {
+  /* Header */
+  .lezhin-header{
+    border-top: 24px solid rgba(0, 0, 0, 0);
+    border-bottom: 24px solid rgba(0, 0, 0, 0);
+  }
+
+  /* div */
+  .lezhin-header > div{
+    margin-bottom: 0;
+  }
+
+
+  /* LOGO */
+  .lezhin-header-anchor{
+    position: relative;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+  }
+
+  .lezhin-header-anchor::after{
+    background-size: 27px 29px;
+  }
+
+
+  /* DIV.lezhin-header-button-group */
+  .lezhin-header-button-group{
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 285px;
+  }
+
+  .search-button{
+    order: 2;
+  }
+
+  .move-to-challenge{
+    order: 1;
+    width: 110px;
+    height: 32px;
+    border-radius: 100px;
+    background-color: #000;
+    background-image: none;
+  }
+
+  .move-to-challenge::before{
+    content: '레진 챌린지';
+    position: absolute;
+    left: 36px;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+    line-height: 2.666666666666667;
+    color: #FFF;
+  }
+
+  .move-to-challenge::after{
+    content: '';
+    position: relative;
+    left: 4px;
+    top: 0;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/images/icon-challenge-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center center;
+  }
+
+  .login-button{
+    order: 3;
+    width: 86px;
+    padding: 0;
+    background-image: url("../../assets/images/icon-login-desktop.svg");
+  }
+
+  .login-button > span{
+    font-size: 12px;
+    line-height: 2.25;
+  }
+
+
+  /* Navigation */
+  .lezhin-header-nav{
+    position: absolute;
+    left: 128px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 360px;
+    padding: 0;
+  }
+
+  .lezhin-header-nav-list-items{
+    width: auto;
+    margin-right: 12px;
+  }
+
+  .lezhin-header-nav-list-items > a{
+    margin: 0;
+  }
+
+  .lezhin-header-nav-list-items > a.up-icon{
+    margin-right: 8px;
+  }
+
+
+
+  /* Main */
+  .lezhin-main{
+    padding: 0 16px;
+  }
+}
+
+
+/* >=1280px (와이드 데스크탑) */
+@media screen and (min-width: 1280px) {
+  /* Header */
+  .lezhin-header{
+    padding: 0 30.5px;
+  }
+
+  /* div */
+  .lezhin-header > div{
+    padding: 0 16px;
+  }
+
+  /* Navigation */
+  .lezhin-header-nav{
+    left: 158.5px;
+  }
+
+  .lezhin-header-nav-list-items{
+    margin-right: 10px;
+  }
+
+
+
+  /* Main */
+  .lezhin-main{
+    padding: 0 16px;
+  }
+}
