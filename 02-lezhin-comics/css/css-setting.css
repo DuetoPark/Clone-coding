@@ -46,7 +46,14 @@ Border
 
 /* 여백
 요소 위 여백 - padding
-요소 아래 여백 - margin */
+요소 아래 여백 - margin
+요소 위아래 동일 여백 - border */
+
+
+/* 가상요소
+::before - icon
+::after - 메뉴 하단 바, 백그라운드 이미지 icon */
+
 
 
 /* 클래스명 지정
