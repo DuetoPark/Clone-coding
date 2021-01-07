@@ -9,60 +9,76 @@
     <title>레진코믹스 클론코딩</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/default/reset-css.css">
     <link rel="stylesheet" href="../css/common/grid.min.css">
     <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/main/main-x-login.css">
+    <link rel="stylesheet" href="../css/icon/icon.css">
   </head>
   <body>
     <header class="lezhin-header">
-      <h1>
-        <!-- before와 after로 눈에 보이는 스타일 -->
-        <!-- a태그 자체는 1x1크기로 만들자 -->
-        <a class="lezhin-header-title" href="#">
-          레진코믹스
+      <div>
+        <!-- 로고 -->
+        <a class="lezhin-header-anchor" href="#">
+          <h1 class="lezhin-header-title">레진코믹스</h1>
         </a>
-      </h1>
+
+        <div class="lezhin-header-button-group">
+          <!-- 검색 모달 활성화 버튼 -  -->
+          <button class="header-button search-button"
+            type="button"
+            aria-label="검색하기"
+          ></button>
+          <!-- 챌린지 화면으로 이동 -->
+          <a class="header-button move-to-challenge"
+            href="#"
+            aria-label="챌린지로 이동"
+          ></a>
+          <!-- 로그인 모달 활성화 버튼 -->
+          <button class="login-button"
+            type="button"
+            aria-label="로그인"
+          ><span>전연령</span></button>
+        </div>
+      </div>
 
       <nav class="lezhin-header-nav">
-        <h2>메뉴</h2>
+        <h2 class="sr-only">메뉴</h2>
         <ol class="lezhin-header-nav-list">
           <li class="lezhin-header-nav-list-items"><a href="#">연재</a></li>
           <li class="lezhin-header-nav-list-items"><a href="#">랭킹</a></li>
           <li class="lezhin-header-nav-list-items"><a href="#">무료</a></li>
-          <li class="lezhin-header-nav-list-items"><a href="#">SALE</a><span>up</span></li>
+          <li class="lezhin-header-nav-list-items"><a class='up-icon' href="#">SALE</a></li>
           <li class="lezhin-header-nav-list-items"><a href="#">단행본</a></li>
           <li class="lezhin-header-nav-list-items"><a href="#">완결</a></li>
         </ol>
       </nav>
-
-      <div class="lezhin-header-button-group">
-        <!-- 검색 활성화 버튼 - 모달 -->
-        <button type="button"></button>
-        <!-- 챌린지 화면으로 이동 -->
-        <a href="#"></a>
-        <!-- 로그인 화면으로 이동 -모달 -->
-        <button type="button"></button>
-      </div>
     </header>
 
-    <main class="container lezhin-main">
-      <section class="">
-        <h1>메인 배너</h1>
+    <main class="lezhin-main">
+      <section class="main-section-banner">
+        <h1 class="sr-only">메인 배너</h1>
         <!-- 배너 이미지 리스트 -->
-        <ol>
-          <li>
+        <ol class="main-section-list">
+          <li class="main-section-list-items">
             <picture>
+              <source media="(min-width: 640px)" srcset="../assets/images/배너-데스크탑.png"/>
               <source />
-              <source />
-              <img src="" alt="">
+              <img class="banner-images" src="../assets/images/배너.png" alt="">
             </picture>
           </li>
         </ol>
         <!-- 이전 버튼 -->
-        <button type="button"></button>
+        <button class="slider-button pre-button"
+          type="button"
+          aria-label="슬라이드 이전"
+        ></button>
         <!-- 다음 버튼 -->
-        <button type="button"></button>
+        <button class="slider-button next-button"
+          type="button"
+          aria-label="슬라이드 다음"
+        ></button>
       </section>
 
       <section class="ranking">
