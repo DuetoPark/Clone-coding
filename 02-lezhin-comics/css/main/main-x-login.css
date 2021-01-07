@@ -4,3 +4,31 @@
   padding-top: 0;
   margin-bottom: 16px;
 }
+
+/* Section - Main-Section-Banner */
+.banner-images{
+  width: 100%;
+}
+
+.slider-button{
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../../assets/images/banner_arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pre-button{
+  background-position: right;
+  left: 32px;
+}
+
+.next-button{
+  right: 32px;
+}

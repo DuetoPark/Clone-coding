@@ -1,55 +1,64 @@
 /* >=640px (태블릿) */
 @media screen and (min-width: 640px) {
-  /* Header */
+  /* Layout */
+  /* Layout - Header */
   .lezhin-header{
     padding: 0 16px;
   }
 
-  /* LOGO */
-  .lezhin-header-anchor{
-    left: -4px;
-  }
-
-  /* Navigation */
-  .lezhin-header-nav{
-    padding: 0 8px;
-  }
-
-
-  /* Main */
+  /* Layout - Main */
   .lezhin-main{
     padding: 0 16px;
   }
 
 
-  /* Section - Main-Section-Banner */
-  .slider-button{
-    display: block;
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+
+  /* Header */
+  /* Header - LOGO */
+  .lezhin-header-anchor{
+    left: -4px;
   }
 
-  .banner:hover .slider-button{
-    opacity: 1;
+  /* Header - DIV.lezhin-header-button-group */
+  .lezhin-header-button-group{
+    right: -8px;
+  }
+
+  .move-to-challenge{
+    margin-right: 4px;
+  }
+
+  /* Header - Navigation */
+  .lezhin-header-nav{
+    padding: 0 2%;
   }
 }
 
 
 /* >=960px (데스크탑) */
 @media screen and (min-width: 960px) {
-  /* Header */
+  /* Layout */
+  /* Layout - Header */
   .lezhin-header{
     border-top: 24px solid rgba(0, 0, 0, 0);
     border-bottom: 24px solid rgba(0, 0, 0, 0);
   }
 
-  /* div */
+  /* Layout - Main-Section */
+  .main-section{
+    padding-top: 24px;
+    margin-bottom: 8px;
+  }
+
+
+
+  /* Header */
+  /* Header - div */
   .lezhin-header > div{
     margin-bottom: 0;
   }
 
-
-  /* LOGO */
+  /* Header - LOGO */
   .lezhin-header-anchor{
     position: relative;
     left: 0;
@@ -62,8 +71,7 @@
     background-size: 27px 29px;
   }
 
-
-  /* DIV.lezhin-header-button-group */
+  /* Header - DIV.lezhin-header-button-group */
   .lezhin-header-button-group{
     right: 0;
     justify-content: space-between;
@@ -71,14 +79,11 @@
     width: 285px;
   }
 
-  .search-button{
-    order: 2;
-  }
-
   .move-to-challenge{
     order: 1;
-    width: 110px;
+    width: 110.5px;
     height: 32px;
+    margin: 0;
     border-radius: 100px;
     background-color: #000;
     background-image: none;
@@ -99,7 +104,7 @@
   .move-to-challenge::after{
     content: '';
     position: relative;
-    left: 4px;
+    left: 6px;
     top: 0;
     display: block;
     width: 32px;
@@ -110,6 +115,11 @@
     background-position: center center;
   }
 
+  .search-button{
+    order: 2;
+    margin-right: 0;
+  }
+
   .login-button{
     order: 3;
     width: 86px;
@@ -118,12 +128,14 @@
   }
 
   .login-button > span{
+    left: 0px;
+    width: 58px;
+    padding: 0 12px;
     font-size: 12px;
     line-height: 2.25;
   }
 
-
-  /* Navigation */
+  /* Header - Navigation */
   .lezhin-header-nav{
     position: absolute;
     left: 128px;
@@ -138,48 +150,59 @@
     margin-right: 12px;
   }
 
-  .lezhin-header-nav-list-items > a{
-    margin: 0;
+  .lezhin-header-nav-list-items > a::after{
+    content: '';
+  }
+
+  .lezhin-header-nav-list-items > a:hover::after{
+    content: '';
+    display: inline;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-right: 8px solid #FFF;
+    border-left: 8px solid #FFF;
+    padding: 0 8px;
+    background-color: #000;
   }
 
   .lezhin-header-nav-list-items > a.up-icon{
     margin-right: 8px;
-  }
-
-
-
-  /* Main */
-  .lezhin-main{
-    padding: 0 16px;
   }
 }
 
 
 /* >=1280px (와이드 데스크탑) */
 @media screen and (min-width: 1280px) {
+  /* Layout */
+  .lezhin-header,
+  .lezhin-main{
+    max-width: 1212px;
+    margin: 0 auto;
+  }
+
+
+
   /* Header */
-  .lezhin-header{
-    padding: 0 30.5px;
-  }
-
-  /* div */
+  /* Header - div */
   .lezhin-header > div{
-    padding: 0 16px;
+    padding: 0;
   }
 
-  /* Navigation */
-  .lezhin-header-nav{
-    left: 158.5px;
+  /* Header - DIV.lezhin-header-button-group */
+  .login-button > span{
+    left: 0px;
+    width: 58px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 2.25;
   }
 
+  /* Header - Navigation */
   .lezhin-header-nav-list-items{
     margin-right: 10px;
-  }
-
-
-
-  /* Main */
-  .lezhin-main{
-    padding: 0 16px;
   }
 }

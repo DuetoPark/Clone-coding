@@ -1,0 +1,25 @@
+/* >=640px (태블릿) */
+@media screen and (min-width: 640px) {
+  /* Section - Main-Section-Banner */
+  .slider-button{
+    display: block;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  .banner:hover .slider-button{
+    opacity: 1;
+  }
+}
+
+
+/* >=960px (데스크탑) */
+@media screen and (min-width: 960px) {
+
+}
+
+
+/* >=1280px (와이드 데스크탑) */
+@media screen and (min-width: 1280px) {
+
+}
