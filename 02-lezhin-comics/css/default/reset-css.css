@@ -31,9 +31,11 @@ strong{
 textarea,
 button,
 input{
+  padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 dl,
