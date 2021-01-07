@@ -44,6 +44,11 @@ Border
 -스토어: 1px solid #dbdee3; */
 
 
+/* 여백
+요소 위 여백 - padding
+요소 아래 여백 - margin */
+
+
 /* 클래스명 지정
 common
   -레이아웃(header, footer, main)
