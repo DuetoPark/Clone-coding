@@ -1,3 +1,4 @@
+/* up - 빨간배경 */
 .up-icon::before{
   content: 'up';
   position: absolute;
@@ -13,4 +14,154 @@
   border-radius: 50%;
   background-color: #EB0026;
   color: #FFF;
+}
+
+/* up - 흰배경 */
+.up-icon-reverse{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-image: url("../../assets/images/icon-up.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 16px;
+}
+
+/* event */
+.event-icon{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background-image: url("../../assets/images/icon-event.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 32px 16px;
+}
+
+/* award */
+.award-icon{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/images/icon-award.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+}
+
+/* new */
+.new-icon{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  background-image: url("../../assets/images/icon-new.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 28px 16px;
+}
+
+/* zzz */
+.zzz-icon{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  background-image: url("../../assets/images/icon-zzz.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 28px 16px;
+}
+
+/* free 24h */
+.free-24h-icon{
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/images/icon-free-24h.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 24px;
+  opacity: 0.85;
+}
+
+
+
+
+/* 장르 */
+.daily-life::after,
+.bl::after,
+.fantasy::after,
+.romance::after,
+.drama::after,
+.gag::after,
+.action::after,
+.teens::after,
+.mystery::after,
+.gl::after{
+  font-size: 12px;
+  line-height: 1.333333333333333;
+  color: #333333;
+}
+
+
+.daily-life::after{
+  content: '일상';
+}
+
+.bl::after{
+  content: 'bl';
+  text-transform: uppercase;
+}
+
+.fantasy::after{
+  content: '판타지';
+}
+
+.romance::after{
+  content: '로맨스';
+}
+
+.drama::after{
+  content: '드라마';
+}
+
+.gag::after{
+  content: '개그';
+}
+
+.action::after{
+  content: '액션';
+}
+
+.teens::after{
+  content: '학원물';
+}
+
+.mystery::after{
+  content: '미스터리';
+}
+
+.gl::after{
+  content: '백합';
+}
+
+/* '**화 무료' */
+.article-work-desc-event::after{
+  content: '화 무료';
 }
