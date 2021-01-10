@@ -3,6 +3,14 @@ css/default/ reset-css
 css/common/ common-css, bootstrap */
 
 
+/* BreakPoint
+-모바일(<=640px)
+-아이패드(>640px)
+-데스크탑(>960px)
+-라지 데스크탑(>1053px) min-width: 1036px
+-엑스트라 라지 데스크탑(>1280px) min-width: 1212px */
+
+
 /* 폰트
 -기본글꼴: Noto Sans KR(Regular, Medium) - CDN으로 불러와 사용
 -기본크기: 14px;
