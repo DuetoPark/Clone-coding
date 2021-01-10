@@ -66,7 +66,6 @@
           <li class="main-section-list-items">
             <picture>
               <source media="(min-width: 640px)" srcset="../assets/images/배너-데스크탑.png"/>
-              <source />
               <img class="banner-images" src="../assets/images/배너.png" alt="">
             </picture>
           </li>
@@ -86,247 +85,321 @@
       <section class="main-section ranking">
         <h1 class="main-section-title">랭킹</h1>
 
-        <h2>랭킹 장르 선택</h2>
-        <ol class="rank-list">
-          <li class="rank-list-items"><a href="#">전체</a></li>
-          <li class="rank-list-items"><a href="#">로맨스</a></li>
-          <li class="rank-list-items"><a href="#">BL</a></li>
-          <li class="rank-list-items"><a href="#">드라마</a></li>
-          <li class="rank-list-items"><a href="#">판타지</a></li>
-          <li class="rank-list-items"><a href="#">개그</a></li>
-          <li class="rank-list-items"><a href="#">액션</a></li>
-          <li class="rank-list-items"><a href="#">학원</a></li>
-          <li class="rank-list-items"><a href="#">미스터리</a></li>
-          <li class="rank-list-items"><a href="#">일상</a></li>
-          <li class="rank-list-items"><a href="#">백합</a></li>
+        <h2 class="sr-only">랭킹 장르 선택</h2>
+        <ol class='type-list rank-list'>
+          <li><a class='type type-active' href="#">전체</a></li>
+          <li><a class='type' href="#">로맨스</a></li>
+          <li><a class='type' href="#">BL</a></li>
+          <li><a class='type' href="#">드라마</a></li>
+          <li><a class='type' href="#">판타지</a></li>
+          <li><a class='type' href="#">개그</a></li>
+          <li><a class='type' href="#">액션</a></li>
+          <li><a class='type' href="#">학원</a></li>
+          <li><a class='type' href="#">미스터리</a></li>
+          <li><a class='type' href="#">일상</a></li>
+          <li><a class='type' href="#">백합</a></li>
         </ol>
 
         <!-- 모바일&태블릿(<960px) 출력 -->
-        <div>
-          <h2>모바일 랭킹 실시간/신작/이벤트 확인</h2>
-          <div>
-            <button type="button">실시간</button>
-            <button type="button">신작</button>
-            <button type="button">이벤트</button>
-            <a href="#">더보기</a>
+        <div class="mobile-rank-button-group">
+          <h2 class='sr-only'>모바일 랭킹 실시간/신작/이벤트 확인</h2>
+          <div class="rank-button-group">
+            <button class="relative rank-button rank-active" type="button">실시간</button>
+            <button class="relative rank-button" type="button">신작</button>
+            <button class="relative rank-button" type="button">이벤트</button>
           </div>
+          <a class="more-button" href="#">더보기</a>
         </div>
 
-        <article class="">
-          <h2>전체 랭킹 실시간</h2>
-          <!-- 데스크탑(>=960px) 출력 -->
-          <div>
-            <h2 type="button">실시간</h2>
-            <a href="#">더보기</a>
-          </div>
-
-          <ol>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong> <!-- 순위 -->
-                <strong>-</strong> <!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>레바툰</h1>
-                <strong>레바</strong>
-                <div>236화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>박씨유대기</h1>
-                <strong>슬라정</strong>
-                <div>125화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>원존: 용의 비상</h1>
-                <strong>천잠토두, Dr.대길</strong>
-                <div>3화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-          </ol>
-        </article>
-
-        <article class="">
-          <h2>전체 랭킹 신작</h2>
-          <!-- 데스크탑(>=960px) 출력 -->
-          <div>
-            <h2 type="button">신작</h2>
-            <a href="#">더보기</a>
-          </div>
-
-          <ol>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>인시크릿</h1>
-                <strong>이파도</strong>
-                <div>2화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>라온의 남자</h1>
-                <strong>릴리</strong>
-                <div>1화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>레그널 트리거</h1>
-                <strong>kalma</strong>
-                <div>84화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-          </ol>
-        </article>
-
-        <article class="">
-          <h2>전체 랭킹 이벤트</h2>
+        <div>
+          <article class="rank-real-time">
+            <h2 class="sr-only">전체 랭킹 실시간</h2>
             <!-- 데스크탑(>=960px) 출력 -->
-          <div>
-            <h2 type="button">이벤트</h2>
-            <a href="#">더보기</a>
-          </div>
+            <div class="article-title-group desktop-rank-title-group">
+              <h2 class="article-title">실시간</h2>
+              <a class="more-button" href="#">더보기</a>
+            </div>
 
-          <ol>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>차린 건 없지만</h1>
-                <strong>심모람</strong>
-                <div>52화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>달콤한 남자</h1>
-                <strong>해진</strong>
-                <div>13화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-            <li>
-              <div>
-                <picture>
-                  <source />
-                  <source />
-                  <img src="" alt=""/>
-                </picture>
-                <span></span> <!-- 시계모양 svg -->
-              </div>
-              <div>
-                <strong>1</strong><!-- 순위 -->
-                <strong>-</strong><!-- 순위변동 -->
-              </div>
-              <div>
-                <h1>붉은 실을 조심하세요</h1>
-                <strong>신지상, 유다, 큐민, 천지안</strong>
-                <div>5화</div>
-              </div>
-              <a href="#"></a>
-            </li>
-          </ol>
-        </article>
+            <ol class="article-work-list">
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">1</strong> <!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong> <!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only up-icon-reverse"
+                      aria-label="최신화 업데이트"
+                    ></strong>
+                    <h1 class="article-work-desc-title">레바툰</h1>
+                  </div>
+                  <p class="article-work-desc-author daily-life">
+                    레바
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">236</p>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">2</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only event-icon"
+                      aria-label="이벤트 진행 중"
+                    ></strong>
+                    <strong class="sr-only award-icon"
+                      aria-label="이벤트 진행 중"
+                    ></strong>
+                    <h1 class="article-work-desc-title">박씨유대기</h1>
+                  </div>
+                  <p class="article-work-desc-author gag">
+                    슬라정
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">125</p>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">3</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <h1 class="article-work-desc-title">원존: 용의 비상</h1>
+                  </div>
+                  <p class="article-work-desc-author fantasy">
+                    천잠토두, Dr.대길
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">3</p>
+                </div>
+                <a href="#"></a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="rank-new">
+            <h2 class="sr-only">전체 랭킹 신작</h2>
+            <!-- 데스크탑(>=960px) 출력 -->
+            <div class="article-title-group desktop-rank-title-group">
+              <h2 class="article-title">신작</h2>
+              <a class="more-button" href="#">더보기</a>
+            </div>
+
+            <ol class="article-work-list">
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">1</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only new-icon"
+                      aria-label="신작"
+                    ></strong>
+                    <h1 class="article-work-desc-title">인시크릿</h1>
+                  </div>
+                  <p class="article-work-desc-author bl">
+                    이파도
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">1</p>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">2</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only new-icon"
+                      aria-label="신작"
+                    ></strong>
+                    <strong class="sr-only up-icon-reverse"
+                      aria-label="최신화 업데이트"
+                    ></strong>
+                    <h1 class="article-work-desc-title">라온의 남자</h1>
+                  </div>
+                  <p class="article-work-desc-author bl">
+                    릴리
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <div class="article-work-desc-event">1</div>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">3</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only new-icon"
+                      aria-label="신작"
+                    ></strong>
+                    <h1 class="article-work-desc-title">레그널 트리거</h1>
+                  </div>
+                  <p class="article-work-desc-author fantasy">
+                    kalma
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">84</p>
+                </div>
+                <a href="#"></a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="rank-event">
+            <h2 class="sr-only">전체 랭킹 이벤트</h2>
+              <!-- 데스크탑(>=960px) 출력 -->
+            <div class="article-title-group desktop-rank-title-group">
+              <h2 class="article-title">이벤트</h2>
+              <a class="more-button" href="#">더보기</a>
+            </div>
+
+            <ol class="article-work-list">
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group relative">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">1</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only event-icon"
+                      aria-label="이벤트 진행 중"
+                    ></strong>
+                    <strong class="sr-only up-icon-reverse"
+                      aria-label="최신화 업데이트"
+                    ></strong>
+                    <h1 class="article-work-desc-title">차린 건 없지만</h1>
+                  </div>
+                  <p class="article-work-desc-author daily-life">
+                    심모람
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">52</p>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group relative">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">2</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group relative">
+                    <strong class="sr-only event-icon"
+                      aria-label="이벤트 진행 중"
+                    ></strong>
+                    <h1 class="article-work-desc-title">달콤한 남자</h1>
+                  </div>
+                  <p class="article-work-desc-author bl">
+                    해진
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">13</p>
+                </div>
+                <a href="#"></a>
+              </li>
+              <li class="article-work-list-items">
+                <div class="article-work-thumbnail-group">
+                  <picture>
+                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                  </picture>
+                  <span></span> <!-- 시계모양 svg -->
+                </div>
+                <div class="article-work-rank-group">
+                  <strong class="article-work-rank">3</strong><!-- 순위 -->
+                  <strong class="article-work-rank-change">-</strong><!-- 순위변동 -->
+                </div>
+                <div class="article-work-desc">
+                  <div class="article-work-desc-title-group">
+                    <strong class="sr-only event-icon"
+                      aria-label="이벤트 진행 중"
+                    ></strong>
+                    <strong class="sr-only up-icon-reverse"
+                      aria-label="최신화 업데이트"
+                    ></strong>
+                    <h1 class="article-work-desc-title">붉은 실을 조심하세요</h1>
+                  </div>
+                  <p class="article-work-desc-author romance">
+                    신지상, 유다, 큐민, 천지안
+                    <span aria-label="장르">/</span>
+                  </p>
+                  <p class="article-work-desc-event">5</p>
+                </div>
+                <a href="#"></a>
+              </li>
+            </ol>
+          </article>
+        </div>
       </section>
 
       <section class="main-section">
@@ -1312,42 +1385,42 @@
         <img src="" alt="">
         <a href="#"></a>
       </div>
-
-      <!-- App -->
-      <aside>
-        <h2 class="main-aside-title">오직 app에서만 만날 수 있는 혜택!!</h2>
-        <div>
-          <div>
-            <picture>
-              <source />
-              <source />
-              <img src="" alt="">
-            </picture>
-          </div>
-          <a href="#"></a>
-        </div>
-        <div>
-          <div>
-            <picture>
-              <source />
-              <source />
-              <img src="" alt="">
-            </picture>
-          </div>
-          <a href="#"></a>
-        </div>
-        <div>
-          <div>
-            <picture>
-              <source />
-              <source />
-              <img src="" alt="">
-            </picture>
-          </div>
-          <a href="#"></a>
-        </div>
-      </aside>
     </main>
+
+    <!-- App -->
+    <aside class="lezhin-aside">
+      <h2 class="main-aside-title">오직 app에서만 만날 수 있는 혜택!!</h2>
+      <div>
+        <div>
+          <picture>
+            <source />
+            <source />
+            <img src="" alt="">
+          </picture>
+        </div>
+        <a href="#"></a>
+      </div>
+      <div>
+        <div>
+          <picture>
+            <source />
+            <source />
+            <img src="" alt="">
+          </picture>
+        </div>
+        <a href="#"></a>
+      </div>
+      <div>
+        <div>
+          <picture>
+            <source />
+            <source />
+            <img src="" alt="">
+          </picture>
+        </div>
+        <a href="#"></a>
+      </div>
+    </aside>
 
     <footer class="lezhin-footer">
       <div class="">
