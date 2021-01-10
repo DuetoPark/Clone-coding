@@ -11,6 +11,11 @@
     padding: 0 16px;
   }
 
+  /* Layout - Aside */
+  .lezhin-aside{
+    padding: 0 16px;
+  }
+
 
 
   /* Header */
@@ -50,6 +55,27 @@
     margin-bottom: 8px;
   }
 
+  /* Layout - Aside */
+  .lezhin-aside{
+    padding: 0 16px;
+    padding-top: 140px;
+    margin-bottom: 60px;
+  }
+
+  /* Layout - Footer */
+  .lezhin-footer{
+    padding: 0;
+  }
+
+
+
+  /* Main */
+  /* Main - Section-Title */
+  .main-section-title{
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
 
   /* Header */
@@ -172,16 +198,87 @@
   .lezhin-header-nav-list-items > a.up-icon{
     margin-right: 8px;
   }
+
+
+
+  /* Main */
+  /* Main - Article*/
+  .article-title{
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  /* Main - Article-work */
+  .article-work-list-items{
+    width: 100%;
+    height: 84px;
+    margin-bottom: 16px;
+  }
+
+  .article-work-thumbnail-group{
+    width: 84px;
+    height: 100%;
+  }
+
+  .article-work-rank-group{
+    width: 48px;
+    padding: 10px 8px;
+  }
+
+  .article-work-desc-title{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+  /* Main - type(List) */
+  .type-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-X: hidden;
+  }
+
+  .type{
+    min-width: 68px;
+    padding: 0 16px;
+    margin: 8px;
+    font-size: 16px;
+    line-height: 2.5;
+  }
+
+  .rank-list > li:first-child .type{
+    margin-left: 0;
+  }
+
+  .more-button{
+    font-size: 14px;
+    line-height: 3.428571428571429;
+  }
+}
+
+/* >= 1054px (라지 데스트탑) */
+@media screen and (min-width: 1054px) {
+  /* Layout */
+  .lezhin-header,
+  .lezhin-main,
+  .lezhin-aside{
+    max-width: 1036px;
+    margin: 0 auto;
+  }
 }
 
 
-/* >=1280px (와이드 데스크탑) */
+
+/* >=1280px (엑스트라 라지 데스크탑 ) */
 @media screen and (min-width: 1280px) {
   /* Layout */
   .lezhin-header,
-  .lezhin-main{
+  .lezhin-main,
+  .lezhin-aside{
     max-width: 1212px;
-    margin: 0 auto;
   }
 
 
@@ -204,5 +301,12 @@
   /* Header - Navigation */
   .lezhin-header-nav-list-items{
     margin-right: 10px;
+  }
+
+
+  /* Main */
+  /* Main - Article-work */
+  .article-work-desc{
+    padding-top: 8px;
   }
 }
