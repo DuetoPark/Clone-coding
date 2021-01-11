@@ -37,6 +37,22 @@
   .lezhin-header-nav{
     padding: 0 2%;
   }
+
+
+
+
+  /* Main */
+  /* Main - Section-work-list */
+  .section-work-list{
+    padding-left: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .section-work-list-items{
+    width: calc((100vw - 136px) / 6);
+    margin-right: 16px;
+  }
 }
 
 
@@ -202,6 +218,18 @@
 
 
   /* Main */
+  /* Main - Section-work-list-container */
+  .section-work-list{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .section-work-list-items{
+    width: calc((100% - 80px) / 6);
+  }
+
+
   /* Main - Article*/
   .article-title{
     margin-top: 20px;
@@ -308,5 +336,10 @@
   /* Main - Article-work */
   .article-work-desc{
     padding-top: 8px;
+  }
+
+  .section-work-list-items{
+    width: calc((100% - 120px) / 6);
+    margin-right: 24px;
   }
 }

@@ -156,8 +156,42 @@
   line-height: 1.5;
 }
 
+/* Main - Section-work-list */
+.section-work-list{
+  display: flex;
+  width: auto;
+  padding: 0 8px 8px 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.section-work-list-items{
+  position: relative; left: 0; top: 0;
+  width: calc((100vw - 56px) / 3);
+  flex-shrink: 0;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+.section-work-thumbnail{
+  width: 100%;
+  height: auto;
+}
+
+.section-work-title{
+  padding-top: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.428571428571429;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 /* Main - Article */
+/* Main - Article-title */
 .article-title-group{
   display: flex;
   align-items: center;
