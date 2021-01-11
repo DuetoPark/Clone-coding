@@ -75,8 +75,25 @@
   display: none;
 }
 
+
 /* Section.ranking - article.rank-new */
 .rank-new,
 .rank-event{
   display: none;
+}
+
+
+/* Section.new-webtoon */
+.new-webtoon .section-work-list-items{
+  width: calc((100vw - 64px) / 2);
+}
+
+.new-webtoon .section-work-title{
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Section.recommendation */
+.recommendation .section-work-list-items{
+  width: 240px;
 }

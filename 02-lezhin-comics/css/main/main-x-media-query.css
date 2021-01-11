@@ -16,6 +16,16 @@
     padding: 6px 8px;
     margin: 0 -16px;
   }
+
+  /* Section.new-webtoon */
+  .new-webtoon .section-work-list-items{
+    width: calc((100vw - 112px) / 4);
+  }
+
+  /* Section.recommendation */
+  .recommendation .section-work-list-items{
+    width: 320px;
+  }
 }
 
 
@@ -58,6 +68,28 @@
     margin-right: 13%;
   }
 
+
+  /* Section.new-webtoon */
+  .new-webtoon-title{
+    padding-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .new-webtoon .section-work-list-items{
+    width: calc((100% - 48px) / 4);
+  }
+
+
+  /* Section.recommendation */
+  .recommendation .section-work-list-items{
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+
+/* >= 1054px (라지 데스트탑) */
+@media screen and (min-width: 1054px) {
+
 }
 
 
@@ -82,5 +114,11 @@
   .rank-real-time,
   .rank-new{
     /* margin-right: 32px; */
+  }
+
+
+  /* Section.new-webtoon */
+  .new-webtoon .section-work-list-items{
+    width: calc((100% - 72px) / 4);
   }
 }
