@@ -270,6 +270,8 @@
 
 .article-work-desc{
   padding-top: 4px;
+  flex-grow: 1;
+  width: calc(100% - 132px);
 }
 
 .article-work-desc-title-group{
@@ -279,12 +281,15 @@
 }
 
 .article-work-desc-title-group > strong{
+  flex-shrink: 0;
   margin-top: 2px;
 }
 
 .article-work-desc-title{
   font-size: 14px;
   line-height: 1.428571428571429;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .article-work-desc-author,
@@ -297,6 +302,8 @@
 
 .article-work-desc-author{
   margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .article-work-desc-event{

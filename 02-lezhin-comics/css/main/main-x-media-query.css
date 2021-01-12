@@ -44,7 +44,6 @@
 
   .ranking > div:last-child{
     display: flex;
-    /* justify-content: space-between; */
   }
 
 
@@ -64,8 +63,12 @@
   .rank-new,
   .rank-event{
     display: block;
-    width: 100%;
-    margin-right: 13%;
+    width: calc((100% - 48px) / 3);
+    margin-right: 24px;
+  }
+
+  .rank-event{
+    margin-right: 0 !important;
   }
 
 
@@ -142,13 +145,9 @@
   .rank-real-time,
   .rank-new,
   .rank-event{
-    flex: 1;
-  }
-
-
-  .rank-real-time,
-  .rank-new{
-    /* margin-right: 32px; */
+    display: block;
+    width: calc((100% - 64px) / 3);
+    margin-right: 32px;
   }
 
 
