@@ -100,6 +100,17 @@
   opacity: 0.85;
 }
 
+.selected-language::after{
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  background-image: url("../../assets/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
 
 
 
