@@ -25,7 +25,6 @@
 /* Layout - Main-Section */
 .main-section{
   padding-top: 16px;
-  margin-bottom: 24px;
 }
 
 /* Layout - Aside */
@@ -353,7 +352,224 @@
 
 
 /* Footer */
-.lezhin-footer p,
-.lezhin-footer dd{
-  white-space:pre-line;
+.lezhin-footer{
+  background-color: #f7f8f9;
+  color: #727272;
+}
+
+.lezhin-footer-items{
+  display: none;
+}
+
+.lezhin-info,
+.lezhin-desc{
+  display: block;
+}
+
+
+/* Footer - (lezhin-logo) */
+.lezhin-logo{
+  position: absolute;
+  left: 16px;
+  top: 60px;
+}
+
+.lezhin-logo-image{
+  width: 128px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.lezhin-logo-company,
+.lezhin-logo-boss{
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Footer - Definition List */
+.lezhin-footer-dl{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.lezhin-footer-dt,
+.lezhin-footer-dd{
+  font-size: 12px;
+}
+
+.lezhin-footer-dt{
+  margin-right: 4px;
+}
+
+.lezhin-footer-dd{
+  white-space: normal;
+}
+
+/* Footer - Definition List(lezhin-desc) */
+.lezhin-desc{
+  padding: 25px 0 33px 0;
+}
+
+.lezhin-footer-dl > div{
+  display: flex;
+  justify-content: center;
+}
+
+.lezhin-footer-anchor{
+  font-size: 12px;
+}
+
+.lezhin-footer-dl .lezhin-desc-fax,
+.lezhin-desc-address .lezhin-footer-dd:last-child,
+.lezhin-footer-dl .lezhin-desc-business-contact{
+  display: none;
+}
+
+
+
+
+/* Footer - List */
+.lezhin-footer-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Footer - List(lezhin-page-language) */
+.lezhin-page-language{
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  z-index: 1;
+}
+
+.lezhin-page-language-title{
+  padding: 0 13px 0 15px;
+}
+
+.lezhin-page-language-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 28px;
+  padding: 0 12px;
+  text-align: left;
+  border: 1px solid #222;
+  background-color: #313131;
+  color: #A3A3A3;
+  transition: color 250ms ease-in-out;
+}
+
+.lezhin-page-language-button::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url("../../assets/images/language-button-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+
+.lezhin-page-language-button:hover::after{
+  fill: #CCCCCC;
+}
+
+.language-list{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: -1;
+  display: none;
+  padding-top: 2px;
+  background-color: #222222;
+  animation-name: slide-10percent;
+  animation-duration: 250ms;
+  animation-timing-function: ease-in-out;
+}
+
+.language-list-anchor{
+  display: flex;
+  align-items: center;
+  width: 150px;
+  padding-left: 14px;
+  line-height: 2.857142857142857;
+  transition: color 250ms ease-in-out;
+}
+
+.lezhin-page-language-button:hover,
+.lezhin-page-language-button:active,
+.lezhin-page-language-button:focus,
+.language-list-anchor:hover,
+.selected-language{
+  color: #CCCCCC;
+}
+
+
+
+
+/* Footer - List(lezhin-info) */
+.lezhin-info .lezhin-footer-list-items > a{
+  margin: 0 10px;
+  line-height: 3.428571428571429;
+  text-decoration: underline;
+}
+
+
+/* Footer - List (lezhin-prize-list) */
+.lezhin-prize{
+  background-color: #313131;
+  transition: color 250ms ease-in-out;
+}
+
+.lezhin-prize:hover{
+  color: #A3A3A3;
+}
+
+.lezhin-price-list-items{
+  display: flex;
+  font-size: 12px;
+  line-height: 4.166666666666667;
+  margin-right: 20px;
+}
+
+.lezhin-price-image-group{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.lezhin-price-list-items:nth-child(3) .lezhin-price-image-group{
+  width: 120px;
+}
+
+.lezhin-price-list-items:nth-child(4) .lezhin-price-image-group{
+  width: 60px;
+}
+
+.prize-1,
+.prize-2,
+.prize-3,
+.prize-4{
+  position: relative;
+}
+
+.prize-2{
+  top: -50px;
+}
+
+.prize-3{
+  top: -100px;
+}
+
+.prize-4{
+  top: -150px;
+}
+
+
+
+/* Footer - p(lezhin-copyright) */
+.lezhin-copyright{
+  white-space: normal;
 }

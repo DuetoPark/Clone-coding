@@ -53,6 +53,11 @@
     width: calc((100vw - 136px) / 6);
     margin-right: 16px;
   }
+
+  /* Footer */
+  .lezhin-footer-main{
+    padding: 0 16px;
+  }
 }
 
 
@@ -285,6 +290,178 @@
     font-size: 14px;
     line-height: 3.428571428571429;
   }
+
+
+
+  /* Footer */
+  .lezhin-footer{
+    padding: 0;
+    background-color: #3A3A3A;
+  }
+
+  .lezhin-footer-main{
+    padding: 60px 16px 30px 16px;
+    color: #A3A3A3;
+  }
+
+  .lezhin-footer-items{
+    display: block;
+    margin-left: 200px;
+  }
+
+  .lezhin-logo{
+    margin: 0;
+  }
+
+
+  /* Footer - Select */
+  .lezhin-page-language{
+    display: flex;
+  }
+
+
+  /* Footer - Definition List */
+  .lezhin-footer-dl{
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 1;
+  }
+
+  .lezhin-footer-dt,
+  .lezhin-footer-dd{
+    font-size: 14px;
+  }
+
+  /* Footer - Definition List(lezhin-desc) */
+  .lezhin-desc{
+    padding: 0;
+  }
+
+  .lezhin-footer-dl:hover > div{
+    color: #A3A3A3;
+    border-color: #A3A3A3;
+  }
+
+  .lezhin-footer-dl > div{
+    justify-content: flex-start;
+    flex-shrink: 0;
+    padding: 0 4px;
+    margin: 3.5px 0;
+    border-right: 1px solid #555;
+    color: #555;
+    transition: color 250ms ease-in-out,
+      border-color 250ms ease-in-out;
+  }
+
+  .lezhin-footer-dl > div:first-child{
+    display: none;
+  }
+
+  .lezhin-footer-dl > div:last-child{
+    border-right: none;
+  }
+
+  .lezhin-footer-anchor{
+    font-size: 14px;
+  }
+
+  div.lezhin-business-registration-number{
+    padding-left: 0;
+  }
+
+  .lezhin-footer-dl .lezhin-desc-fax,
+  .lezhin-desc-address .lezhin-footer-dd:last-child,
+  .lezhin-footer-dl .lezhin-desc-business-contact{
+    display: flex;
+  }
+
+  .lezhin-footer-dl .lezhin-desc-customer-contact,
+  .lezhin-footer-dl .lezhin-desc-business-contact{
+    color: #A3A3A3;
+  }
+
+  .lezhin-footer-dl .lezhin-desc-customer-contact:hover,
+  .lezhin-footer-dl .lezhin-desc-business-contact:hover{
+    color: #EEE;
+  }
+
+
+  /* Footer - List */
+  .lezhin-footer-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: 280px;
+  }
+
+  .lezhin-footer-list-items{
+    margin-right: 16px;
+  }
+
+
+  /* Footer - List(lezhin-info) */
+  .lezhin-info .lezhin-footer-list-items > a{
+    margin: 0;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .lezhin-info .lezhin-footer-list-items{
+    transition: color 250ms ease-in-out;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:hover,
+  .lezhin-contact .lezhin-footer-list-items:hover{
+    color: #EEE;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:first-child{
+    order: 1;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:nth-child(2){
+    order: 3;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:nth-child(3){
+    order: 4;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:nth-child(4){
+    order: 5;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:nth-child(5){
+    order: 6;
+  }
+
+  .lezhin-info .lezhin-footer-list-items:last-child{
+    order: 2;
+  }
+
+
+  /* Footer list(lezhin-prize-list) */
+  .lezhin-prize{
+    padding: 20px;
+  }
+
+  .lezhin-price-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+
+  /* Footer - p(lezhin-copyright) */
+  .lezhin-copyright{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
 
 /* >= 1054px (라지 데스트탑) */
@@ -292,9 +469,14 @@
   /* Layout */
   .lezhin-header,
   .lezhin-main,
-  .lezhin-aside{
+  .lezhin-aside,
+  .lezhin-footer-main{
     max-width: 1036px;
     margin: 0 auto;
+  }
+
+  .lezhin-aside{
+    margin-bottom: 60px;
   }
 }
 
@@ -305,7 +487,8 @@
   /* Layout */
   .lezhin-header,
   .lezhin-main,
-  .lezhin-aside{
+  .lezhin-aside,
+  .lezhin-footer-main{
     max-width: 1212px;
   }
 
