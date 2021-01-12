@@ -1,0 +1,8 @@
+@keyframes slide-10percent {
+  0%{
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: none;
+  }
+}
