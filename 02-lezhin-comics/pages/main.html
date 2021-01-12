@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/main/main-x-login.css">
     <link rel="stylesheet" href="../css/main/main-x-media-query.css">
     <link rel="stylesheet" href="../css/icon/icon.css">
+    <link rel="stylesheet" href="../css/animation/animation.css">
   </head>
   <body>
     <header class="relative lezhin-header">
@@ -1453,90 +1454,155 @@
     </aside>
 
     <footer class="lezhin-footer">
-      <div class="">
-        <div>
-          <strong>언어/국가 변경</strong>
-          <select class="lezhin-footer-select" name="">
-            <option class="lezhin-footer-option" value="">한국어/한국</option>
-            <option class="lezhin-footer-option" value="">日本語/日本</option>
-            <option class="lezhin-footer-option" value="">English/US</option>
-          </select>
-        </div>
+      <div class="relative lezhin-footer-main">
+        <section class="lezhin-footer-items lezhin-logo">
+          <h1 class="sr-only">레진코믹스</h1>
+          <img class="lezhin-logo-image"
+            src="../assets/images/logo-footer.png" alt="로고">
+          <p class="lezhin-logo-company">
+            (주)레진엔터테인먼트<br/>
+            <strong class="lezhin-logo-ceo">대표 이성업</strong>
+          </p>
+        </section>
 
-        <ul class="lezhin-footer-list">
-          <li class="lezhin-footer-list-item"><a href="#">회사소개</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">이용약관</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">개인정보처리방침</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">청소년보호정책</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">고객지원/공지사항</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">사업자정보확인</a></li>
-        </ul>
+        <section class="lezhin-footer-items lezhin-page-language">
+          <h3 class="lezhin-page-language-title">언어/국가 변경</h3>
+          <button class="lezhin-page-language-button" type="button">한국어/한국</button>
+          <ol class="language-list">
+            <li class="language-list-items">
+              <a class="language-list-anchor selected-language" href="#">한국어/한국</a>
+            </li>
+            <li class="language-list-items">
+              <a class="language-list-anchor" href="#">日本語/日本</a>
+            </li>
+            <li class="language-list-items">
+              <a class="language-list-anchor" href="#">English/US</a>
+            </li>
+          </ol>
+        </section>
 
-        <ul class="lezhin-footer-list">
-          <li class="lezhin-footer-list-item"><a href="#">블로그</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">페이스북</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">트위터</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">채용공고</a></li>
-          <li class="lezhin-footer-list-item"><a href="#">연재문의</a></li>
-        </ul>
+        <section class="lezhin-footer-items lezhin-info relative">
+          <h3 class="sr-only">레진코믹스 정보</h3>
+          <ul class="lezhin-footer-list">
+            <li class="lezhin-footer-list-items">
+              <a href="#">회사소개</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">이용약관</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">개인정보처리방침</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">청소년보호정책</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">고객지원/공지사항</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">사업자정보확인</a>
+            </li>
+          </ul>
+        </section>
 
-        <p>
+        <section class="lezhin-footer-items lezhin-contact">
+          <h3 class="sr-only">레진코믹스 소식</h3>
+          <ul class="lezhin-footer-list">
+            <li class="lezhin-footer-list-items"><a href="#">블로그</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">페이스북</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">트위터</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">채용공고</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">연재문의</a></li>
+          </ul>
+        </section>
+
+        <p class="lezhin-footer-items lezhin-copyright">
           레진코믹스의 모든 웹툰들은 저작권법에 의거 보호받고 있습니다. 저작권자 또는 레진코믹스의 승인없이 웹툰의 일부 또는 전체를 복사하여 다른 매체(개인 미디어 포함)에 게재하는 행위는 저작권법에 의거 법적 조치에 처해질 수 있습니다. 언어/국가별로 서비스되는 작품 및 운영 방침이 다르게 적용될 수 있습니다.
         </p>
 
-        <strong>(주)레진엔터테인먼트 대표 이성업</strong>
-        <dl>
-          <div>
-            <dt>사업자 등록번호</dt>
-            <dd>114-87-00708</dd>
-          </div>
-          <div>
-            <dt>통신판매업 신고번호</dt>
-            <dd>제2014-서울강남-00058</dd>
-          </div>
-          <div>
-            <dt>주소</dt>
-            <dd>서울특별시 강남구 도산대로 170</dd>
-            <dd>170, Dosan-daero, Gangnam-gu, Seoul, Korea</dd>
-          </div>
-          <div>
-            <dt>대표번호</dt>
-            <dd>02-1670-9917</dd>
-          </div>
-          <div>
-            <dt>팩스번호</dt>
-            <dd>02-517-2484</dd>
-          </div>
-          <div>
-            <dt>고객문의</dt>
-            <dd><a href="#">help@lezhin.com</a></dd>
-          </div>
-          <div>
-            <dt>업무 제휴 문의</dt>
-            <dd><a href="#">contact@lezhin.com</a></dd>
-          </div>
-        </dl>
+        <section class="lezhin-footer-items lezhin-desc">
+          <h3 class="sr-only">레진코믹스 정보</h3>
+          <dl class="lezhin-footer-dl">
+            <div class="lezhin-boss">
+              <dt class="lezhin-footer-dt">(주)레진엔터테인먼트 대표</dt>
+              <dd class="lezhin-footer-dd">이성업</dd>
+            </div>
+            <div class="lezhin-business-registration-number">
+              <dt class="lezhin-footer-dt">사업자 등록번호</dt>
+              <dd class="lezhin-footer-dd">114-87-00708</dd>
+            </div>
+            <div>
+              <dt class="lezhin-footer-dt">통신판매업 신고번호</dt>
+              <dd class="lezhin-footer-dd">제2014-서울강남-00058호</dd>
+            </div>
+            <div class="lezhin-desc-address">
+              <dt class="lezhin-footer-dt">주소</dt>
+              <dd class="lezhin-footer-dd">서울특별시 강남구 도산대로 170</dd>
+              <dd class="lezhin-footer-dd">170, Dosan-daero, Gangnam-gu, Seoul, Korea</dd>
+            </div>
+            <div>
+              <dt class="lezhin-footer-dt">대표번호</dt>
+              <dd class="lezhin-footer-dd">02-1670-9917</dd>
+            </div>
+            <div class="lezhin-desc-fax">
+              <dt class="lezhin-footer-dt">팩스번호</dt>
+              <dd class="lezhin-footer-dd">02-517-2484</dd>
+            </div>
+            <div class="lezhin-desc-customer-contact">
+              <dt class="lezhin-footer-dt">고객문의</dt>
+              <dd class="lezhin-footer-dd">
+                <a class="lezhin-footer-anchor" href="#">help@lezhin.com</a>
+              </dd>
+            </div>
+            <div class="lezhin-desc-business-contact">
+              <dt class="lezhin-footer-dt">업무 제휴 문의</dt>
+              <dd class="lezhin-footer-dd">
+                <a class="lezhin-footer-anchor" href="#">contact@lezhin.com</a>
+              </dd>
+            </div>
+          </dl>
+        </section>
       </div>
 
-      <ol>
-        <li>
-          <img src="" alt="">
-          제 9회 대한민국 인터넷대상 국무총리상
-        </li>
-        <li>
-          <img src="" alt="">
-          글로벌K-스타트업 2013 최우수상
-        </li>
-        <li>
-          <img src="" alt="">
-          <img src="" alt="">
-          벤처기업 인증
-        </li>
-        <li>
-          <img src="" alt="">
-          저작권OK
-        </li>
-      </ol>
+      <aside class="lezhin-prize">
+        <h3 class="sr-only">레진코믹스 2020 수상</h3>
+        <ol class="lezhin-footer-items lezhin-price-list">
+          <li class="lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-1"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            제 9회 대한민국 인터넷대상 국무총리상
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-2"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            글로벌K-스타트업 2013 최우수상
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-3"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            벤처기업 인증
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-4"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            저작권OK
+          </li>
+        </ol>
+      </aside>
     </footer>
+
+    <script src="../assets/app.js"></script>
   </body>
 </html>
