@@ -35,74 +35,87 @@ let workNext = function (target) {
   let workList = target.parentElement.previousElementSibling;
   let workListItems = workList.children;
 
-  // currentList++;
   switch (currentList) {
-    case 0:
-      for(let i=0; i<6; i++){
-        workListItems[i].style.display = "block";
-      }
-      console.log("workNext currentList : "+currentList);
-      break;
-
     case 1:
+      // preButton 활성화
+      preButton.classList.remove("work-button-inactive");
+      preButton.classList.add("work-button-active");
+      preButton.removeAttribute("disabled");
+
+      // workListItems[0]~[5] 숨기기
       for(let i=0; i<6; i++){
         workListItems[i].style.display = "none";
       }
+      
       if (workListItems.length<=12) {
-        for(let i=6; i<workListItems.length; i++){
+        // workListItems[6]~[n] 출력 (workListItems.length < 12)
+        for (let i=6; i<workListItems.length; i++) {
           workListItems[i].style.display = "block";
           console.log(workListItems[i]);
         }
+        // nextButton 비활성화
         nextButton.classList.remove("work-button-active");
         nextButton.classList.add("work-button-inactive");
+        nextButton.setAttribute("disabled", "");
       } else {
-        for(let i=6; i<12; i++){
+        // workListItems[6]~[11] 출력 (workListItems.length >= 12)
+        for (let i=6; i<12; i++) {
           workListItems[i].style.display = "block";
           console.log(workListItems[i]);
         }
       }
-
-      preButton.classList.remove("work-button-inactive");
-      preButton.classList.add("work-button-active");
-
+      // case value 변경
       currentList = 2;
-      console.log("workNext currentList : "+currentList);
+      console.log("workNext currentList : "+currentList); //개발자도구 확인용
       break;
 
       case 2:
+        // workListItems[6]~[11] 숨기기
         for(let i=6; i<12; i++){
           workListItems[i].style.display = "none";
         }
+
         if (workListItems.length<=18) {
+          // workListItems[12]~[n] 출력 (workListItems.length <= 18)
           for(let i=12; i<workListItems.length; i++){
             workListItems[i].style.display = "block";
             console.log(workListItems[i]);
           }
+          // nextButton 비활성화
           nextButton.classList.remove("work-button-active");
           nextButton.classList.add("work-button-inactive");
+          nextButton.setAttribute("disabled", "");
         } else {
+          // workListItems[12]~[17] 출력 (workListItems.length > 18)
           for(let i=12; i<18; i++){
             workListItems[i].style.display = "block";
             console.log(workListItems[i]);
           }
         }
 
+        // case value 변경
         currentList = 3;
         console.log("workNext currentList : "+currentList);
         break;
 
       case 3:
+        // workListItems[12]~[17] 숨기기
         for(let i=12; i<18; i++){
           workListItems[i].style.display = "none";
         }
+
+        // workListItems[18]~[n] 출력
         for(let i=18; i<workListItems.length; i++){
           workListItems[i].style.display = "block";
           console.log(workListItems[i]);
         }
 
+        // nextButton 비활성화
         nextButton.classList.remove("work-button-active");
         nextButton.classList.add("work-button-inactive");
+        nextButton.setAttribute("disabled", "");
 
+        // case value 변경
         currentList = 4;
         console.log("workNext currentList : "+currentList);
         break;
@@ -111,83 +124,98 @@ let workNext = function (target) {
 
 
 
-const workPrevious = function (target) {
+let workPrevious = function (target) {
   let preButton = target;
   let nextButton = target.nextElementSibling;
   let workList = target.parentElement.previousElementSibling;
   let workListItems = workList.children;
 
   switch (currentList) {
-    case 1:
-      for(let i=0; i<6; i++){
+    case 4:
+      // workListItems[18]~[n] 숨기기
+      for(let i=18; i<workListItems.length; i++){
+        workListItems[i].style.display = "none";
+        console.log(workListItems[i]);
+      }
+
+      // workListItems[12]~[18] 출력
+      for(let i=12; i<18; i++){
         workListItems[i].style.display = "block";
       }
 
-      if (workListItems.length<12) {
-        for(let i=6; i<workListItems.length; i++){
-          workListItems[i].style.display = "none";
-          console.log(workListItems[i]);
-        }
-      } else {
-        for(let i=6; i<12; i++){
-          workListItems[i].style.display = "none";
-          console.log(workListItems[i]);
-        }
-      }
-
-      preButton.classList.remove("work-button-active");
-      preButton.classList.add("work-button-inactive");
+      // nextButton 활성화
       nextButton.classList.add("work-button-active");
       nextButton.classList.remove("work-button-inactive");
+      nextButton.removeAttribute("disabled");
 
+      // case value 변경
+      currentList = 3;
       console.log("workPrevious currentList : "+currentList);
-      currentList = 0;
       break;
 
-    case 2:
-      for(let i=6; i<12; i++){
-        workListItems[i].style.display = "block";
-      }
+    case 3:
       if (workListItems.length<18) {
+        // workListItems[12]~[n] 숨기기  (workListItems.length <= 18)
         for(let i=12; i<workListItems.length; i++){
           workListItems[i].style.display = "none";
           console.log(workListItems[i]);
         }
-        nextButton.classList.add("work-button-active");
-        nextButton.classList.remove("work-button-inactive");
       } else {
+        // workListItems[12]~[17] 숨기기 (workListItems.length >= 18)
         for(let i=12; i<18; i++){
           workListItems[i].style.display = "none";
           console.log(workListItems[i]);
         }
       }
 
-      console.log("workPrevious currentList : "+currentList);
-      currentList = 1;
-      break;
-
-    case 3:
-      for(let i=12; i<18; i++){
+      // workListItems[6]~[11] 출력
+      for(let i=6; i<12; i++){
         workListItems[i].style.display = "block";
       }
 
-      if (workListItems.length<24) {
-        for(let i=18; i<workListItems.length; i++){
+      // nextButton 활성화
+      nextButton.classList.add("work-button-active");
+      nextButton.classList.remove("work-button-inactive");
+      nextButton.removeAttribute("disabled");
+
+      // case value 변경
+      currentList = 2;
+      console.log("workPrevious currentList : "+currentList);
+      break;
+
+    case 2:
+      if (workListItems.length<12) {
+        // workListItems[6]~[n] 숨기기  (workListItems.length < 12)
+        for(let i=6; i<workListItems.length; i++){
           workListItems[i].style.display = "none";
           console.log(workListItems[i]);
         }
       } else {
-        for(let i=18; i<24; i++){
+        // workListItems[6]~[11] 숨기기 (workListItems.length >= 12)
+        for(let i=6; i<12; i++){
           workListItems[i].style.display = "none";
           console.log(workListItems[i]);
         }
       }
 
+      // workListItems[0]~[6] 출력
+      for(let i=0; i<6; i++){
+        workListItems[i].style.display = "block";
+      }
+
+      // nextButton 활성화
       nextButton.classList.add("work-button-active");
       nextButton.classList.remove("work-button-inactive");
+      nextButton.removeAttribute("disabled");
 
+      // preButton 비활성화
+      preButton.classList.add("work-button-inactive");
+      preButton.classList.remove("work-button-active");
+      preButton.setAttribute("disabled", "");
+
+      // case value 변경
+      currentList = 1;
       console.log("workPrevious currentList : "+currentList);
-      currentList = 2;
       break;
   }
 };
