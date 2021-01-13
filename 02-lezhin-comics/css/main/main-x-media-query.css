@@ -82,10 +82,17 @@
     width: calc((100% - 48px) / 4);
   }
 
+  .new-webtoon .section-work-list-items:nth-child(4) ~ li{
+    display: none;
+  }
 
   /* Section.recommendation */
   .recommendation .section-work-list-items{
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 32px) / 3);
+  }
+
+  .recommendation .section-work-list-items:nth-child(3) ~ li{
+    display: none;
   }
 
 
@@ -154,6 +161,11 @@
   /* Section.new-webtoon */
   .new-webtoon .section-work-list-items{
     width: calc((100% - 72px) / 4);
+  }
+
+  /* Section.recommendation */
+  .recommendation .section-work-list-items{
+    width: calc((100% - 48px) / 3);
   }
 
 
