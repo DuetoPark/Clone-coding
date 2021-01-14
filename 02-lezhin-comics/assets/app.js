@@ -27,7 +27,6 @@ languageButton.addEventListener("click", languageListHandler);
 
 // Button Click Event - Section-work-list
 const workArrowButton = document.querySelectorAll(".section-work-button-group");
-let currentList = 1;
 
 let workNext = function (target) {
   let preButton = target.previousElementSibling;
@@ -35,8 +34,8 @@ let workNext = function (target) {
   let workList = target.parentElement.previousElementSibling;
   let workListItems = workList.children;
 
-  switch (currentList) {
-    case 1:
+  switch (preButton.value) {
+    case "pre":
       // preButton 활성화
       preButton.classList.remove("work-button-inactive");
       preButton.classList.add("work-button-active");
@@ -46,7 +45,7 @@ let workNext = function (target) {
       for(let i=0; i<6; i++){
         workListItems[i].style.display = "none";
       }
-      
+
       if (workListItems.length<=12) {
         // workListItems[6]~[n] 출력 (workListItems.length < 12)
         for (let i=6; i<workListItems.length; i++) {
@@ -65,47 +64,52 @@ let workNext = function (target) {
         }
       }
       // case value 변경
-      currentList = 2;
-      console.log("workNext currentList : "+currentList); //개발자도구 확인용
+      preButton.value = 2;
+      console.log("workNext currentList : "+preButton.value); //개발자도구 확인용
       break;
 
-      case 2:
-        // workListItems[6]~[11] 숨기기
-        for(let i=6; i<12; i++){
-          workListItems[i].style.display = "none";
+    case "1":
+      // preButton 활성화
+      preButton.classList.remove("work-button-inactive");
+      preButton.classList.add("work-button-active");
+      preButton.removeAttribute("disabled");
+
+      // workListItems[0]~[5] 숨기기
+      for(let i=0; i<6; i++){
+        workListItems[i].style.display = "none";
+      }
+
+      if (workListItems.length<=12) {
+        // workListItems[6]~[n] 출력 (workListItems.length < 12)
+        for (let i=6; i<workListItems.length; i++) {
+          workListItems[i].style.display = "block";
+          console.log(workListItems[i]);
         }
-
-        if (workListItems.length<=18) {
-          // workListItems[12]~[n] 출력 (workListItems.length <= 18)
-          for(let i=12; i<workListItems.length; i++){
-            workListItems[i].style.display = "block";
-            console.log(workListItems[i]);
-          }
-          // nextButton 비활성화
-          nextButton.classList.remove("work-button-active");
-          nextButton.classList.add("work-button-inactive");
-          nextButton.setAttribute("disabled", "");
-        } else {
-          // workListItems[12]~[17] 출력 (workListItems.length > 18)
-          for(let i=12; i<18; i++){
-            workListItems[i].style.display = "block";
-            console.log(workListItems[i]);
-          }
+        // nextButton 비활성화
+        nextButton.classList.remove("work-button-active");
+        nextButton.classList.add("work-button-inactive");
+        nextButton.setAttribute("disabled", "");
+      } else {
+        // workListItems[6]~[11] 출력 (workListItems.length >= 12)
+        for (let i=6; i<12; i++) {
+          workListItems[i].style.display = "block";
+          console.log(workListItems[i]);
         }
+      }
+      // case value 변경
+      preButton.value = 2;
+      console.log("workNext currentList : "+preButton.value); //개발자도구 확인용
+      break;
 
-        // case value 변경
-        currentList = 3;
-        console.log("workNext currentList : "+currentList);
-        break;
+    case "2":
+      // workListItems[6]~[11] 숨기기
+      for(let i=6; i<12; i++){
+        workListItems[i].style.display = "none";
+      }
 
-      case 3:
-        // workListItems[12]~[17] 숨기기
-        for(let i=12; i<18; i++){
-          workListItems[i].style.display = "none";
-        }
-
-        // workListItems[18]~[n] 출력
-        for(let i=18; i<workListItems.length; i++){
+      if (workListItems.length<=18) {
+        // workListItems[12]~[n] 출력 (workListItems.length <= 18)
+        for(let i=12; i<workListItems.length; i++){
           workListItems[i].style.display = "block";
           console.log(workListItems[i]);
         }
@@ -114,11 +118,40 @@ let workNext = function (target) {
         nextButton.classList.remove("work-button-active");
         nextButton.classList.add("work-button-inactive");
         nextButton.setAttribute("disabled", "");
+      } else {
+        // workListItems[12]~[17] 출력 (workListItems.length > 18)
+        for(let i=12; i<18; i++){
+          workListItems[i].style.display = "block";
+          console.log(workListItems[i]);
+        }
+      }
 
-        // case value 변경
-        currentList = 4;
-        console.log("workNext currentList : "+currentList);
-        break;
+      // case value 변경
+      preButton.value = 3;
+      console.log("workNext currentList : "+preButton.value);
+      break;
+
+    case "3":
+      // workListItems[12]~[17] 숨기기
+      for(let i=12; i<18; i++){
+        workListItems[i].style.display = "none";
+      }
+
+      // workListItems[18]~[n] 출력
+      for(let i=18; i<workListItems.length; i++){
+        workListItems[i].style.display = "block";
+        console.log(workListItems[i]);
+      }
+
+      // nextButton 비활성화
+      nextButton.classList.remove("work-button-active");
+      nextButton.classList.add("work-button-inactive");
+      nextButton.setAttribute("disabled", "");
+
+      // case value 변경
+      preButton.value = 4;
+      console.log("workNext currentList : "+preButton.value);
+      break;
   }
 };
 
@@ -130,8 +163,8 @@ let workPrevious = function (target) {
   let workList = target.parentElement.previousElementSibling;
   let workListItems = workList.children;
 
-  switch (currentList) {
-    case 4:
+  switch (preButton.value) {
+    case "4":
       // workListItems[18]~[n] 숨기기
       for(let i=18; i<workListItems.length; i++){
         workListItems[i].style.display = "none";
@@ -149,11 +182,11 @@ let workPrevious = function (target) {
       nextButton.removeAttribute("disabled");
 
       // case value 변경
-      currentList = 3;
-      console.log("workPrevious currentList : "+currentList);
+      preButton.value = 3;
+      console.log("workPrevious currentList : "+preButton.value);
       break;
 
-    case 3:
+    case "3":
       if (workListItems.length<18) {
         // workListItems[12]~[n] 숨기기  (workListItems.length <= 18)
         for(let i=12; i<workListItems.length; i++){
@@ -179,11 +212,11 @@ let workPrevious = function (target) {
       nextButton.removeAttribute("disabled");
 
       // case value 변경
-      currentList = 2;
-      console.log("workPrevious currentList : "+currentList);
+      preButton.value = 2;
+      console.log("workPrevious currentList : "+preButton.value);
       break;
 
-    case 2:
+    case "2":
       if (workListItems.length<12) {
         // workListItems[6]~[n] 숨기기  (workListItems.length < 12)
         for(let i=6; i<workListItems.length; i++){
@@ -214,13 +247,13 @@ let workPrevious = function (target) {
       preButton.setAttribute("disabled", "");
 
       // case value 변경
-      currentList = 1;
-      console.log("workPrevious currentList : "+currentList);
+      preButton.value = 1;
+      console.log("workPrevious currentList : "+preButton.value);
       break;
   }
 };
 
-const workArrowHandler = function (e) {
+let workArrowHandler = function (e) {
   if(e.target.value === "next"){
     workNext(e.target);
   } else {
