@@ -26,6 +26,13 @@ languageButton.addEventListener("click", languageListHandler);
 
 
 // Button Click Event - Section-work-list
+// 1. Copy ClickEvent(execCommand) 지정하듯이, button의 value를 데이터 저장소처럼 사용.
+// 2. switch expression을 .section-work-button-group 안의 버튼인 preButton.value로 지정.
+//   이유: 그룹간의 간섭을 없애기 위함.
+//     -preButton은 이벤트 변수의 영향을 받음.
+//     -preButton에다 value 수정하면, 해당 그룹에서만 바뀜.
+//     -그리고 해당 그룹/다른 그룹 선택해도 preButton value 유지됨.
+
 const workArrowButton = document.querySelectorAll(".section-work-button-group");
 
 let workNext = function (target) {
