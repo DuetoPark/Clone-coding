@@ -1,0 +1,11 @@
+/* Nav - serialization-nav */
+.serialization-nav{
+  display: flex;
+  justify-content: center;
+}
+
+.serialization-nav .type-list{
+  padding: 6px 0;
+  margin: 0 -8px;
+  width: auto;
+}
