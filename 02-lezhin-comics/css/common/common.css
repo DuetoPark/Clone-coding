@@ -389,8 +389,7 @@
 
 /* Work-pre-button */
 .work-pre-button{
-  position: relative;
-  left: 1px;
+  border-right: 1px solid #FFFFFF;
   border-radius: 3px 0 0 3px;
   background-position: right;
 }
