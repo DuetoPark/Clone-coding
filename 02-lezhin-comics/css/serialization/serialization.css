@@ -21,6 +21,11 @@
   margin-bottom: 16px;
 }
 
+.serialization-work-image-group{
+  border-radius: 2px;
+  overflow: hidden;
+}
+
 .serialization-work-desc{
   padding: 8px 0;
   padding-left: 4px;
