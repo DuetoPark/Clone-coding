@@ -6,7 +6,7 @@
     <meta name="author" content="dueto park">
     <meta name="keywords" content="클론코딩, clone-coding, 레진코믹스">
     <meta name="description" content="매일 업그레이드해서 이 분야 일진짱 되는 날까지!">
-    <title>레진코믹스 클론코딩</title>
+    <title>레진코믹스 클론코딩 | 메인</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
@@ -49,12 +49,24 @@
       <nav class="lezhin-header-nav">
         <h2 class="sr-only">메뉴</h2>
         <ol class="lezhin-header-nav-list">
-          <li class="relative lezhin-header-nav-list-items"><a href="#">연재</a></li>
-          <li class="relative lezhin-header-nav-list-items"><a href="#">랭킹</a></li>
-          <li class="relative lezhin-header-nav-list-items"><a href="#">무료</a></li>
-          <li class="relative lezhin-header-nav-list-items"><a class='relative up-icon' href="#">SALE</a></li>
-          <li class="relative lezhin-header-nav-list-items"><a href="#">단행본</a></li>
-          <li class="relative lezhin-header-nav-list-items"><a href="#">완결</a></li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="요일별 코믹스 페이지로 이동">연재</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="장르별 랭킹 페이지로 이동">랭킹</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="무료 페이지로 이동">무료</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a class='relative up-icon' href="#" aria-label="할인 안내 페이지로 이동">SALE</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="단행본 페이지로 이동">단행본</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="완결 코믹스 페이지로 이동">완결</a>
+          </li>
         </ol>
       </nav>
     </header>
@@ -66,8 +78,12 @@
         <ol class="main-section-list">
           <li class="main-section-list-items">
             <picture>
-              <source media="(min-width: 640px)" srcset="../assets/images/배너-데스크탑.png"/>
-              <img class="banner-images" src="../assets/images/배너.png" alt="">
+              <source
+                media="(min-width: 640px)"
+                srcset="../assets/images/배너-데스크탑.png"/>
+              <img class="banner-images"
+                src="../assets/images/배너.png"
+                alt="">
             </picture>
           </li>
         </ol>
@@ -86,28 +102,42 @@
       <section class="main-section ranking">
         <h1 class="main-section-title">랭킹</h1>
 
-        <h2 class="sr-only">랭킹 장르 선택</h2>
-        <ol class='type-list rank-list'>
-          <li><a class='type type-active' href="#">전체</a></li>
-          <li><a class='type' href="#">로맨스</a></li>
-          <li><a class='type' href="#">BL</a></li>
-          <li><a class='type' href="#">드라마</a></li>
-          <li><a class='type' href="#">판타지</a></li>
-          <li><a class='type' href="#">개그</a></li>
-          <li><a class='type' href="#">액션</a></li>
-          <li><a class='type' href="#">학원</a></li>
-          <li><a class='type' href="#">미스터리</a></li>
-          <li><a class='type' href="#">일상</a></li>
-          <li><a class='type' href="#">백합</a></li>
-        </ol>
+        <nav>
+          <h2 class="sr-only">랭킹 장르 선택</h2>
+          <ol class='type-list rank-list'>
+            <li><a class='type type-active' href="#">전체</a></li>
+            <li><a class='type' href="#">로맨스</a></li>
+            <li><a class='type' href="#">BL</a></li>
+            <li><a class='type' href="#">드라마</a></li>
+            <li><a class='type' href="#">판타지</a></li>
+            <li><a class='type' href="#">개그</a></li>
+            <li><a class='type' href="#">액션</a></li>
+            <li><a class='type' href="#">학원</a></li>
+            <li><a class='type' href="#">미스터리</a></li>
+            <li><a class='type' href="#">일상</a></li>
+            <li><a class='type' href="#">백합</a></li>
+          </ol>
+        </nav>
 
         <!-- 모바일&태블릿(<960px) 출력 -->
         <div class="mobile-rank-button-group">
-          <h2 class='sr-only'>모바일 랭킹 실시간/신작/이벤트 확인</h2>
+          <h2 class="sr-only" aria-hidden="true">모바일 랭킹 실시간/신작/이벤트 확인</h2>
           <div class="rank-button-group">
-            <button class="relative rank-button rank-active" type="button">실시간</button>
-            <button class="relative rank-button" type="button">신작</button>
-            <button class="relative rank-button" type="button">이벤트</button>
+            <button class="relative rank-button rank-active"
+              aria-label="실시간 랭킹"
+              type="button">
+              실시간
+            </button>
+            <button class="relative rank-button"
+              aria-label="신작 랭킹"
+              type="button">
+              신작
+            </button>
+            <button class="relative rank-button"
+              aria-label="이벤트 랭킹"
+              type="button">
+              이벤트
+            </button>
           </div>
           <a class="more-button" href="#">더보기</a>
         </div>
@@ -116,7 +146,8 @@
           <article class="rank-real-time">
             <h2 class="sr-only">전체 랭킹 실시간</h2>
             <!-- 데스크탑(>=960px) 출력 -->
-            <div class="article-title-group desktop-rank-title-group">
+            <div class="article-title-group desktop-rank-title-group"
+              aria-hidden="true">
               <h2 class="article-title">실시간</h2>
               <a class="more-button" href="#">더보기</a>
             </div>
@@ -125,8 +156,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -136,9 +171,8 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only up-icon-reverse"
-                      aria-label="최신화 업데이트"
-                    ></strong>
+                    <strong class="up-icon-reverse"
+                      aria-label="최신화 업데이트"></strong>
                     <h1 class="article-work-desc-title">레바툰</h1>
                   </div>
                   <p class="article-work-desc-author daily-life">
@@ -152,8 +186,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -163,12 +201,10 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only event-icon"
-                      aria-label="이벤트 진행 중"
-                    ></strong>
-                    <strong class="sr-only award-icon"
-                      aria-label="이벤트 진행 중"
-                    ></strong>
+                    <strong class="event-icon"
+                      aria-label="이벤트 진행 중"></strong>
+                    <strong class="award-icon"
+                      aria-label="수상작"></strong>
                     <h1 class="article-work-desc-title">박씨유대기</h1>
                   </div>
                   <p class="article-work-desc-author gag">
@@ -182,8 +218,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -209,7 +249,8 @@
           <article class="rank-new">
             <h2 class="sr-only">전체 랭킹 신작</h2>
             <!-- 데스크탑(>=960px) 출력 -->
-            <div class="article-title-group desktop-rank-title-group">
+            <div class="article-title-group desktop-rank-title-group"
+              aria-hidden="true">
               <h2 class="article-title">신작</h2>
               <a class="more-button" href="#">더보기</a>
             </div>
@@ -218,8 +259,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -229,9 +274,8 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only new-icon"
-                      aria-label="신작"
-                    ></strong>
+                    <strong class="new-icon"
+                      aria-label="신작"></strong>
                     <h1 class="article-work-desc-title">인시크릿</h1>
                   </div>
                   <p class="article-work-desc-author bl">
@@ -245,8 +289,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -256,12 +304,10 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only new-icon"
-                      aria-label="신작"
-                    ></strong>
-                    <strong class="sr-only up-icon-reverse"
-                      aria-label="최신화 업데이트"
-                    ></strong>
+                    <strong class="new-icon"
+                      aria-label="신작"></strong>
+                    <strong class="up-icon-reverse"
+                      aria-label="최신화 업데이트"></strong>
                     <h1 class="article-work-desc-title">라온의 남자</h1>
                   </div>
                   <p class="article-work-desc-author bl">
@@ -275,8 +321,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -286,9 +336,8 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only new-icon"
-                      aria-label="신작"
-                    ></strong>
+                    <strong class="new-icon"
+                      aria-label="신작"></strong>
                     <h1 class="article-work-desc-title">레그널 트리거</h1>
                   </div>
                   <p class="article-work-desc-author fantasy">
@@ -305,7 +354,8 @@
           <article class="rank-event">
             <h2 class="sr-only">전체 랭킹 이벤트</h2>
               <!-- 데스크탑(>=960px) 출력 -->
-            <div class="article-title-group desktop-rank-title-group">
+            <div class="article-title-group desktop-rank-title-group"
+              aria-hidden="true">
               <h2 class="article-title">이벤트</h2>
               <a class="more-button" href="#">더보기</a>
             </div>
@@ -314,10 +364,15 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group relative">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
-                  <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
+                  <span class="free-24h-icon"
+                    aria-label="24시간마다 1화 무료로 전환"></span> <!-- 시계모양 svg -->
                 </div>
                 <div class="article-work-rank-group">
                   <strong class="article-work-rank">1</strong><!-- 순위 -->
@@ -325,12 +380,10 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only event-icon"
-                      aria-label="이벤트 진행 중"
-                    ></strong>
-                    <strong class="sr-only up-icon-reverse"
-                      aria-label="최신화 업데이트"
-                    ></strong>
+                    <strong class="event-icon"
+                      aria-label="이벤트 진행 중"></strong>
+                    <strong class="up-icon-reverse"
+                      aria-label="최신화 업데이트"></strong>
                     <h1 class="article-work-desc-title">차린 건 없지만</h1>
                   </div>
                   <p class="article-work-desc-author daily-life">
@@ -344,10 +397,15 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group relative">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
-                  <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
+                  <span class="free-24h-icon"
+                    aria-label="24시간마다 1화 무료로 전환"></span> <!-- 시계모양 svg -->
                 </div>
                 <div class="article-work-rank-group">
                   <strong class="article-work-rank">2</strong><!-- 순위 -->
@@ -355,9 +413,8 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group relative">
-                    <strong class="sr-only event-icon"
-                      aria-label="이벤트 진행 중"
-                    ></strong>
+                    <strong class="event-icon"
+                      aria-label="이벤트 진행 중"></strong>
                     <h1 class="article-work-desc-title">달콤한 남자</h1>
                   </div>
                   <p class="article-work-desc-author bl">
@@ -371,8 +428,12 @@
               <li class="article-work-list-items">
                 <div class="article-work-thumbnail-group">
                   <picture>
-                    <source media="(min-width: 960px)" srcset="../assets/images/썸네일-데스크탑.png"/>
-                    <img class="article-work-thumbnail " src="../assets/images/썸네일-모바일.png" alt=""/>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="../assets/images/썸네일-데스크탑.png"/>
+                    <img class="article-work-thumbnail"
+                      src="../assets/images/썸네일-모바일.png"
+                      alt=""/>
                   </picture>
                   <span></span> <!-- 시계모양 svg -->
                 </div>
@@ -382,12 +443,10 @@
                 </div>
                 <div class="article-work-desc">
                   <div class="article-work-desc-title-group">
-                    <strong class="sr-only event-icon"
-                      aria-label="이벤트 진행 중"
-                    ></strong>
-                    <strong class="sr-only up-icon-reverse"
-                      aria-label="최신화 업데이트"
-                    ></strong>
+                    <strong class="event-icon"
+                      aria-label="이벤트 진행 중"></strong>
+                    <strong class="up-icon-reverse"
+                      aria-label="최신화 업데이트"></strong>
                     <h1 class="article-work-desc-title">붉은 실을 조심하세요</h1>
                   </div>
                   <p class="article-work-desc-author romance">
@@ -408,139 +467,169 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title new-webtoon-title">BJ 엘프의 요리 채널</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">무명의 등불</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">라온의 남자</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">오늘, 그 녀석 () 에게 심쿵한 날</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">타임라인</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">메리 고 라운드</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">레그널 트리거</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">안나 이야기</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">나의 수하[개정판]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">에로만화부!</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">인시크릿[개정판]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">데스크레센도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">시선 끝, 30도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title new-webtoon-title">이토록 다채로운 핏빛</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title new-webtoon-title">클라우드</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <h1 class="section-work-title new-webtoon-title">클라우드</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -562,168 +651,191 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">킬러5</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">붉은 실을 조심하세요</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">봄의 저주</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">충강화월</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">흥하후궁 이야 ~소옥전~</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">유생이 나타났다!</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title"><span>clamp</span>학원탐정단</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">고요한 냥만</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">생존률 극악 엑스트라에 빙의했다[연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">북극의 밤</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">달달한 그녀</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">열혈전사의 부활-헌터학원[연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">주재삼계[연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">크레이지 덴티스트</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">킬러5[연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">봄의 저주</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">춘강화월 [연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <span></span>
-            <h1 class="section-work-title">춘강화월 [연재]</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -747,80 +859,89 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">나의 호랑이님</h1>
             <strong class="article-work-desc-event">5</strong>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">달이 속삭이는 이야기</h1>
             <strong class="article-work-desc-event">2</strong>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">징벌 소녀</h1>
             <strong class="article-work-desc-event">14</strong>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">모모세 헬프!!</h1>
             <strong class="article-work-desc-event">7</strong>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">아르카나 판타지</h1>
             <strong class="article-work-desc-event">23</strong>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">구원하소서</h1>
             <strong></strong>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">나의 아빠</h1>
             <strong></strong>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
         </ol>
@@ -842,117 +963,135 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">에로만화부!</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">사랑할 수 없는 그녀</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">굿바이 악마</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">귀여운 그녀</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">신데렐라 리미트</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">앞집의 시간표</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">첫사랑의 세계</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">굿바이 악마</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">키스하기 1초 전</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">어차피 인간은 다 변태야[연재]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span>
             <h1 class="section-work-title">뜨거운 웬스</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">바른 쀼생활</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <span></span>
-            <h1 class="section-work-title">바른 쀼생활</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -974,198 +1113,231 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">라온의 남자</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">미성년</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">달콤한 남자</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">클라우드</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">시선 끝, 30도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">BJ 알렉스</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">울프인더하우스[개정판]</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">러브 오어 헤이트[개정판]</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">피장파장의 오류</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">야화첩[개정판]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">왜 속이고 난리</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">복학생</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">풀스 리마스터</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">Teach Me!</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">그렇게 내가 싫다면[개정판]</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">착각은 자유</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">A와 B의 초상</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">일어나서 사랑을 시작해</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span class="free-24h-icon"></span>
             <h1 class="section-work-title">아스란히</h1>
+            <span class="free-24h-icon"
+              aria-label="24시간마다 1화 무료로 전환"></span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">좋아한다는 걸 잊지마</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <span class="free-24h-icon"></span>
-            <h1 class="section-work-title">좋아한다는 걸 잊지마</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -1187,84 +1359,102 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">던전 속 사정</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">섹서사이즈</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">서는 여자</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">일상생활 가능하세요?</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">비 마이 게스트</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">나의 호랑이님</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">시선 끝, 30도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">탄생소녀</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">이름을 말하지 않는 악마</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <h1 class="section-work-title">이름을 말하지 않는 악마</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -1289,10 +1479,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="흑역사처리반 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1300,10 +1491,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="하얀데레 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1311,10 +1503,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="봄의 저주 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1322,10 +1515,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="성인 인증하고 12코인 받기 1월 31일까지"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1333,10 +1527,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="1월 출석체크하고 최대 24코인, 2800포인트 지급"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1344,10 +1539,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="총 16작품, 최대 67% 할인 1월 21일까지"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1355,10 +1551,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="작가 인터뷰 김보통 작가님편"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1366,10 +1563,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="불멸의 날들 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1377,10 +1575,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="울프 인더 하우스 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1388,10 +1587,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="지젤씨의 피 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1399,10 +1599,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="아버지의 집밥 추천"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1410,10 +1611,11 @@
             <div class="section-work-thumbnail-group-240px">
               <picture>
                 <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.075.png" alt=""/>
+                <img class="section-work-thumbnail"
+                  src="../assets/images/썸네일-1.075.png"
+                  alt="레진코믹스 추천작"/>
               </picture>
-              <span></span>
+              <span></span> <!-- 시계모양 svg -->
             </div>
             <a href="#"></a>
           </li>
@@ -1436,93 +1638,102 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">자살 소년</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">부랄친구</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">여자친구</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">삐뚤어질테다</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">박씨유대기</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">징벌 소녀</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">히어로 왈츠</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">내 학생이 싸이코패스일 리가 없어</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">수컷의 경우</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <span></span> <!-- 시계모양 svg -->
-            <h1 class="section-work-title">수컷의 경우</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -1544,111 +1755,135 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">타임라인</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">연필의 각도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">시크릿 동맹</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">말할 수 없는 남매</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">별과 하나의 시</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">하얀데레</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">내가 원하는 건</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">비밀스러운 짝사랑</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">아슬아슬</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">685일</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">10년째 차이는 소꿉친구</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">벌건 대낮</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <h1 class="section-work-title">벌건 대낮</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -1670,72 +1905,80 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">BJ 엘프의 요리 채널</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">레바툰</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">표준규격전사</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">4컷용사</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">바나나툰</h1>
-            <a href="#"></a>
-          </li>
-          <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <span></span> <!-- 시계모양 svg -->
-            <h1 class="section-work-title">바퀴멘터리</h1>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">바퀴멘터리</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
+            <a href="#"></a>
+          </li>
+          <li class="section-work-list-items">
             <h1 class="section-work-title">니 친구 김저키</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
         </ol>
@@ -1757,108 +2000,124 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">무명의 등불</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">헌터의 약혼자로 살아남기</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">천지해</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">천사의 용도</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">지젤 씨의 피[개정판]</h1>
-            <a href="#"></a>
-          </li>
-          <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
+            <a href="#"></a>
+          </li>
+          <li class="section-work-list-items">
             <h1 class="section-work-title">머쉬룸 스프</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">레그널 트리거</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">커튼콜 아래그랑</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">모모세 헬프!!</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <h1 class="section-work-title">흑역사 처리반</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">마법사의 아이</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <h1 class="section-work-title">마법사의 아이</h1>
             <a href="#"></a>
           </li>
         </ol>
@@ -1880,72 +2139,80 @@
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">최강왕따</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">불멸의 날들</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">돌아올 땐 해일같이</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">전설의 읍내최강</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">용의 아들 최창식</h1>
-            <a href="#"></a>
-          </li>
-          <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
             <span></span> <!-- 시계모양 svg -->
-            <h1 class="section-work-title">히어로즈 플랜비</h1>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
+            <h1 class="section-work-title">히어로즈 플랜비</h1>
+            <span></span> <!-- 시계모양 svg -->
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
+            <a href="#"></a>
+          </li>
+          <li class="section-work-list-items">
             <h1 class="section-work-title">흑역사처리반</h1>
+            <span></span> <!-- 시계모양 svg -->
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
         </ol>
@@ -1963,151 +2230,137 @@
       </section>
 
       <section class="main-section lezhin-shop">
-        <h1 class="main-section-title">lezhin#</h1>
+        <h1 class="main-section-title" aria-label="레진샾">lezhin#</h1>
 
         <ol class="section-work-list">
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">야화첩 패브릭 포스터</h1>
             <span class="price">
               <strong class="price-amount">22,000</strong>원
             </span>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">2반 이희수</h1>
             <p class="price lezhin-shop-discount">
               <strong class="price-amount">46,800</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">불멸의 날들 엽서 3종</h1>
             <p class="price  lezhin-shop-discount">
               <strong class="price-amount">6,000</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">야화첩 2021 캘린더</h1>
             <p class="price">
               <strong class="price-amount">17,000</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">Love or Hate_증명사진(교복)</h1>
             <p class="price">
               <strong class="price-amount">5,000</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">야화첩 엽서 3종</h1>
             <p class="price">
               <strong class="price-amount">6,000</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
-            <h1 class="section-work-title">FOOLS Remaster(풀스 리마스터) 폰스트랩</h1>
-            <p class="price">
-              <strong class="price-amount">7,000</strong>원
-            </p>
-            <a href="#"></a>
-          </li>
-          <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">걷지 않는 다리_증명사진 세트</h1>
             <p class="price">
               <strong class="price-amount">5,000</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
           <li class="section-work-list-items">
-            <picture>
-              <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-            </picture>
-            <span></span> <!-- 시계모양 svg -->
             <h1 class="section-work-title">야화첩 여름굿즈</h1>
             <p class="price">
               <strong class="price-amount">10,000</strong>원
             </p>
-            <a href="#"></a>
-            <li class="section-work-list-items">
-              <picture>
-                <source />
-                <source />
-                <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
-              </picture>
-              <span></span> <!-- 시계모양 svg -->
-              <h1 class="section-work-title">FOOLS Remaster(풀스 리마스터) 폰스트랩</h1>
-              <p class="price">
-                <strong class="price-amount">7,000</strong>원
-              </p>
-              <a href="#"></a>
-            </li>
-
-          </li>
-          <li class="section-work-list-items">
             <picture>
               <source />
-              <source />
-              <img class="section-work-thumbnail" src="../assets/images/썸네일-1.335.png" alt=""/>
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
             </picture>
-            <span></span> <!-- 시계모양 svg -->
+            <a href="#"></a>
+          </li>
+          <li class="section-work-list-items">
+            <h1 class="section-work-title">FOOLS Remaster(풀스 리마스터) 폰스트랩</h1>
+            <p class="price">
+              <strong class="price-amount">7,000</strong>원
+            </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
+            <a href="#"></a>
+          </li>
+          <li class="section-work-list-items">
             <h1 class="section-work-title">시크릿 캐릭터 드로잉</h1>
             <p class="price lezhin-shop-discount">
               <strong class="price-amount">12,600</strong>원
             </p>
+            <picture>
+              <source />
+              <img class="section-work-thumbnail"
+                src="../assets/images/썸네일-1.335.png"
+                alt=""/>
+            </picture>
             <a href="#"></a>
           </li>
         </ol>
@@ -2127,9 +2380,12 @@
       <!-- 제휴카드 -->
       <div class="affiliate-point">
         <picture>
-          <source />
-          <source media="(min-width:960px)" srcset="../assets/images/제휴카드-688x215.png"/>
-          <img class="affiliate-point-image" src="../assets/images/제휴카드-1180x230.png" alt="">
+          <source
+            media="(min-width:960px)"
+            srcset="../assets/images/제휴카드-688x215.png"/>
+          <img class="affiliate-point-image"
+            src="../assets/images/제휴카드-1180x230.png"
+            alt="제휴 포인트 코인으로 전환하실 분들은 클릭!">
         </picture>
         <a href="#"></a>
       </div>
@@ -2151,7 +2407,9 @@
       <ol class="lezhin-app-list">
         <li class="lezhin-app-list-items">
           <picture>
-            <source media="(min-width: 960px)" srcset="../assets/images/app-comics-plus-desktop.png"/>
+            <source
+              media="(min-width: 960px)"
+              srcset="../assets/images/app-comics-plus-desktop.png"/>
             <img class="lezhin-app-image"
               src="../assets/images/app-comics-plus-mobile.png"
               alt="오직 안드로이드만, 레진 코믹스 플러스 앱, 코인충천 상시 10% 할인">
@@ -2160,19 +2418,23 @@
         </li>
         <li class="lezhin-app-list-items">
           <picture>
-            <source media="(min-width: 960px)" srcset="../assets/images/app-apple-desktop.png"/>
+            <source
+              media="(min-width: 960px)"
+              srcset="../assets/images/app-apple-desktop.png"/>
             <img class="lezhin-app-image"
               src="../assets/images/app-apple-mobile.png"
-              alt="오직 안드로이드만, 레진 코믹스 플러스 앱, 코인충천 상시 10% 할인">
+              alt="애플, 앱 스토어 어플 다운로드">
           </picture>
           <a href="#"></a>
         </li>
         <li class="lezhin-app-list-items">
           <picture>
-            <source media="(min-width: 960px)" srcset="../assets/images/app-android-desktop.png"/>
+            <source
+              media="(min-width: 960px)"
+              srcset="../assets/images/app-android-desktop.png"/>
             <img class="lezhin-app-image"
               src="../assets/images/app-android-mobile.png"
-              alt="오직 안드로이드만, 레진 코믹스 플러스 앱, 코인충천 상시 10% 할인">
+              alt="안드로이드, 구글 플레이 스토어 어플 다운로드">
           </picture>
           <a href="#"></a>
         </li>
@@ -2184,9 +2446,10 @@
         <section class="lezhin-footer-items lezhin-logo">
           <h1 class="sr-only">레진코믹스</h1>
           <img class="lezhin-logo-image"
-            src="../assets/images/logo-footer.png" alt="로고">
+            src="../assets/images/logo-footer.png"
+            alt="로고">
           <p class="lezhin-logo-company">
-            (주)레진엔터테인먼트<br/>
+            <span aria-label="주식회사">(주)</span>레진엔터테인먼트<br/>
             <strong class="lezhin-logo-ceo">대표 이성업</strong>
           </p>
         </section>
@@ -2196,13 +2459,18 @@
           <button class="lezhin-page-language-button" type="button">한국어/한국</button>
           <ol class="language-list">
             <li class="language-list-items">
-              <a class="language-list-anchor selected-language" href="#">한국어/한국</a>
+              <a class="language-list-anchor selected-language"
+                href="#">한국어/한국</a>
             </li>
             <li class="language-list-items">
-              <a class="language-list-anchor" href="#">日本語/日本</a>
+              <a class="language-list-anchor"
+                aria-label="일본어/일본"
+                href="#">日本語/日本</a>
             </li>
             <li class="language-list-items">
-              <a class="language-list-anchor" href="#">English/US</a>
+              <a class="language-list-anchor"
+                aria-label="영어/비아시아"
+                href="#">English/US</a>
             </li>
           </ol>
         </section>
