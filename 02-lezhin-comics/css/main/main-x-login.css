@@ -123,6 +123,18 @@
 
 
 /* Section.lezhin-shop */
+.lezhin-shop .section-work-list-items > picture{
+  order: 1;
+}
+
+.lezhin-shop .section-work-list-items > .section-work-title{
+  order: 2;
+}
+
+.lezhin-shop .section-work-list-items > .price{
+  order: 3;
+}
+
 .price,
 .price-amount{
   font-size: 12px;
