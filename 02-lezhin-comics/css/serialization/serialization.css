@@ -9,3 +9,28 @@
   margin: 0 -8px;
   width: auto;
 }
+
+
+/* Section - Serialization-webtoon */
+.serialization-webtoon{
+  padding-top: 8px;
+}
+
+.serialization-list-items{
+  position: relative; left: 0; right: 0;
+  margin-bottom: 16px;
+}
+
+.serialization-work-desc{
+  padding: 8px 0;
+  padding-left: 4px;
+}
+
+.serialization-work-desc-title-group{
+  margin-bottom: 4px;
+}
+
+.serialization-desc-title{
+  font-size: 16px;
+  line-height: 1.5;
+}

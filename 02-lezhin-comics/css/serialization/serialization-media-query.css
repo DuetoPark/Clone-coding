@@ -9,6 +9,21 @@
     width: 100%;
   }
 
+
+  /* Section - Serialization-webtoon */
+  .serialization-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .serialization-list-items{
+    width: calc((100% - 16px) / 2);
+    margin: 0 16px 16px 0;
+  }
+
+  .serialization-list-items:nth-child(2n){
+    margin: 0 0 16px 0;
+  }
 }
 
 
@@ -18,6 +33,22 @@
   .serialization-nav .type-list{
     padding: 8px 0;
     margin: 0;
+  }
+
+
+  /* Section - Serialization-webtoon */
+  .monday-webtoon{
+    padding: 16px 0 8px 0;
+  }
+
+  .serialization-list-items,
+  .serialization-list-items:nth-child(2n){
+    width: calc((100% - 48px) / 4);
+    margin: 0 16px 16px 0;
+  }
+
+  .serialization-list-items:nth-child(4n){
+    margin: 0 0 16px 0;
   }
 }
 
@@ -30,6 +61,14 @@
 
 /* >=1280px (와이드 데스크탑) */
 @media screen and (min-width: 1280px) {
+  /* Section - Serialization-webtoon */
+  .serialization-list-items,
+  .serialization-list-items:nth-child(2n){
+    width: calc((100% - 72px) / 4);
+    margin: 0 24px 16px 0;
+  }
 
-
+  .serialization-list-items:nth-child(4n){
+    margin: 0 0 16px 0;
+  }
 }
