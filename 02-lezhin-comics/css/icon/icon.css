@@ -16,7 +16,10 @@
   color: #FFF;
 }
 
-/* up - 흰배경 */
+/* up - 흰배경
+<strong class="sr-only up-icon-reverse"
+aria-label="최신화 업데이트"></strong>
+*/
 .up-icon-reverse{
   position: relative;
   top: 0;
@@ -30,7 +33,11 @@
   background-size: 20px 16px;
 }
 
-/* event */
+
+/* event
+<strong class="sr-only event-icon"
+aria-label="이벤트 진행 중"></strong>
+*/
 .event-icon{
   position: relative;
   top: 0;
@@ -44,7 +51,11 @@
   background-size: 32px 16px;
 }
 
-/* award */
+
+/* award
+<strong class="award-icon"
+aria-label="수상작"></strong>
+*/
 .award-icon{
   position: relative;
   top: 0;
@@ -58,7 +69,11 @@
   background-size: 16px 16px;
 }
 
-/* new */
+
+/* new
+<strong class="sr-only new-icon"
+aria-label="신작"></strong>
+*/
 .new-icon{
   position: relative;
   top: 0;
@@ -72,7 +87,11 @@
   background-size: 28px 16px;
 }
 
-/* zzz */
+
+/* zzz
+<strong class="sr-only zzz-icon"
+aria-label="휴재중"></strong>
+*/
 .zzz-icon{
   position: relative;
   top: 0;
@@ -86,7 +105,11 @@
   background-size: 28px 16px;
 }
 
-/* free 24h */
+
+/* free 24h
+<span class="free-24h-icon"></span>
+<span class="free-24h-icon-big"></span>
+*/
 .free-24h-icon{
   position: absolute;
   top: 4px;
@@ -100,6 +123,20 @@
   opacity: 0.85;
 }
 
+.free-24h-icon-big{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  background-image: url("../../assets/images/icon-free-24h.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 32px 32px;
+  opacity: 0.85;
+}
+
+/* Selected-language */
 .selected-language::after{
   content: '';
   display: block;
