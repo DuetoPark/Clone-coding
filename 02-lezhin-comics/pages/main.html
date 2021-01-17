@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="../css/common/grid.min.css">
     <link rel="stylesheet" href="../css/common/common.css">
     <link rel="stylesheet" href="../css/common/common-media-query.css">
+    <link rel="stylesheet" href="../css/common/modal.css">
+    <link rel="stylesheet" href="../css/common/modal-media-query.css">
     <link rel="stylesheet" href="../css/main/main-x-login.css">
     <link rel="stylesheet" href="../css/main/main-x-media-query.css">
     <link rel="stylesheet" href="../css/icon/icon.css">
     <link rel="stylesheet" href="../css/animation/animation.css">
+
   </head>
   <body>
     <header class="relative lezhin-header">
@@ -71,7 +74,7 @@
       </nav>
     </header>
 
-    <main class="lezhin-main">
+    <main class="lezhin-main relative">
       <section class="main-section banner">
         <h1 class="sr-only">메인 배너</h1>
         <!-- 배너 이미지 리스트 -->
@@ -2389,6 +2392,54 @@
         </picture>
         <a href="#"></a>
       </div>
+
+      <nav class="login-modal">
+        <h2 class="sr-only">로그인창</h2>
+
+        <button class="modal-close relative"
+          type="button"
+          aria-label="로그인창 닫기"></button>
+
+        <section class="login-modal-container">
+          <h3 class="sr-only">로그인 수단 선택</h3>
+
+          <div class="recently-login-account">
+            <h3 class="recently-login-account-title">최근 로그인한 계정</h3>
+            <a class="login-modal-anchor naver-login relative"
+              href="#">네이버 아이디로 로그인</a>
+          </div>
+
+          <div class="another-account">
+            <h3 class="another-account-title">다른 계정으로 로그인 / 가입</h3>
+            <div class="another-account-anchor-group">
+              <a class="another-account-anchor facebook-login"
+                href="#"
+                aria-label="페이스북 아이디로 로그인"></a>
+              <a class="another-account-anchor apple-id-login"
+                href="#"
+                aria-label="애플 아이디로 로그인"></a>
+            </div>
+          </div>
+
+          <div class="email-login">
+            <a class="login-modal-anchor select-email"
+              href="#" >이메일로 로그인</a>
+            <div class="email-login-anchor-group relative">
+              <a class="email-login-anchor go-to-sign-in"
+                href="#">이메일로 회원가입</a>
+              <a class="email-login-anchor find-password"
+                href="#">비밀번호 찾기</a>
+            </div>
+          </div>
+
+          <div class="notice-contact">
+            <a class="login-modal-notice"
+              href="#">고객지원</a>
+            <button class="login-modal-contact"
+              type="button">연재문의</button>
+          </div>
+        </section>
+      </nav>
     </main>
 
     <!-- App -->
