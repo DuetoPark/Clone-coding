@@ -69,7 +69,9 @@ function changeList (target) {
 }
 
 function dailyWebtoonHandler (e) {
-  changeList(e.target);
+  if (e.target.classList[0] === "week-button") {
+    changeList(e.target);
+  }
 }
 
 weekButtonlist.addEventListener("click", dailyWebtoonHandler);
