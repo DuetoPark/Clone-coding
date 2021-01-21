@@ -1,0 +1,117 @@
+/* >=640px (태블릿) */
+@media screen and (min-width: 640px) {
+  /* Main */
+  .comics-main{
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  /* Article - lezhin-article-works-desc */
+  .lezhin-article-works-info{
+    position: sticky; left: 0; top: 0;
+    width: calc(50% - 16px);
+    height: 100vh;
+    padding-top: 50%;
+    margin-right: 16px;
+  }
+
+  /* Section - lezhin-section-episodes*/
+  .lezhin-section-episodes{
+    width: 50%;
+    padding-bottom: 16px;
+  }
+
+  .lezhin-section-episode-div{
+    position: sticky; left: 0; top: 0;
+  }
+
+  .lezhin-section-episode-list{
+    padding: 0;
+  }
+
+  .lezhin-section-episode-date > p:last-child{
+    margin-right: 24px;
+  }
+}
+
+/* >=960px (데스크탑) */
+@media screen and (min-width: 960px) {
+  /* Header */
+  .comics-header{
+    display: block;
+  }
+
+  /* Main */
+  .comics-main{
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  /* Article - lezhin-article-works-desc */
+  .lezhin-article-works-info{
+    flex-shrink: 0;
+    width: 356px;
+    padding-top: 356px;
+    margin-right: 32px;
+  }
+
+  .lezhin-article-works-home-button{
+    display: none;
+  }
+
+  /* Section - lezhin-section-episodes*/
+  .lezhin-section-episodes{
+    width: 100%;
+    padding-bottom: 32px;
+  }
+
+  .lezhin-section-episode-div{
+    padding-right: 32px;
+    font-size: 16px;
+    border-top: 1px solid #DEE0E3;
+  }
+
+  .lezhin-section-episode-list-items > div{
+    padding: 16px 0;
+  }
+
+  .lezhin-section-episode-image{
+    width: 96px;
+    margin-right: 24px;
+  }
+
+  .lezhin-section-episode-part{
+    font-size: 14px;
+    line-height: 1.142857142857143;
+  }
+
+  .lezhin-section-episode-title{
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .lezhin-section-episode-date  p{
+    font-size: 14px;
+    line-height: 1.142857142857143;
+  }
+
+  .lezhin-section-episode-date > p:last-child{
+    margin-top: 10px;
+    margin-right: 32px;
+  }
+}
+
+/* >= 1054px (라지 데스트탑) */
+@media screen and (min-width: 1054px) {
+
+}
+
+/* >= 1280px (엑스트라 라지 데스트탑) */
+@media screen and (min-width: 1280px) {
+  /* Article - lezhin-article-works-desc */
+  .lezhin-article-works-info{
+    width: 420px;
+    padding-top: 420px;
+  }
+
+}
