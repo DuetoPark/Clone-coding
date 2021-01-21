@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../css/comics/comics-media-query.css">
     <link rel="stylesheet" href="../css/icon/icon.css">
     <link rel="stylesheet" href="../css/animation/animation.css">
+
+    <script src="../assets/comics.js"></script>
   </head>
   <body>
     <header class="relative lezhin-header comics-header">
@@ -50,7 +52,7 @@
         <h2 class="sr-only">메뉴</h2>
         <ol class="lezhin-header-nav-list">
           <li class="relative lezhin-header-nav-list-items">
-            <a class="relative header-nav-active" href="#">연재</a>
+            <a class="relative" href="#">연재</a>
           </li>
           <li class="relative lezhin-header-nav-list-items">
             <a href="#">랭킹</a>
@@ -82,7 +84,7 @@
           method="GET">
           <input class="lezhin-article-works-checkbox"
             type="checkbox"
-            name="vote"
+            name="pick"
             value="pick"
             id="pick"/>
           <label class="lezhin-article-works-label pick-label"
