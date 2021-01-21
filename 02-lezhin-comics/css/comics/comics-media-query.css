@@ -59,6 +59,10 @@
     display: none;
   }
 
+  .lezhin-article-works-label{
+    background-color: rgba(69,76,85,0.5);
+  }
+
   /* Section - lezhin-section-episodes*/
   .lezhin-section-episodes{
     width: 100%;
