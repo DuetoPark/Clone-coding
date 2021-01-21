@@ -70,7 +70,12 @@
 }
 
 .lezhin-article-works-checkbox{
-  display: none;
+  position: absolute;
+  z-index: -99;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .lezhin-article-works-label{
@@ -83,6 +88,7 @@
   border-radius: 100px;
   background-color: rgba(69,76,85,0.8);
   color: #ACB4BF;
+  cursor: pointer;
 }
 
 .lezhin-article-works-label:last-child{
@@ -108,6 +114,24 @@
   background-position: top -1px right 50%;
 }
 
+.pick-label:hover::before{
+  background-position: center;
+}
+
+#pick:checked + .pick-label::before{
+  content: '';
+  position: relative;
+  top: -10px;
+  left: -2px;
+  display: block;
+  width: 24px;
+  height: 48px;
+  background-image: url("../../assets/images/btn-star.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: bottom -1px right 50%;
+}
+
 .like-label,
 .dislike-label{
   flex-shrink: 0;
@@ -118,13 +142,60 @@
   background-image: url("../../assets/images/btn-voteup.png");
   background-repeat: no-repeat;
   background-size: 50px;
+  background-position: top 0 center;
+}
+
+.like-label:hover{
+  background-position: top 33% center;
+}
+
+.like-label-checked{
+  flex-shrink: 0;
+  width: 48px;
+  background-image: url("../../assets/images/btn-voteup.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: bottom -2px center;
+}
+
+.like-label-inactive{
+  flex-shrink: 0;
+  width: 48px;
+  background-image: url("../../assets/images/btn-voteup.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: top 66% center;
 }
 
 .dislike-label{
   background-image: url("../../assets/images/btn-votedown.png");
   background-repeat: no-repeat;
   background-size: 50px;
+  background-position: top 0 center;
 }
+
+.dislike-label:hover{
+  background-position: top 33% center;
+}
+
+.dislike-label-checked{
+  flex-shrink: 0;
+  width: 48px;
+  background-image: url("../../assets/images/btn-votedown.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: bottom -2px center;
+}
+
+.dislike-label-inactive{
+  flex-shrink: 0;
+  width: 48px;
+  background-image: url("../../assets/images/btn-votedown.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: top 66% center;
+}
+
 
 /* p */
 .lezhin-article-works-desc > p{
@@ -138,6 +209,11 @@
 .lezhin-article-works-author{
   line-height: 2.571428571428571;
   color: #738DB5;
+}
+
+.lezhin-article-works-author:hover,
+.lezhin-article-works-hashtag-anchor:hover{
+  text-decoration: underline;
 }
 
 .lezhin-article-works-hashtag{
