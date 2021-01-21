@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../css/common/grid.min.css">
     <link rel="stylesheet" href="../css/common/common.css">
     <link rel="stylesheet" href="../css/common/common-media-query.css">
+    <link rel="stylesheet" href="../css/common/modal.css">
+    <link rel="stylesheet" href="../css/common/modal-media-query.css">
     <link rel="stylesheet" href="../css/comics/comics.css">
     <link rel="stylesheet" href="../css/comics/comics-media-query.css">
     <link rel="stylesheet" href="../css/icon/icon.css">
@@ -73,12 +75,12 @@
       </nav>
     </header>
 
-    <main class="lezhin-main comics-main">
+    <main class="lezhin-main comics-main relative">
       <article class="lezhin-article-works-info relative">
         <h1 class="lezhin-article-works-title">차린 건 없지만</h1>
         <!-- 메인 페이지로 이동 버튼 -->
         <a class="lezhin-article-works-home-button"
-          href="#"
+          href="./main.html"
           aria-label="메인 페이지로 이동">
           <span class="go-to-home-arrow" aria-hidden="true"></span>홈
         </a>
@@ -335,6 +337,54 @@
           </li>
         </ol>
       </section>
+
+      <nav class="login-modal">
+        <h2 class="sr-only">로그인창</h2>
+
+        <button class="modal-close relative"
+          type="button"
+          aria-label="로그인창 닫기"></button>
+
+        <section class="login-modal-container">
+          <h3 class="sr-only">로그인 수단 선택</h3>
+
+          <div class="recently-login-account">
+            <h3 class="recently-login-account-title">최근 로그인한 계정</h3>
+            <a class="login-modal-anchor naver-login relative"
+              href="#">네이버 아이디로 로그인</a>
+          </div>
+
+          <div class="another-account">
+            <h3 class="another-account-title">다른 계정으로 로그인 / 가입</h3>
+            <div class="another-account-anchor-group">
+              <a class="another-account-anchor facebook-login"
+                href="#"
+                aria-label="페이스북 아이디로 로그인"></a>
+              <a class="another-account-anchor apple-id-login"
+                href="#"
+                aria-label="애플 아이디로 로그인"></a>
+            </div>
+          </div>
+
+          <div class="email-login">
+            <a class="login-modal-anchor select-email"
+              href="#" >이메일로 로그인</a>
+            <div class="email-login-anchor-group relative">
+              <a class="email-login-anchor go-to-sign-in"
+                href="#">이메일로 회원가입</a>
+              <a class="email-login-anchor find-password"
+                href="#">비밀번호 찾기</a>
+            </div>
+          </div>
+
+          <div class="notice-contact">
+            <a class="login-modal-notice"
+              href="#">고객지원</a>
+            <button class="login-modal-contact"
+              type="button">연재문의</button>
+          </div>
+        </section>
+      </nav>
     </main>
 
     <footer class="lezhin-footer comics-footer">
@@ -493,5 +543,6 @@
       </aside>
     </footer>
 
+    <script src="../assets/modal.js"></script>
   </body>
 </html>
