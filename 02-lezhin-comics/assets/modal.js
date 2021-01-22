@@ -1,10 +1,12 @@
-// Modal event
+// 로그인 모달 이벤트
 const loginButton = document.querySelector(".login-button");
 const loginModal = document.querySelector(".login-modal");
+const serialInquiryModal = document.querySelector(".serial-inquiry-modal-container");
 let currentStatus = 0;
 
-
-function loginButtonControl () {
+// '로그인 버튼' 동작
+// -로그인 모달 열림
+function loginButtonFunction () {
   // 애니메이션 진행중에 .modal-active 클래스 추가
   // - 진행중에 클래스를 추가하는 이유
   //   : 프로그램은 작성 순서대로 진행되기 때문이다.
@@ -30,6 +32,8 @@ function loginButtonControl () {
   }
 }
 
+//'로그인 닫기 버튼' 동작
+// -로그인 모달 닫힘
 function closeLoginWindow () {
   loginModal.classList.add("modal-close-animation");
   window.setTimeout(function () {
@@ -42,15 +46,41 @@ function closeLoginWindow () {
   currentStatus = 0;
 }
 
-function loginModalHandler () {
-  loginButtonControl();
+// '연재문의 버튼' 동작
+// -연재문의 모달 열림
+function openSerialInquiry () {
+  loginButtonFunction();
+  serialInquiryModal.classList.remove("inactive");
+  document.body.classList.add("hidden");
 }
 
-function closeLoginHandler (e) {
-  if (e.target.classList[0] === "modal-close") {
+// '연재문의 닫기 버튼' 동작
+// - 연재문의 모달 닫힘
+function closeSerialInquiry () {
+  serialInquiryModal.classList.add("inactive");
+  document.body.classList.remove("hidden");
+}
+
+
+
+function loginButtonHandler () {
+  loginButtonFunction();
+}
+
+function loginModalHandler (e) {
+  if (e.target.className === "login-close") {
     closeLoginWindow();
+  } else if (e.target.className === "login-modal-contact") {
+    openSerialInquiry();
   }
 }
 
-loginButton.addEventListener("click", loginModalHandler);
-loginModal.addEventListener("click", closeLoginHandler);
+function serialInquiryModalHandler (e) {
+  if (e.target.className === "serial-inquiry-close") {
+    closeSerialInquiry();
+  }
+}
+
+loginButton.addEventListener("click", loginButtonHandler);
+loginModal.addEventListener("click", loginModalHandler);
+serialInquiryModal.addEventListener("click", serialInquiryModalHandler);
