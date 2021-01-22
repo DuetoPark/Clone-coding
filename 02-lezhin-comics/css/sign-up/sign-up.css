@@ -1,0 +1,157 @@
+/* Main */
+.sign-up-main{
+  padding: 16px;
+  margin: 0;
+}
+
+/* Section */
+.lezhin-section-sign-up-title{
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: center;
+}
+
+/* Article - lezhin-article-agreement */
+/* form */
+.agreement-form-fieldset{
+  padding: 0;
+  margin-bottom: 24px;
+  border: none;
+}
+
+.agreement-form-div{
+  position: relative; top: 0; left: 0;
+  display: flex;
+  margin-bottom: 12px;
+  color: #707070;
+}
+
+.agreement-form-div:last-child{
+  margin-bottom: 0;
+}
+
+.agreement-form-div:first-child .agreement-form-label,
+.agreement-form-div:last-child .agreement-form-label{
+  font-weight: 500;
+  color: #333333;
+}
+
+.agreement-form-div .agreement-form-detail{
+  margin-left: auto;
+}
+
+.agreement-form-div:hover .agreement-form-input::before{
+  border-color: rgba(1, 1, 1, 0.54);
+}
+
+.agreement-form-input{
+  position: absolute; top: 10px; left: 10px;
+  width: 1px;
+  height: 1px;
+}
+
+.agreement-form-input::before{
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: -10px;
+  z-index: 1;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid rgba(112, 112, 112, 0.54);
+  background-color: #FFF;
+}
+
+.agreement-form-input:checked::before{
+  border: none;
+  background-color: #FF2E4B;
+  background-image: url("../../assets/images/icon-check-white.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 left 50%;
+  background-size: 14px;
+}
+
+.agreement-form-input:checked + label{
+  color: #333;
+}
+
+.agreement-form-label{
+  z-index: 2;
+  padding-left: 26px;
+  white-space: normal;
+}
+
+.agreement-form-label:hover{
+  color: #333;
+}
+
+/* anchor */
+.agreement-form-detail{
+  text-decoration: underline;
+  color: #5A719A;
+}
+
+/* 필수 */
+.essential{
+  color: #EB0026;
+}
+
+/* hr */
+.agreement-form-hr{
+  margin: 13px 0;
+  border: none;
+  border-bottom: 1px solid #DBDEE3;
+}
+
+/* button */
+.agreement-form-fieldset:last-child{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-button{
+  width: 100%;
+  height: 48px;
+  margin-right: 2%;
+  border-radius: 2px;
+  border: 1px solid #C6CBD4;
+  background-color: #FFF;
+  color: #585858;
+}
+
+.sign-up-cancle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-agreement{
+  margin-right: 0;
+  border: none;
+  background-color: #DBDEE3;
+  color: #FFF;
+  transition: background-color 250ms ease-in-out;
+}
+
+.agreement-active{
+  background-color: #EB0026;
+}
+
+
+
+/* Aside - sign-up-help */
+.sign-up-help{
+  padding-top: 16px;
+  margin-bottom: 40px;
+}
+
+.sign-up-help > p,
+.sign-up-help a{
+  white-space: normal;
+  font-size: 12px;
+  color: #707070;
+}
