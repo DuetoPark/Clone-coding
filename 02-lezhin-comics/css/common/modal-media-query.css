@@ -1,5 +1,40 @@
+/* >=640px (태블릿) */
+@media screen and (min-width: 640px) {
+  /* Aside - Serial-inquiry-modal */
+  .serial-inquiry-modal{
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 386px;
+  }
+}
+
 /* >=960px (데스크탑) */
 @media screen and (min-width: 960px) {
+  /* 모달효과 */
+  .body-scroll-off{
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  .modal-active{
+    width: 280px;
+  }
+
+  .modal-open-animation{
+    display: block;
+    animation-name: modal-open-960px;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+  }
+
+  .modal-close-animation{
+    animation-name: modal-close-960px;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+  }
+
+
+
   /* Login-modal - login-modal */
   .login-modal{
     position: absolute;
@@ -26,26 +61,9 @@
     border: none;
   }
 
-  /* 모달효과 */
-  .body-scroll-off{
-    overflow-y: scroll;
-    width: 100%;
-  }
-
-  .modal-active{
-    width: 280px;
-  }
-
-  .modal-open-animation{
-    display: block;
-    animation-name: modal-open-960px;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in;
-  }
-
-  .modal-close-animation{
-    animation-name: modal-close-960px;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in;
+  /* Aside - Serial-inquiry-modal */
+  .serial-inquiry-modal{
+    padding: 32px;
+    padding-top: 48px;
   }
 }
