@@ -341,7 +341,7 @@
       <nav class="login-modal">
         <h2 class="sr-only">로그인창</h2>
 
-        <button class="modal-close relative"
+        <button class="login-close"
           type="button"
           aria-label="로그인창 닫기"></button>
 
@@ -350,7 +350,7 @@
 
           <div class="recently-login-account">
             <h3 class="recently-login-account-title">최근 로그인한 계정</h3>
-            <a class="login-modal-anchor naver-login relative"
+            <a class="login-modal-anchor latest-naver-login relative"
               href="#">네이버 아이디로 로그인</a>
           </div>
 
@@ -386,6 +386,33 @@
         </section>
       </nav>
     </main>
+
+    <!-- 연재문의 모달 -->
+    <div class="serial-inquiry-modal-container inactive">
+      <aside class="serial-inquiry-modal">
+        <h2 class="serial-inquiry-title">연재문의</h2>
+
+        <div class="serial-inquiry-div">
+          <h3 class="serial-inquiry-subtitle">
+            레진코믹스에 작품 투고하기
+          </h3>
+          <p class="serial-inquiry-paragraph">
+            4화 이상 '<strong>완성 원고</strong>'와 '<strong>작품 기획서</strong>'를 <a class="serial-inquiry-anchor" href="mailto:submit@lezhin.com">submit@lezhin.com</a>으로 보내주시면 검토 후 안내 드리겠습니다. 작품 기획서에는 '<strong>장르, 시놉시스, 캐릭터 설명</strong>'을 포함해 주세요.
+          </p>
+
+          <h3 class="serial-inquiry-subtitle">
+            레진코믹스에 작품 연재하기
+            <span class="serial-inquiry-news" aria-label="새소식">new!</span>
+          </h3>
+          <p class="serial-inquiry-paragraph">
+            레진 챌린지에서는 작가가 직접 다양한 작품을 연재할 수 있습니다. 작품 감상은 Web, App 모두 가능하지만 등록은 데스크톱 Web에서만 가능합니다. <a  class="serial-inquiry-anchor" href="#">레진 챌린지 바로가기</a>.
+          </p>
+        </div>
+
+        <button class="serial-inquiry-close"
+          type="button">닫기</button>
+      </aside>
+    </div>
 
     <footer class="lezhin-footer comics-footer">
       <div class="relative lezhin-footer-main">
