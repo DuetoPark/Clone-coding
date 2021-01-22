@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dueto park">
+    <meta name="keywords" content="클론코딩, clone-coding, 레진코믹스, 회원가입">
+    <meta name="description" content="회원가입, 약관동의, 이메일 인증, 개인정보 입력">
+    <title>레진코믹스 클론코딩 | 회원가입</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/default/reset-css.css">
+    <link rel="stylesheet" href="../css/common/grid.min.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/common/common-media-query.css">
+    <link rel="stylesheet" href="../css/common/modal.css">
+    <link rel="stylesheet" href="../css/common/modal-media-query.css">
+    <link rel="stylesheet" href="../css/sign-up/sign-up.css">
+    <link rel="stylesheet" href="../css/sign-up/sign-up-media-query.css">
+    <link rel="stylesheet" href="../css/icon/icon.css">
+    <link rel="stylesheet" href="../css/animation/animation.css">
+  </head>
+  <body>
+    <header class="relative lezhin-header">
+      <div>
+        <!-- 로고 -->
+        <a class="relative lezhin-header-anchor" href="./main.html">
+          <h1 class="lezhin-header-title sr-only">레진코믹스</h1>
+        </a>
+
+        <div class="lezhin-header-button-group">
+          <button class="size-48-button search-button"
+            type="button"
+            aria-label="검색하기"
+          ></button>
+          <a class="relative size-48-button move-to-challenge"
+            href="#"
+            aria-label="레진 챌린지로 이동"
+          ></a>
+          <button class="relative login-button"
+            type="button"
+            aria-label="로그인"
+          ><span>전연령</span></button>
+        </div>
+      </div>
+
+      <!-- 헤더 메뉴 (페이지 이동) -->
+      <nav class="lezhin-header-nav">
+        <h2 class="sr-only">메뉴</h2>
+        <ol class="lezhin-header-nav-list">
+          <li class="relative lezhin-header-nav-list-items">
+            <a class="relative"
+              href="./serialization.html"
+              aria-label="현재페이지 요일별 코믹스">연재</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="장르별 랭킹 페이지로 이동">랭킹</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="무료 페이지로 이동">무료</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a class='relative up-icon' href="#" aria-label="할인 안내 페이지로 이동">SALE</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="단행본 페이지로 이동">단행본</a>
+          </li>
+          <li class="relative lezhin-header-nav-list-items">
+            <a href="#" aria-label="완결 코믹스 페이지로 이동">완결</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+
+    <main class="lezhin-main sign-up-main relative">
+      <section class="lezhin-section-sign-up relative">
+        <h1 class="lezhin-section-sign-up-title">이메일로 회원가입</h1>
+
+        <article class="lezhin-article-agreement">
+          <h2 class="sr-only">약관동의</h2>
+          <form class="lezhin-article-agreement-form" action="" method="GET">
+            <fieldset class="agreement-form-fieldset">
+              <div class="agreement-form-div">
+                <input class="agreement-form-input"
+                  type="checkbox"
+                  name="agreement"
+                  value="all"
+                  id="all"/>
+                <label class="agreement-form-label relative" for="all">
+                  전체동의
+                </label>
+              </div>
+
+              <hr class="agreement-form-hr"/>
+
+              <div class="agreement-form-div">
+                <input class="agreement-form-input"
+                  type="checkbox"
+                  name="agreement"
+                  value="ToS"
+                  id="ToS"/>
+                <label class="agreement-form-label" for="ToS">
+                  레진코믹스 이용약관<span class="essential">(필수)</span>
+                </label>
+                <a class="agreement-form-detail" href="#">상세보기</a>
+              </div>
+              <div class="agreement-form-div">
+                <input class="agreement-form-input"
+                  type="checkbox"
+                  name="agreement"
+                  value="privacy"
+                  id="privacy"/>
+                <label class="agreement-form-label" for="privacy">
+                  개인정보 수집 및 이용에 대한 안내<span class="essential">(필수)</span>
+                </label>
+                <a class="agreement-form-detail" href="#">상세보기</a>
+              </div>
+              <div class="agreement-form-div">
+                <input class="agreement-form-input"
+                  type="checkbox"
+                  name="agreement"
+                  value="marketing"
+                  id="marketing"/>
+                <label class="agreement-form-label" for="marketing">
+                  이벤트 혜택 및 마케팅 정보 이메일 알림(선택)
+                </label>
+              </div>
+
+              <hr class="agreement-form-hr"/>
+
+              <div class="agreement-form-div">
+                <input class="agreement-form-input"
+                  type="checkbox"
+                  name="agreement"
+                  value="age-14"
+                  id="age-14"/>
+                <label class="agreement-form-label" for="age-14">
+                  만 14세 이상입니다.<span class="essential">(필수)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="agreement-form-fieldset">
+              <a class="sign-up-button sign-up-cancle"
+                href="./main.html" aria-label="취소 누르면 메인화면으로 이동">취소</a>
+              <button class="sign-up-button sign-up-agreement"
+                type="submit">동의</button>
+            </fieldset>
+          </form>
+        </article>
+
+        <aside class="sign-up-help">
+          <h3 class="sr-only">도움 문의</h3>
+          <p>
+            이용 중 도움이 필요하시면 [<a href="#">고객지원</a>] 페이지로, 로그인에 문제가 있다면 <a href="#">help@lezhin.com</a>으로 문의해 주세요.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="lezhin-footer inactive">
+      <div class="relative lezhin-footer-main">
+        <section class="lezhin-footer-items lezhin-logo">
+          <h1 class="sr-only">레진코믹스</h1>
+          <img class="lezhin-logo-image"
+            src="../assets/images/logo-footer.png"
+            alt="로고">
+          <p class="lezhin-logo-company">
+            <span aria-label="주식회사">(주)</span>레진엔터테인먼트<br/>
+            <strong class="lezhin-logo-ceo">대표 이성업</strong>
+          </p>
+        </section>
+
+        <section class="lezhin-footer-items lezhin-page-language">
+          <h3 class="lezhin-page-language-title">언어/국가 변경</h3>
+          <button class="lezhin-page-language-button" type="button">한국어/한국</button>
+          <ol class="language-list">
+            <li class="language-list-items">
+              <a class="language-list-anchor selected-language"
+                href="#">한국어/한국</a>
+            </li>
+            <li class="language-list-items">
+              <a class="language-list-anchor"
+                aria-label="일본어/일본"
+                href="#">日本語/日本</a>
+            </li>
+            <li class="language-list-items">
+              <a class="language-list-anchor"
+                aria-label="영어/비아시아"
+                href="#">English/US</a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="lezhin-footer-items lezhin-info relative">
+          <h3 class="sr-only">레진코믹스 정보</h3>
+          <ul class="lezhin-footer-list">
+            <li class="lezhin-footer-list-items">
+              <a href="#">회사소개</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">이용약관</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">개인정보처리방침</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">청소년보호정책</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">고객지원/공지사항</a>
+            </li>
+            <li class="lezhin-footer-list-items">
+              <a href="#">사업자정보확인</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="lezhin-footer-items lezhin-contact">
+          <h3 class="sr-only">레진코믹스 소식</h3>
+          <ul class="lezhin-footer-list">
+            <li class="lezhin-footer-list-items"><a href="#">블로그</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">페이스북</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">트위터</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">채용공고</a></li>
+            <li class="lezhin-footer-list-items"><a href="#">연재문의</a></li>
+          </ul>
+        </section>
+
+        <p class="lezhin-footer-items lezhin-copyright">
+          레진코믹스의 모든 웹툰들은 저작권법에 의거 보호받고 있습니다. 저작권자 또는 레진코믹스의 승인없이 웹툰의 일부 또는 전체를 복사하여 다른 매체(개인 미디어 포함)에 게재하는 행위는 저작권법에 의거 법적 조치에 처해질 수 있습니다. 언어/국가별로 서비스되는 작품 및 운영 방침이 다르게 적용될 수 있습니다.
+        </p>
+
+        <section class="lezhin-footer-items lezhin-desc">
+          <h3 class="sr-only">레진코믹스 정보</h3>
+          <dl class="lezhin-footer-dl">
+            <div class="lezhin-boss">
+              <dt class="lezhin-footer-dt"><span aria-label="주식회사">(주)</span>레진엔터테인먼트 대표</dt>
+              <dd class="lezhin-footer-dd">이성업</dd>
+            </div>
+            <div class="lezhin-business-registration-number">
+              <dt class="lezhin-footer-dt">사업자 등록번호</dt>
+              <dd class="lezhin-footer-dd">114-87-00708</dd>
+            </div>
+            <div>
+              <dt class="lezhin-footer-dt">통신판매업 신고번호</dt>
+              <dd class="lezhin-footer-dd">제2014-서울강남-00058호</dd>
+            </div>
+            <div class="lezhin-desc-address">
+              <dt class="lezhin-footer-dt">주소</dt>
+              <dd class="lezhin-footer-dd">서울특별시 강남구 도산대로 170</dd>
+              <dd class="lezhin-footer-dd">170, Dosan-daero, Gangnam-gu, Seoul, Korea</dd>
+            </div>
+            <div>
+              <dt class="lezhin-footer-dt">대표번호</dt>
+              <dd class="lezhin-footer-dd">02-1670-9917</dd>
+            </div>
+            <div class="lezhin-desc-fax">
+              <dt class="lezhin-footer-dt">팩스번호</dt>
+              <dd class="lezhin-footer-dd">02-517-2484</dd>
+            </div>
+            <div class="lezhin-desc-customer-contact">
+              <dt class="lezhin-footer-dt">고객문의</dt>
+              <dd class="lezhin-footer-dd">
+                <a class="lezhin-footer-anchor" href="#">help@lezhin.com</a>
+              </dd>
+            </div>
+            <div class="lezhin-desc-business-contact">
+              <dt class="lezhin-footer-dt">업무 제휴 문의</dt>
+              <dd class="lezhin-footer-dd">
+                <a class="lezhin-footer-anchor" href="#">contact@lezhin.com</a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+
+      <aside class="lezhin-prize">
+        <h3 class="sr-only">레진코믹스 2020 수상</h3>
+        <ol class="lezhin-footer-items lezhin-price-list">
+          <li class="lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-1"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            제 9회 대한민국 인터넷대상 국무총리상
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-2"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            글로벌K-스타트업 2013 최우수상
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-3"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            벤처기업 인증
+          </li>
+          <li class="relative lezhin-price-list-items">
+            <div class="relative lezhin-price-image-group">
+              <img class="prize-4"
+                src="../assets/images/company-prize-2020.png"
+                alt="">
+            </div>
+            저작권OK
+          </li>
+        </ol>
+      </aside>
+    </footer>
+
+    <script src="../assets/sign-up.js"></script>
+  </body>
+</html>
