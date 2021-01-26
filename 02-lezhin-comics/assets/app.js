@@ -56,7 +56,7 @@ let workNext = function (target) {
       if (workListItems.length<=12) {
         // workListItems[6]~[n] 출력 (workListItems.length < 12)
         for (let i=6; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -66,7 +66,7 @@ let workNext = function (target) {
       } else {
         // workListItems[6]~[11] 출력 (workListItems.length >= 12)
         for (let i=6; i<12; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -89,7 +89,7 @@ let workNext = function (target) {
       if (workListItems.length<=12) {
         // workListItems[6]~[n] 출력 (workListItems.length < 12)
         for (let i=6; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -99,7 +99,7 @@ let workNext = function (target) {
       } else {
         // workListItems[6]~[11] 출력 (workListItems.length >= 12)
         for (let i=6; i<12; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -117,7 +117,7 @@ let workNext = function (target) {
       if (workListItems.length<=18) {
         // workListItems[12]~[n] 출력 (workListItems.length <= 18)
         for(let i=12; i<workListItems.length; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
 
@@ -128,7 +128,7 @@ let workNext = function (target) {
       } else {
         // workListItems[12]~[17] 출력 (workListItems.length > 18)
         for(let i=12; i<18; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -146,7 +146,7 @@ let workNext = function (target) {
 
       // workListItems[18]~[n] 출력
       for(let i=18; i<workListItems.length; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
         console.log(workListItems[i]);
       }
 
@@ -180,7 +180,7 @@ let workPrevious = function (target) {
 
       // workListItems[12]~[18] 출력
       for(let i=12; i<18; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -210,7 +210,7 @@ let workPrevious = function (target) {
 
       // workListItems[6]~[11] 출력
       for(let i=6; i<12; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -240,7 +240,7 @@ let workPrevious = function (target) {
 
       // workListItems[0]~[6] 출력
       for(let i=0; i<6; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -305,7 +305,7 @@ const newWebtoonNext = function (target) {
       if (workListItems.length<=8) {
         // workListItems[4]~[n] 출력 (workListItems.length < 8)
         for (let i=4; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -315,7 +315,7 @@ const newWebtoonNext = function (target) {
       } else {
         // workListItems[4]~[7] 출력 (workListItems.length >= 8)
         for (let i=4; i<8; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -338,7 +338,7 @@ const newWebtoonNext = function (target) {
       if (workListItems.length<=8) {
         // workListItems[4]~[n] 출력 (workListItems.length < 8)
         for (let i=4; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -348,7 +348,7 @@ const newWebtoonNext = function (target) {
       } else {
         // workListItems[4]~[7] 출력 (workListItems.length >= 8)
         for (let i=4; i<8; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -366,7 +366,7 @@ const newWebtoonNext = function (target) {
       if (workListItems.length<=12) {
         // workListItems[8]~[n] 출력 (workListItems.length <= 12)
         for(let i=8; i<workListItems.length; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
 
@@ -377,7 +377,7 @@ const newWebtoonNext = function (target) {
       } else {
         // workListItems[8]~[11] 출력 (workListItems.length > 12)
         for(let i=8; i<12; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -395,7 +395,7 @@ const newWebtoonNext = function (target) {
 
       // workListItems[12]~[n] 출력
       for(let i=12; i<workListItems.length; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
         console.log(workListItems[i]);
       }
 
@@ -429,7 +429,7 @@ let newWebtoonPrevious = function (target) {
 
       // workListItems[8]~[11] 출력
       for(let i=8; i<12; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -459,7 +459,7 @@ let newWebtoonPrevious = function (target) {
 
       // workListItems[4]~[7] 출력
       for(let i=4; i<8; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -489,7 +489,7 @@ let newWebtoonPrevious = function (target) {
 
       // workListItems[0]~[3] 출력
       for(let i=0; i<4; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -544,7 +544,7 @@ const recommendationNext = function (target) {
       if (workListItems.length<=6) {
         // workListItems[3]~[n] 출력 (workListItems.length < 6)
         for (let i=3; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -554,7 +554,7 @@ const recommendationNext = function (target) {
       } else {
         // workListItems[3]~[5] 출력 (workListItems.length >= 6)
         for (let i=3; i<6; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -577,7 +577,7 @@ const recommendationNext = function (target) {
       if (workListItems.length<=6) {
         // workListItems[3]~[n] 출력 (workListItems.length < 6)
         for (let i=3; i<workListItems.length; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
         // nextButton 비활성화
@@ -587,7 +587,7 @@ const recommendationNext = function (target) {
       } else {
         // workListItems[3]~[5] 출력 (workListItems.length >= 6)
         for (let i=3; i<6; i++) {
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -605,7 +605,7 @@ const recommendationNext = function (target) {
       if (workListItems.length<=9) {
         // workListItems[6]~[n] 출력 (workListItems.length <= 9)
         for(let i=6; i<workListItems.length; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
 
@@ -616,7 +616,7 @@ const recommendationNext = function (target) {
       } else {
         // workListItems[6]~[8] 출력 (workListItems.length > 9)
         for(let i=6; i<9; i++){
-          workListItems[i].style.display = "block";
+          workListItems[i].style.display = "flex";
           console.log(workListItems[i]);
         }
       }
@@ -634,7 +634,7 @@ const recommendationNext = function (target) {
 
       // workListItems[9]~[n] 출력
       for(let i=9; i<workListItems.length; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
         console.log(workListItems[i]);
       }
 
@@ -668,7 +668,7 @@ let recommendationPrevious = function (target) {
 
       // workListItems[6]~[8] 출력
       for(let i=6; i<9; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -698,7 +698,7 @@ let recommendationPrevious = function (target) {
 
       // workListItems[0]~[3] 출력
       for(let i=3; i<6; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
@@ -728,7 +728,7 @@ let recommendationPrevious = function (target) {
 
       // workListItems[0]~[3] 출력
       for(let i=0; i<3; i++){
-        workListItems[i].style.display = "block";
+        workListItems[i].style.display = "flex";
       }
 
       // nextButton 활성화
