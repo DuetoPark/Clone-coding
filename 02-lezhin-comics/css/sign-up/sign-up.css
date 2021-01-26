@@ -1,10 +1,135 @@
+/* common - form(input[type=checkbox]) */
+.signup-form-input-checkbox,
+.signup-form-input-radio{
+  position: absolute; top: 10px; left: 10px;
+  width: 1px;
+  height: 1px;
+}
+
+.signup-form-input-checkbox::before{
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid rgba(112, 112, 112, 0.54);
+  background-color: #FFF;
+}
+
+.signup-form-input-checkbox:checked::before{
+  border: none;
+  background-color: #FF2E4B;
+  background-image: url("../../assets/images/icon-check-white.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 left 50%;
+  background-size: 14px;
+}
+
+.signup-form-input-checkbox + label{
+  z-index: 2;
+  padding-left: 26px;
+  white-space: normal;
+}
+
+.signup-form-input-checkbox:hover + label{
+  color: #333;
+}
+
+.signup-form-input-checkbox:checked + label,
+.signup-form-input-radio:checked + label{
+  color: #333;
+}
+
+
+/* common - form(input[type=radio]) */
+.signup-form-input-radio:checked::before{
+  border-color: #FF2E4B;
+}
+
+.signup-form-input-radio:checked::after{
+  content: '';
+  position: absolute; top: 0; left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FF2E4B;
+}
+
+
+/* common - form(input[type=text]) */
+.signup-form-input-text{
+  width: 100%;
+  padding: 0 2px;
+  padding-top: 16px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  border-bottom: 1px solid #C5CBD3;
+}
+
+.signup-form-input-text-label{
+  position: absolute;
+  left: 0;
+  top: calc((100% - 24px) / 2 + 16px);
+  transform: translateY(-50%);
+  padding: 0 2px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.142857142857143;
+  color: #5A719A;
+  transition: all 250ms ease-in-out;
+}
+
+.signup-form-input-text-active{
+  transform: translateY(calc(-100% - 16px));
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* common - message */
+.form-input-message{
+  display: none;
+  font-size: 12px;
+  line-height: 1.333333333333333;
+  white-space: normal;
+  color: #333333;
+}
+
+.form-input-message:first-child{
+  display: block;
+}
+
+.emphasize-message{
+  color: #EB0026;
+}
+
+/* common - 상세보기 */
+.agreement-form-detail{
+  margin-left: auto;
+}
+
+
+
+
 /* Main */
 .sign-up-main{
   padding: 16px;
   margin: 0;
 }
 
-/* Section */
+/* Section - lezhin-section-sign-up */
+.lezhin-section-sign-up{
+  margin: 0 auto;
+}
+
 .lezhin-section-sign-up-title{
   margin-bottom: 16px;
   font-size: 16px;
@@ -14,13 +139,8 @@
 }
 
 /* Article - lezhin-article-agreement */
-/* form */
-.agreement-form-fieldset{
-  padding: 0;
-  margin-bottom: 24px;
-  border: none;
-}
 
+/* form */
 .agreement-form-div{
   position: relative; top: 0; left: 0;
   display: flex;
@@ -38,55 +158,8 @@
   color: #333333;
 }
 
-.agreement-form-div .agreement-form-detail{
-  margin-left: auto;
-}
-
-.agreement-form-div:hover .agreement-form-input::before{
+.agreement-form-div:hover .signup-form-input-checkbox::before{
   border-color: rgba(1, 1, 1, 0.54);
-}
-
-.agreement-form-input{
-  position: absolute; top: 10px; left: 10px;
-  width: 1px;
-  height: 1px;
-}
-
-.agreement-form-input::before{
-  content: '';
-  position: absolute;
-  top: -9px;
-  left: -10px;
-  z-index: 1;
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 2px;
-  border: 2px solid rgba(112, 112, 112, 0.54);
-  background-color: #FFF;
-}
-
-.agreement-form-input:checked::before{
-  border: none;
-  background-color: #FF2E4B;
-  background-image: url("../../assets/images/icon-check-white.svg");
-  background-repeat: no-repeat;
-  background-position: top 0 left 50%;
-  background-size: 14px;
-}
-
-.agreement-form-input:checked + label{
-  color: #333;
-}
-
-.agreement-form-label{
-  z-index: 2;
-  padding-left: 26px;
-  white-space: normal;
-}
-
-.agreement-form-label:hover{
-  color: #333;
 }
 
 /* anchor */
@@ -108,9 +181,10 @@
 }
 
 /* button */
-.agreement-form-fieldset:last-child{
+.agreement-form-fieldset:last-of-type{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .sign-up-button{
@@ -137,16 +211,10 @@
   transition: background-color 250ms ease-in-out;
 }
 
-.agreement-active{
-  background-color: #EB0026;
-}
-
-
-
 /* Aside - sign-up-help */
 .sign-up-help{
-  padding-top: 16px;
-  margin-bottom: 40px;
+  border-top: 40px solid rgba(0, 0, 0, 0);
+  border-bottom: 40px solid rgba(0, 0, 0, 0);
 }
 
 .sign-up-help > p,
@@ -154,4 +222,202 @@
   white-space: normal;
   font-size: 12px;
   color: #707070;
+}
+
+
+/* Article - lezhin-article-authentication */
+.lezhin-article-authentication,
+.lezhin-article-privacy{
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* form */
+#authentication-email:active .form-input-message:first-child,
+#authentication-email:focus .form-input-message:first-child{
+  display: none;
+}
+
+#authentication-email:active .form-input-message:nth-child(2),
+#authentication-email:focus .form-input-message:nth-child(2){
+  display: block;
+}
+
+.authentication-email,
+.authentication-number{
+  padding: 0;
+  border: none;
+}
+
+.authentication-email:first-of-type{
+  margin-bottom: 0;
+}
+
+.authentication-number{
+  margin-top: 24px;
+}
+
+.authentication-form-div{
+  margin-bottom: 24px;
+}
+
+/* button */
+.authentication-button{
+  width: 100%;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #DBDEE3;
+  color: #FFF;
+  transition: background-color 250ms ease-in-out;
+}
+
+.authentication-button-active{
+  background-color: #EB0026;
+}
+
+.resend-email{
+  border: 1px solid #DBDEE3;
+  background-color: #FFF;
+  color: #DBDEE3;
+  transition: border 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.resend-email-active{
+  border: 1px solid #5A719A;
+  color: #5A719A;
+}
+
+/* div */
+.another-account-div{
+  padding: 0;
+  padding-top: 48px;
+  margin-bottom: 0;
+}
+
+.another-account-subtitle{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+
+/* Article - lezhin-article-privacy */
+.lezhin-article-privacy{
+  margin-bottom: px;
+}
+
+.finish-email-check{
+  font-weight: 500;
+}
+
+/* div - privacy-options */
+.privacy-options{
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+.privacy-options-title{
+  font-weight: 500;
+  line-height: 1.142857142857143;
+  margin-bottom: 12px;
+}
+
+.privacy-options > div{
+  background-color: #F3F5F8;
+  padding: 8px 16px 16px 16px;
+}
+
+.form-fieldset-legend{
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2.461538461538462;
+}
+
+/* fieldset - privacy-gender */
+.privacy-gender{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.privacy-gender .form-fieldset-legend{
+  width: 100%;
+}
+
+.privacy-gender-div{
+  color: #707070;
+}
+
+.privacy-gender-div:hover{
+  color: #333333;
+}
+
+.radio-active:hover .signup-form-input-radio::before{
+  border-color: #FF2E4B;
+}
+
+.privacy-gender-div:hover .signup-form-input-radio::before{
+  border-color: rgba(1, 1, 1, 0.54);
+}
+
+.privacy-gender-div:first-of-type{
+  margin-right: 24px;
+}
+
+.signup-form-input-radio::before{
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(112, 112, 112, 0.54);
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+.signup-form-input-radio-label{
+  padding-left: 28px;
+}
+
+/* fieldset - privacy-birth */
+.privacy-birth{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.privacy-birth-select{
+  width: calc((100% - 16px) / 3);
+  height: 40px;
+  margin-right: 8px;
+  padding: 0 8px;
+  font-size: 16px;
+  /* text-align: right; */
+  border: 1px solid #DFE3E8;
+  border-radius: 2px;
+  direction: rtl;
+}
+
+.privacy-birth-select:last-child{
+  margin-right: 0;
+}
+
+/* div - privacy-agreement */
+.privacy-agreement{
+  display: flex;
+}
+
+.privacy-agreement-checkbox-label{
+  padding-left: 28px;
+  color: #ACB4BF;
+}
+
+
+/* Active */
+.agreement-active{
+  background-color: #EB0026;
 }
