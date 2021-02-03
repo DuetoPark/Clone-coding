@@ -1,0 +1,234 @@
+/* Reset CSS */
+*{
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: #0B163B;
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+strong{
+  font-weight: 400;
+}
+
+ol,
+ul,
+li{
+  list-style: none;
+}
+
+body{
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  background-color: #FCFCFA;
+}
+
+
+/* hidden */
+.hidden{
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+
+/* 강조 */
+.highlight{
+  color: #D83616;
+}
+
+
+/* Layout */
+.page-header{
+  display: flex;
+  flex-direction: column;
+  border-top: 20px solid rgba(0, 0, 0, 0);
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  padding: 0 8px;
+}
+
+.page-main{
+  padding: 0 8px;
+}
+
+
+
+/* Header */
+.title{
+  order: 1;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.author-objective{
+  order: 3;
+  font-size: 13px;
+  padding-top: 30px;
+  text-transform: capitalize;
+}
+
+.author{
+  transition: color 250ms ease-in;
+}
+
+.author:hover{
+  color:#D83616;
+}
+
+.page-header > picture{
+  order: 2;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.header-images{
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Main */
+.page-dl{
+  padding: 16px 0;
+  border-top: 1px solid #BDBDBD;
+}
+
+.page-dl > div{
+  margin-bottom: 8px;
+}
+
+.page-dl > div:last-child{
+  margin-bottom: 0;
+}
+
+.page-dl > div > dt,
+.page-dl > div > dd{
+  font-size: 13px;
+}
+
+.page-url > dd > a{
+  text-transform: uppercase;
+  transition: color 250ms ease-in-out;
+}
+
+.page-url > dd > a:hover{
+  color: #DBDBDB;
+}
+
+
+/* Media Query */
+/* > 640px (tablet) */
+@media screen and (min-width: 640px) {
+  /* Layout */
+  .page-header{
+    border-top: 40px solid rgba(0, 0, 0, 0);
+    border-bottom: 30px solid rgba(0, 0, 0, 0);
+    padding: 0 16px;
+  }
+
+  .page-main{
+    padding: 0 16px;
+  }
+
+
+  /* Header */
+  .title{
+    font-size: 40px;
+  }
+
+  .header-images{
+    max-width: 100%;
+  }
+
+
+  /* Main */
+  .page-dl{
+    padding: 24px 0;
+  }
+
+  .page-dl > div{
+    margin-bottom: 16px;
+  }
+
+  .page-dl > div > dd{
+    font-size: 14px;
+  }
+}
+
+
+/* > 960px (desktop) */
+@media screen and (min-width: 960px) {
+  /* Layout */
+  .page-header{
+    border: none;
+    padding: 40px 32px;
+  }
+
+  .page-main{
+    padding: 0 32px;
+  }
+
+
+  /* Header */
+  .author-objective{
+    font-size: 15px;
+    padding-top: 40px;
+  }
+
+  .page-header > picture{
+    padding-top: 40px;
+  }
+
+
+  /* Main */
+  .page-dl{
+    padding: 40px 0;
+  }
+
+  .page-dl > div{
+    margin-bottom: 16px;
+  }
+
+  .page-dl > div > dt,
+  .page-dl > div > dd{
+    font-size: 15px;
+  }
+
+  .page-dl > div > dt{
+    margin-bottom: 4px;
+  }
+}
+
+
+/* > 1054px (wide-desktop) */
+@media screen and (min-width: 1054px) {
+  /* Layout */
+  .page-header,
+  .page-main{
+    max-width: 960px;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+
+  .page-main{
+    padding: 0;
+  }
+}
