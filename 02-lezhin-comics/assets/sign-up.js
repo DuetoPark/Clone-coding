@@ -63,7 +63,7 @@ function buttonFunction (target) {
     articleAuthentication.classList.add("inactive");
     articlePrivacy.classList.remove("inactive");
   } else if (target.value === "send-email") {
-    sendEmailButton.classList.add("inactive");
+    sendEmailButton.style.display = "none";
     resendEmailButton.classList.remove("inactive");
     authenticationNumber.classList.remove("inactive");
 
@@ -84,6 +84,9 @@ function inputFocus (target) {
   target.nextElementSibling.classList.add("signup-form-input-text-active");
   document.querySelectorAll(".form-input-message")[0].style.display = "none";
   document.querySelectorAll(".form-input-message")[1].style.display = "block";
+  if (target.nextElementSibling.childrenElementCount > 0) {
+    target.nextElementSibling.children.classList.remove("inactive");
+  }
 }
 
 function focusout () {
