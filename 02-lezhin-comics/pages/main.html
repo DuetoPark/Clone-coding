@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/default/reset-css.css">
-    <link rel="stylesheet" href="../css/common/grid.min.css">
     <link rel="stylesheet" href="../css/common/common.css">
     <link rel="stylesheet" href="../css/common/common-media-query.css">
     <link rel="stylesheet" href="../css/common/modal.css">
@@ -25,7 +24,9 @@
     <header class="relative lezhin-header">
       <div>
         <!-- 로고 -->
-        <a class="relative lezhin-header-anchor" href="./main.html">
+        <a class="relative lezhin-header-anchor"
+          href="./main.html"
+          aria-current="page">
           <h1 class="lezhin-header-title sr-only">레진코믹스</h1>
         </a>
 
@@ -46,13 +47,11 @@
       </div>
 
       <!-- 헤더 메뉴 (페이지 이동) -->
-      <nav class="lezhin-header-nav">
-        <h2 class="sr-only">메뉴</h2>
+      <nav class="lezhin-header-nav" aria-labelledby="lezhin-menu">
+        <h2 id="lezhin-menu" class="sr-only">메뉴</h2>
         <ol class="lezhin-header-nav-list">
           <li class="relative lezhin-header-nav-list-items">
-            <a
-              href="./serialization.html"
-              aria-label="요일별 코믹스 페이지로 이동">연재</a>
+            <a href="./serialization.html" aria-label="요일별 코믹스 페이지로 이동">연재</a>
           </li>
           <li class="relative lezhin-header-nav-list-items">
             <a href="#" aria-label="장르별 랭킹 페이지로 이동">랭킹</a>
@@ -77,7 +76,7 @@
       <section class="main-section banner">
         <h1 class="sr-only">메인 배너</h1>
         <!-- 배너 이미지 리스트 -->
-        <ol class="main-section-list">
+        <ol id="banner-slider" class="main-section-list" >
           <li class="main-section-list-items">
             <picture>
               <source
@@ -85,19 +84,21 @@
                 srcset="../assets/images/배너-데스크탑.png"/>
               <img class="banner-images"
                 src="../assets/images/배너.png"
-                alt="">
+                alt="이벤트">
             </picture>
           </li>
         </ol>
         <!-- 이전 버튼 -->
         <button class="slider-button pre-button"
           type="button"
-          aria-label="슬라이드 이전"
+          aria-label="이전 배너"
+          aria-controls="banner-slider"
         ></button>
         <!-- 다음 버튼 -->
         <button class="slider-button next-button"
           type="button"
-          aria-label="슬라이드 다음"
+          aria-label="다음 배너"
+          aria-controls="banner-slider"
         ></button>
       </section>
 
