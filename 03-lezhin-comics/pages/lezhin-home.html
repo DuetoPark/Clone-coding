@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="author" content="dueto park">
+    <meta name="keywords" content="(클론코딩, 최적화, 접근성, wai-aria) 레진코믹스, 웹툰, 만화, 연재, 로맨스, 학원, 액션, bl, 성인">
+    <meta name="description" content="(클론코딩을 하며 마크업 단계부터 최적화와 접근성에 신경쓰는 습관을 들인다.) 소문으로만 듣던 그 웹툰, 궁금하지 않아요? 일상의 즐거움과 솔직한 재미가 가득한 레진코믹스!">
+    <!-- home -->
+    <title>레진코믹스 - 소문난 웹툰 맛집</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset-css.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></link>
+  </head>
+  <body>
+    <header id="header" aria-label="페이지 조작 영역입니다. 홈으로 이동, 메뉴, 검색 및 로그인 계정">
+      <a href="#main" class="hidden-inline">메인으로 건너뛰기</a>
+
+      <!-- 로고 -->
+      <h1 id="logo" aria-label="홈으로 이동">
+        <a href="#" class="logo-anchor">
+          <img src="" class="logo-image" alt="레진코믹스"/>
+        </a>
+      </h1>
+
+      <!-- 페이지 이동 -->
+      <nav id="navigation" aria-labelledby="nav-title">
+        <h2 id="nav-title" class="hidden" aria-hidden="true">연재 및 장르별 웹툰보기 페이지로 이동</h2>
+        <a href="#main" class="hidden-inline">메인으로 건너뛰기</a>
+        <ul id="nav-menu" role="menu">
+          <!-- assets/app/header-menu.js (메뉴 목록) -->
+        </ul>
+      </nav>
+
+      <!-- 버튼모음 - 성인인증, 검색, 로그인 -->
+      <ol class="" aria-label="성인인증, 검색, 로그인 계정 그룹">
+        <li role="none">
+          <button type="button">
+            <img src="" alt="성인인증">
+          </button>
+        </li>
+        <li role="none">
+          <button type="button">
+            <img src="" alt="검색">
+          </button>
+        </li>
+        <li role="none">
+          <button type="button">
+            <img src="" alt="로그인">
+          </button>
+        </li>
+      </ol>
+    </header>
+
+
+    <!-- main - home -->
+    <main id="main" class="main-home">
+
+      <!-- 배너 -->
+      <section id="home-banner" class="banner-slide" aria-labelledby="banner-title">
+        <h3 id="banner-title" class="hidden" aria-hidden="true">광고 배너</h3>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 640px)" srcset="../assets/images/배너.png"/>
+            <img src="../assets/images/배너-데스크탑.png" alt="월월 회원특집 총 0작품, 최대 0% 할인">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 640px)" srcset="../assets/images/배너.png"/>
+            <img src="../assets/images/배너-데스크탑.png" alt="명작 21화씩 무료, 총 231화, 2월 22일까지 진행">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 640px)" srcset="../assets/images/배너.png"/>
+            <img src="../assets/images/배너-데스크탑.png" alt="4000만뷰 돌파! 그 끝에 있는 것 감상하기">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 640px)" srcset="../assets/images/배너.png"/>
+            <img src="../assets/images/배너-데스크탑.png" alt="2월 출석체크 작심 삼일 이벤트 확인하기">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width: 640px)" srcset="../assets/images/배너.png"/>
+            <img src="../assets/images/배너-데스크탑.png" alt="레진 입문서 확인하기">
+          </picture>
+        </a>
+      </section>
+
+      <!-- 랭킹 -->
+      <section id="home-ranking" aria-labelledby="ranking-title">
+        <h3 id="ranking-title" class="section-title">랭킹</h3>
+
+        <article aria-labelledby="select-genre-title">
+          <h4 id="select-genre-title" class="hidden">장르 선택 및 웹툰 목록</h4>
+
+          <div id="select-genre" aria-label="장르 선택">
+            <!-- assets/app/main-rank-genre.js (장르 버튼) -->
+          </div>
+
+          <div>
+            <button type="button" aria-selected="true">
+              <span class="hidden-inline">해당 장르</span>실시간<span class="hidden-inline">랭킹</span>
+            </button>
+            <button type="button" aria-selected="false">
+              <span class="hidden-inline">해당 장르</span>신작<span class="hidden-inline">랭킹</span>
+            </button>
+            <button type="button" aria-selected="false">
+              <span class="hidden-inline">해당 장르</span>이벤트<span class="hidden-inline">랭킹</span>
+            </button>
+            <a href="#" aria-label="랭킹 마지막 순위까지 보기">더보기</a>
+          </div>
+
+          <div id="ranking-webtoons" aria-label="웹툰 목록">
+            <ol>
+              <li>
+                <div></div>
+                <div class="">
+                  <strong></strong>
+                  <p></p>
+                  <span></span>
+                </div>
+                <div>
+                  <picture>
+                    <source media="(max-width: 960px)" srcset="../assets/images/썸네일-모바일.png"/>
+                    <img src="../assets/images/썸네일-데스크탑.png" alt=""/>
+                  </picture>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <!-- 신규 코믹스 -->
+      <section aria-labelledby="new-title">
+        <h3 id="new-title" class="hidden">신규 코믹스</h3>
+        <article class="" aria-labelledby="new-webtoon-title">
+          <h3 id="new-webtoon-title" class="article-title">신작 연재</h3>
+          <ol id="new-webtoon-list">
+            <!-- assets/app/main-create-list.js (state.신규코믹스.신작연재) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="new-cartoon-title">
+          <h3 id="new-cartoon-title" class="article-title">신규 만화</h3>
+          <ol id="new-cartoon-list">
+            <!-- assets/app/main-create-list.js (state.신규코믹스.신규만화) -->
+          </ol>
+        </article>
+      </section>
+
+      <!-- 장르별 코믹스 -->
+      <section aria-labelledby="genre-title">
+        <h3 id="genre-title" class="hidden">장르별 코믹스</h3>
+        <article class="" aria-labelledby="adult-edit-title">
+          <h3 id="adult-edit-title" class="article-title">노출없이 야릇해</h3>
+          <ol id="adult-edit-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.개정판) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="adult-title">
+          <h3 id="adult-title" class="article-title">불 꺼져도 SEXY하게</h3>
+          <ol id="adult-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.성인물) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="bl-title">
+          <h3 id="bl-title" class="article-title">격하게 간당간당한 BL</h3>
+          <ol id="bl-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.bl) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="school-title">
+          <h3 id="school-title" class="article-title">예측불가 사춘기 학교생활</h3>
+          <ol id="school-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.학원) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="romance-title">
+          <h3 id="romance-title" class="article-title">본격CC권장만화</h3>
+          <ol id="romance-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.로맨스) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="gag-title">
+          <h3 id="gag-title" class="article-title">유해불건전장르불문개그</h3>
+          <ol id="gag-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.개그) -->
+          </ol>
+        </article>
+        <article class="" aria-labelledby="fantasy-title">
+          <h3 id="fantasy-title" class="article-title">드라마틱한 판타지</h3>
+          <ol id="fantasy-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.판타지) -->
+          </ol>
+        </article>
+        <aside class="" aria-labelledby="point-title">
+          <h3 id="point-title" class="hidden">제휴 포인트를 코인으로 전환하기</h3>
+          <a href="#">
+            <picture>
+              <source media="(max-width:960px)" srcset="../assets/images/제휴카드-모바일.png">
+              <img src="../assets/images/제휴카드-데스크탑.png" alt="나도 모르게 쌓인 제휴 포인트를 코인으로 전환하자!">
+            </picture>
+          </a>
+        </aside>
+        <aside class="" aria-labelledby="sale-title">
+          <h3 id="sale-title" class="hidden">세일</h3>
+          <ol id="sale-list">
+            <!-- assets/app/main-create-list.js (state.장르별코믹스.SALE) -->
+          </ol>
+        </aside>
+      </section>
+
+      <!-- 굿즈 -->
+      <section aria-labelledby="goods-title">
+        <h3 id="goods-title" class="section-title">
+          <span aria-hidden="true">lezhin#</span>
+          <span class="hidden-inline">레진굿즈샵</span>
+        </h3>
+        <ol id="goods-list">
+          <li>
+            <a href="#">
+              <img src="../assets/images/썸네일-공통.png" alt="">
+              <strong></strong>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 레진챌린지 -->
+      <section aria-labelledby="challenge-title">
+        <h3 id="challenge-title" class="hidden">레진챌린지</h3>
+        <a href="#">
+          <picture>
+            <source media="(max-width:960px)" srcset="../assets/images/챌린지-모바일.png">
+            <img src="../assets/images/챌린지-데스크탑.png" alt="누구나 웹툰 올리고 함께 즐기는 레진 챌린지">
+          </picture>
+        </a>
+      </section>
+    </main>
+
+    <aside id="aside" aria-labelledby="aside-title">
+      <h2 id="aside-title" class="hidden">어플리케이션 혜택</h2>
+      <picture>
+        <source media="(max-width:960px)" srcset="../assets/images/app-혜택-모바일.png">
+        <img src="../assets/images/app-혜택-데스크탑.png" alt="오직 앱에서만 만날 수 있는 혜택">
+      </picture>
+      <a href="#">
+        <picture>
+          <source media="(max-width:960px)" srcset="../assets/images/app-모바일.png">
+          <img src="../assets/images/app-데스크탑.png" alt="안드로이드 온리, 레진 코믹스 플러스, 코인충전 상시 10% 할인">
+        </picture>
+      </a>
+      <a href="#">
+        <picture>
+          <source media="(max-width:960px)" srcset="../assets/images/app-애플-모바일.png">
+          <img src="../assets/images/app-애플-데스크탑.png" alt="앱 스토어에서 어플 다운받기">
+        </picture>
+      </a>
+      <a href="#">
+        <picture>
+          <source media="(max-width:960px)" srcset="../assets/images/app-안드-모바일.png">
+          <img src="../assets/images/app-안드-데스크탑.png" alt="구글 플레이에서 어플 다운받기">
+        </picture>
+      </a>
+    </aside>
+
+    <footer id="footer" aria-labelledby="footer-title">
+      <h2 id="footer-title" class="hidden">회사정보</h2>
+      <section>
+        <h3>페이지 언어 변경</h3>
+        <strong>언어/국가 변경</strong>
+        <ol>
+          <li>
+            <a href="#">한국어/한국</a>
+          </li>
+          <li>
+            <a href="#">日本語/日本</a>
+          </li>
+          <li>
+            <a href="#">English/US</a>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>회사 정보 및 방침</h3>
+        <div class="">
+          <img src="" alt="레진코믹스 로고">
+          <p>
+            (주)레진엔터테인먼트<br/>
+            대표 이성업
+          </p>
+        </div>
+
+        <div class="">
+          <ol id="lezhin-info">
+
+          </ol>
+
+          <ol id="lezhin-sns">
+
+          </ol>
+
+          <p id="lezhin-desc">
+            레진코믹스의 모든 웹툰들은 저작권법에 의거 보호받고 있습니다. 저작권자 또는 레진코믹스의 승인없이 웹툰의 일부 또는 전체를 복사하여 다른 매체(개인 미디어 포함)에 게재하는 행위는 저작권법에 의거 법적 조치에 처해질 수 있습니다. 언어/국가별로 서비스되는 작품 및 운영 방침이 다르게 적용될 수 있습니다.
+          </p>
+
+          <ol id="lezhin-contact">
+            <dl class="">
+
+            </dl>
+          </ol>
+        </div>
+      </section>
+      <aside id="lezhin-prize">
+        <h3>레진코믹스 2020 수상</h3>
+        <ol id="lezhin-prize-list">
+
+        </ol>
+      </aside>
+    </footer>
+
+    <!-- data -->
+    <script type="text/javascript" src="../assets/data-home.js"></script>
+    <!-- 동작 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/app/app.js"></script>
+    <script type="text/javascript" src="../assets/app/header-menu.js"></script>
+    <script type="text/javascript" src="../assets/app/main-rank-genre.js"></script>
+    <script type="text/javascript" src="../assets/app/main-rank-webtoons.js"></script>
+    <script type="text/javascript" src="../assets/app/main-create-list.js"></script>
+  </body>
+</html>
