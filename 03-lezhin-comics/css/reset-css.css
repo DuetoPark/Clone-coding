@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong{
+  font-weight: 400;
+}
+
+textarea,
+button,
+input{
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+dl,
+dt,
+dd{
+  padding: 0;
+  margin: 0;
+}
+
+dfn,
+em,
+cite,
+q{
+  font-style: normal;
+}
+
+ul,
+ol,
+li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+strong{
+  font-weight: 400;
+}
+
+blockquote,
+cite{
+	quotes: none;
+}
+
+fieldset{
+  padding: 0;
+  margin-bottom: 24px;
+  border: none;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
