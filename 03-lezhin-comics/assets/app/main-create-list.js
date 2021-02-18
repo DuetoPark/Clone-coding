@@ -1,5 +1,5 @@
 //메인 베너 목록 생성
-const bannerSection = document.querySelector("#home-banner");
+const bannerSection = document.querySelector(".banner-slider");
 let bannerArray = state.배너;
 
 function createBanner () {
@@ -13,10 +13,11 @@ function createBanner () {
 
     let bannerSource = document.createElement("source");
     bannerSource.setAttribute("media", "(max-width: 640px)");
-    bannerSource.setAttribute("srcset", "../assets/images/배너.png");
+    bannerSource.setAttribute("srcset", "../assets/images/배너-모바일.png");
     bannerPicture.appendChild(bannerSource);
 
     let bannerImg = document.createElement("img");
+    bannerImg.setAttribute("class","banner-image");
     bannerImg.setAttribute("src", "../assets/images/배너-데스크탑.png");
     bannerImg.setAttribute("alt", bannerArray[i].altValue);
     bannerPicture.appendChild(bannerImg);
