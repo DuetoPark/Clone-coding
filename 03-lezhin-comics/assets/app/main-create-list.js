@@ -84,6 +84,7 @@ let saleDataArray = state.장르별코믹스.SALE;
 function createSaleList () {
   for (let i=0; i<saleDataArray.length; i++) {
     let saleLi = document.createElement("li");
+    saleLi.setAttribute("aria-label", saleDataArray[i].altValue);
     saleOl.appendChild(saleLi);
 
     let saleAnchor = document.createElement("a");
