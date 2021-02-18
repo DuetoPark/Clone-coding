@@ -1,3 +1,30 @@
+//메인 베너 목록 생성
+const bannerSection = document.querySelector("#home-banner");
+let bannerArray = state.배너;
+
+function createBanner () {
+  for (let i=0; i<bannerArray.length; i++) {
+    let bannerAnchor = document.createElement("a");
+    bannerAnchor.setAttribute("href", "#");
+    bannerSection.appendChild(bannerAnchor);
+
+    let bannerPicture = document.createElement("picture");
+    bannerAnchor.appendChild(bannerPicture);
+
+    let bannerSource = document.createElement("source");
+    bannerSource.setAttribute("media", "(max-width: 640px)");
+    bannerSource.setAttribute("srcset", "../assets/images/배너.png");
+    bannerPicture.appendChild(bannerSource);
+
+    let bannerImg = document.createElement("img");
+    bannerImg.setAttribute("src", "../assets/images/배너-데스크탑.png");
+    bannerImg.setAttribute("alt", bannerArray[i].altValue);
+    bannerPicture.appendChild(bannerImg);
+  }
+}
+createBanner();
+
+
 // 웹툰 목록 생성하는 생성자
 function Create(domOl, dataArray, name) {
   this.domOl =  document.querySelector(domOl);
@@ -10,7 +37,7 @@ function Create(domOl, dataArray, name) {
 
       let createAnchor = document.createElement("a");
       createAnchor.setAttribute("class", name+"-anchor");
-      createAnchor.setAttribute("href","/");
+      createAnchor.setAttribute("href", "#");
       createLi.appendChild(createAnchor);
 
       let createTitle = document.createElement("strong");
@@ -58,7 +85,7 @@ function createSaleList () {
     saleOl.appendChild(saleLi);
 
     let saleAnchor = document.createElement("a");
-    saleAnchor.setAttribute("href","/");
+    saleAnchor.setAttribute("href","#");
     saleAnchor.setAttribute("class", "sale-anchor");
     saleLi.appendChild(saleAnchor);
 
@@ -82,7 +109,7 @@ function createGoodsList () {
     goodsOl.appendChild(goodsLi);
 
     let goodsAnchor = document.createElement("a");
-    goodsAnchor.setAttribute("href","/");
+    goodsAnchor.setAttribute("href","#");
     goodsAnchor.setAttribute("class", "goods-anchor");
     goodsLi.appendChild(goodsAnchor);
 
