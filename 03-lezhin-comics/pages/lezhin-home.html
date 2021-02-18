@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
     <link rel="stylesheet" href="../css/test.css">
   </head>
   <body>
@@ -22,8 +23,8 @@
 
       <!-- 로고 -->
       <h1 id="logo" aria-label="홈으로 이동">
-        <a href="#" class="logo-anchor">
-          <img src="" class="logo-image" alt="레진코믹스"/>
+        <a id="logo-anchor" href="#">
+          <img id="logo-image" src="../assets/images/로고-마스코트.svg" alt="레진코믹스"/>
         </a>
       </h1>
 
@@ -37,20 +38,21 @@
       </nav>
 
       <!-- 버튼모음 - 성인인증, 검색, 로그인 -->
-      <section class="" aria-label="검색 및 로그인 계정 그룹">
-        <div class="">
-          <button type="button">
-            <img src="" alt="성인인증">
+      <section id="search-group" aria-labelledby="search-group-title">
+        <h3 id="search-group-title" class="hidden" aria-hidden="true">검색 및 로그인 계정 그룹</h3>
+        <div>
+          <button class="search-group-button all" type="button">
+            <div class="hidden">성인인증</div>
           </button>
         </div>
-        <div class="">
-          <button type="button">
-            <img src="" alt="검색">
+        <div>
+          <button class="search-group-button" type="button">
+            <img id="search-icon" src="../assets/images/icon-돋보기.svg" alt="검색">
           </button>
         </div>
-        <div class="">
-          <button type="button">
-            <img src="" alt="로그인">
+        <div>
+          <button class="search-group-button" type="button">
+            <img src="../assets/images/icon-계정.svg" alt="로그인">
           </button>
         </div>
       </section>
