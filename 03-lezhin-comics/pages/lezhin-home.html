@@ -219,7 +219,7 @@
 
       <!-- 레진챌린지 -->
       <section aria-labelledby="challenge-title">
-        <h3 id="challenge-title" class="hidden">레진챌린지</h3>
+        <h3 id="challenge-title" class="hidden" aria-hidden="true">레진챌린지</h3>
         <a href="#">
           <picture>
             <source media="(max-width:960px)" srcset="../assets/images/챌린지-모바일.png">
@@ -230,29 +230,32 @@
     </main>
 
     <aside id="aside" aria-labelledby="aside-title">
-      <h2 id="aside-title" class="hidden">어플리케이션 혜택</h2>
-      <picture>
+      <h4 id="aside-title" class="hidden" aria-hidden="true">어플리케이션 혜택</h4>
+      <picture aria-hidden="true">
         <source media="(max-width:960px)" srcset="../assets/images/app-혜택-모바일.png">
         <img src="../assets/images/app-혜택-데스크탑.png" alt="오직 앱에서만 만날 수 있는 혜택">
       </picture>
-      <a href="#">
-        <picture>
-          <source media="(max-width:960px)" srcset="../assets/images/app-모바일.png">
-          <img src="../assets/images/app-데스크탑.png" alt="안드로이드 온리, 레진 코믹스 플러스, 코인충전 상시 10% 할인">
-        </picture>
-      </a>
-      <a href="#">
-        <picture>
-          <source media="(max-width:960px)" srcset="../assets/images/app-애플-모바일.png">
-          <img src="../assets/images/app-애플-데스크탑.png" alt="앱 스토어에서 어플 다운받기">
-        </picture>
-      </a>
-      <a href="#">
-        <picture>
-          <source media="(max-width:960px)" srcset="../assets/images/app-안드-모바일.png">
-          <img src="../assets/images/app-안드-데스크탑.png" alt="구글 플레이에서 어플 다운받기">
-        </picture>
-      </a>
+      <strong class="hidden">오직 앱에서만 만날 수 있는 혜택</strong>
+      <div>
+        <a href="#">
+          <picture>
+            <source media="(max-width:960px)" srcset="../assets/images/app-모바일.png">
+            <img src="../assets/images/app-데스크탑.png" alt="안드로이드 온리, 레진 코믹스 플러스, 코인충전 상시 10% 할인">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width:960px)" srcset="../assets/images/app-애플-모바일.png">
+            <img src="../assets/images/app-애플-데스크탑.png" alt="앱 스토어에서 어플 다운받기">
+          </picture>
+        </a>
+        <a href="#">
+          <picture>
+            <source media="(max-width:960px)" srcset="../assets/images/app-안드-모바일.png">
+            <img src="../assets/images/app-안드-데스크탑.png" alt="구글 플레이에서 어플 다운받기">
+          </picture>
+        </a>
+      </div>
     </aside>
 
     <footer id="footer" aria-labelledby="footer-title">
