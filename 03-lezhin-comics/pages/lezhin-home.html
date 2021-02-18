@@ -10,9 +10,11 @@
     <title>레진코믹스 - 소문난 웹툰 맛집</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/reset-css.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" type="text/css" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/reset-css.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/test.css">
   </head>
   <body>
     <header id="header" aria-label="페이지 조작 영역입니다. 홈으로 이동, 메뉴, 검색 및 로그인 계정">
@@ -58,9 +60,16 @@
     <!-- main - home -->
     <main id="main" class="main-home">
       <!-- 배너 -->
-      <section id="home-banner" class="banner-slide" aria-labelledby="banner-title">
+      <section aria-labelledby="banner-title">
         <h3 id="banner-title" class="hidden" aria-hidden="true">광고 배너</h3>
-        <!-- assets/app/main-rank-genre.js (배너) -->
+        <article class="banner-slider">
+          <!-- assets/app/main-rank-genre.js (배너) -->
+        </article>
+        <div aria-labelledby="banner-controller">
+          <h4 id="banner-controller" class="hidden" aria-hidden="true">배너 조작 버튼</h4>
+          <button type="button" class="prev"></button>
+          <button type="button" class="next"></button>
+        </div>
       </section>
 
       <!-- 랭킹 -->
@@ -309,7 +318,8 @@
     <!-- data -->
     <script type="text/javascript" src="../assets/data-home.js"></script>
     <!-- 라이브러리 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- 동작 -->
     <script type="text/javascript" src="../assets/app/app.js"></script>
