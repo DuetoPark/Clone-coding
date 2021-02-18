@@ -34,6 +34,7 @@ function Create(domOl, dataArray, name) {
   this.createList = function () {
     for (let i=0; i<this.dataArray.length; i++) {
       let createLi = document.createElement("li");
+      createLi.setAttribute("aria-label", this.dataArray[i].name);
       this.domOl.appendChild(createLi);
 
       let createAnchor = document.createElement("a");

@@ -67,8 +67,8 @@
         </article>
         <div aria-labelledby="banner-controller">
           <h4 id="banner-controller" class="hidden" aria-hidden="true">배너 조작 버튼</h4>
-          <button type="button" class="prev"></button>
-          <button type="button" class="next"></button>
+          <button type="button" class="prev" aria-label="이전 배너"></button>
+          <button type="button" class="next" aria-label="다음 배너"></button>
         </div>
       </section>
 
@@ -128,16 +128,16 @@
 
       <!-- 신규 코믹스 -->
       <section aria-labelledby="new-title">
-        <h3 id="new-title" class="hidden">신규 코믹스</h3>
+        <h3 id="new-title" class="hidden" aria-hidden="true">신규 코믹스</h3>
         <article class="" aria-labelledby="new-webtoon-title">
           <h3 id="new-webtoon-title" class="article-title">신작 연재</h3>
-          <ol id="new-webtoon-list">
+          <ol id="new-webtoon-list" aria-label="웹툰">
             <!-- assets/app/main-create-list.js (state.신규코믹스.신작연재) -->
           </ol>
         </article>
         <article class="" aria-labelledby="new-cartoon-title">
           <h3 id="new-cartoon-title" class="article-title">신규 만화</h3>
-          <ol id="new-cartoon-list">
+          <ol id="new-cartoon-list" aria-label="만화">
             <!-- assets/app/main-create-list.js (state.신규코믹스.신규만화) -->
           </ol>
         </article>
