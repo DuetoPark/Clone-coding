@@ -8,7 +8,15 @@ let state = {
     후방주의: "./only-19.html",
     무료: "./free.html",
     랭킹: "./ranking.html",
-    "SALE": "./sale.html"},
+    "SALE": "./sale.html"
+  },
+  배너: [
+    {id: 1, altValue: "월월 회원특집 총 0작품, 최대 0% 할인"},
+    {id: 2, altValue: "명작 21화씩 무료, 총 231화, 2월 22일까지 진행"},
+    {id: 3, altValue: "4000만뷰 돌파! 그 끝에 있는 것 감상하기"},
+    {id: 4, altValue: "2월 출석체크 작심 삼일 이벤트 확인하기"},
+    {id: 5, altValue: "레진 입문서 확인하기"}
+  ],
   랭킹: {
     전체: {
       실시간: [
