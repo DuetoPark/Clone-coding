@@ -8,11 +8,113 @@
 }
 
 .hidden-inline{
-  display: inline-block;
+  display: block;
   width: 1px;
   height: 1px;
   margin: -1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
+}
+
+/* header */
+#header{
+  position: relative; top: 0; left: 0;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+#logo{
+  width: 100%;
+  padding: 4px 8px;
+}
+
+#logo-anchor{
+  padding: 0 10px;
+  margin: 0 4px;
+  background-color: #ED1C24;
+}
+
+#logo-image{
+  width: 20px;
+  height: 22px;
+}
+
+#navigation{
+  padding-top: 4px;
+  overflow-x: auto;
+  word-break: keep-all;
+}
+
+#nav-menu{
+  display: flex;
+  padding: 0 2%;
+}
+
+.menu-list-items{
+  flex-grow: 1;
+  margin-right: 4px;
+}
+
+.menu-list-items:last-child{
+  margin-right: 0;
+}
+
+.menu-anchor{
+  display: inline-block;
+  padding: 0 8px;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+#search-group{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search-group-button{
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.all{
+  position: relative; top: 0; left: 0;
+}
+
+.all::before{
+  content: '';
+  display: block;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 12px;
+  border-radius: 100px;
+  background-color: #DBDEE3;
+}
+
+.all::after{
+  content: '19';
+  display: block;
+  position: absolute; top: 50%; left: 4px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+  border-radius: 100px;
+  box-shadow: 0 0 2.5px 0 rgb(0 0 0 / 50%);
+  color: #ACB4BF;
+  background-color: #FFFFFF;
+}
+
+#search-icon{
+  width: 18px;
+  height: auto;
 }
