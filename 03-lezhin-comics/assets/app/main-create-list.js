@@ -1,5 +1,5 @@
 //메인 베너 목록 생성
-const bannerSection = document.querySelector(".banner-slider");
+const bannerSection = document.querySelector("#banner-slider");
 let bannerArray = state.배너;
 
 function createBanner () {
