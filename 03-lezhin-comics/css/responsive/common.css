@@ -21,6 +21,21 @@
 
 /* > 960px (tablet) */
 @media screen and (min-width: 960px) {
+  /* 옵션 선택 CSS */
+  .select-container{
+    padding: 8px 16px;
+    white-space: normal;
+  }
+
+  .select-content{
+    min-width: 68px;
+    height: 40px;
+    padding: 0 16px;
+    margin: 8px;
+    font-size: 14px;
+  }
+
+
   /* header */
   #header{
     align-items: center;
@@ -61,5 +76,14 @@
 
   .all{
     margin-right: 14px;
+  }
+}
+
+
+/* >= 1280px (wide desktop) */
+@media screen and (min-width: 1280px) {
+  /* 옵션 선택 CSS */
+  .select-content{
+    font-size: 16px;
   }
 }

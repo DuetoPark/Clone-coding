@@ -5,6 +5,16 @@
     padding: 0 16px;
     margin-bottom: 32px;
   }
+
+
+  /* Main - Ranking */
+  .section-title{
+    padding: 0 16px;
+  }
+
+  #ranking-option{
+    padding: 0 16px;
+  }
 }
 
 /* > 960px (tablet) */
@@ -13,4 +23,19 @@
   #banner{
     margin-bottom: 44px;
   }
+
+
+  /* Main - Ranking */
+  .section-title{
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+
+/* >= 1280px (wide desktop) */
+@media screen and (min-width: 1280px) {
+  
+
 }
