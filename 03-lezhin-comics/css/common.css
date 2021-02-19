@@ -19,19 +19,22 @@
 
 /* header */
 #header{
-  position: relative; top: 0; left: 0;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 8px;
   margin-bottom: 12px;
 }
 
 #logo{
-  width: 100%;
+  order: 1;
   padding: 4px 8px;
+  margin-right: auto;
 }
 
 #logo-anchor{
   padding: 0 10px;
   margin: 0 4px;
+  line-height: 40px;
   background-color: #ED1C24;
 }
 
@@ -41,6 +44,8 @@
 }
 
 #navigation{
+  order: 3;
+  width: 100%;
   padding-top: 4px;
   overflow-x: auto;
   word-break: keep-all;
@@ -48,6 +53,7 @@
 
 #nav-menu{
   display: flex;
+  flex-shrink: 1;
   padding: 0 2%;
 }
 
@@ -69,10 +75,8 @@
 }
 
 #search-group{
+  order: 2;
   display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .search-group-button{
