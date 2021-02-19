@@ -17,6 +17,38 @@
   clip-path: inset(50%);
 }
 
+
+/* 여러개 중 하나 선택 CSS */
+.select-container{
+  padding: 6px 12px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.select-content{
+  min-width: 48px;
+  height: 32px;
+  padding: 0 12px;
+  margin: 6px 4px;
+  font-size: 12px;
+  border-radius: 100px;
+  background-color: #EFF1F4;
+}
+
+.select-content:first-of-type{
+  margin-left: 0;
+}
+
+.select-content:last-child{
+  margin-right: 12px;
+}
+
+.select-active{
+  color: #FFFFFF;
+  background-color: #EB0026;
+}
+
+
 /* header */
 #header{
   display: flex;
