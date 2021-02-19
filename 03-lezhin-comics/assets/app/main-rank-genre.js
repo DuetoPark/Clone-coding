@@ -8,7 +8,7 @@ function createGenre () {
     let genreButton = document.createElement("button");
     genreButton.setAttribute("type", "button");
     genreButton.setAttribute("id", rankingKeys[i]+"-button");
-    genreButton.setAttribute("class", "genre-button");
+    genreButton.setAttribute("class", "select-content");
     genreButton.setAttribute("value", rankingKeys[i]);
     genreButton.setAttribute("role", "tab");
     genreButton.setAttribute("aria-controls", rankingKeys[i]+"-rank");
