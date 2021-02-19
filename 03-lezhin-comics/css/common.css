@@ -122,3 +122,46 @@
   width: 18px;
   height: auto;
 }
+
+
+/* Main - Banner */
+#banner{
+  position: relative; top: 0; left: 0;
+  padding: 0 8px;
+}
+
+#banner-slider{
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.banner-image{
+  width: 100%;
+}
+
+.controller{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  background-image: url("../assets/images/배너-화살표.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.01;
+  transition: opacity 250ms ease-in-out;
+}
+
+#banner:hover .controller{
+  opacity: 1;
+}
+
+.prev{
+  left: 32px;
+  background-position: right;
+}
+
+.next{
+  right: 32px;
+}
