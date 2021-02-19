@@ -1,0 +1,45 @@
+/* > 960px (tablet) */
+@media screen and (min-width: 960px) {
+  /* header */
+  #header{
+    align-items: center;
+    margin: 24px 16px;
+  }
+
+  #logo{
+    padding: 0;
+    margin: 0;
+  }
+
+  #logo-anchor{
+    padding: 12px calc(37px/2);
+    margin: 0;
+    line-height: 64px;
+  }
+
+  #logo-image{
+    width: auto;
+    height: auto;
+  }
+
+  #navigation{
+    order: 2;
+    width: auto;
+    padding: 0;
+    margin-left: 48px;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+
+  #nav-menu{
+    padding: 0;
+  }
+
+  #search-group{
+    order: 3;
+  }
+
+  .all{
+    margin-right: 14px;
+  }
+}
