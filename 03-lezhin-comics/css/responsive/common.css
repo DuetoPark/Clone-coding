@@ -17,12 +17,6 @@
   .all{
     margin-right: 30px;
   }
-
-  /* Main - Banner */
-  #banner{
-    padding: 0 16px;
-    margin-bottom: 32px;
-  }
 }
 
 /* > 960px (tablet) */
@@ -67,11 +61,5 @@
 
   .all{
     margin-right: 14px;
-  }
-
-
-  /* Main - Banner */
-  #banner{
-    margin-bottom: 44px;
   }
 }
