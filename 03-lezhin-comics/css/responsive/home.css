@@ -21,6 +21,12 @@
   #new-webtoon .works-list-items{
     width: calc((100% - 64px) / 4);
   }
+
+
+  /* 장르별 코믹스 - Aside (제휴) */
+  #point{
+    padding: 8px 16px;
+  }
 }
 
 /* > 960px (tablet) */
@@ -52,6 +58,23 @@
   #new-webtoon .works-title{
     padding-top: 12px;
     margin-bottom: 16px;
+  }
+
+
+  /* 장르별 코믹스 - Aside (제휴) */
+  #point{
+    padding: 0;
+    padding-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  #point-anchor{
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #point-image{
+    width: 100%;
+    height: auto;
   }
 }
 
