@@ -1,4 +1,4 @@
-/* Main - Banner */
+/* Banner */
 #banner{
   position: relative; top: 0; left: 0;
   padding: 0 8px;
@@ -42,7 +42,7 @@
 }
 
 
-/* Main - Ranking */
+/* Ranking */
 #home-ranking{
   padding-top: 16px;
   margin-bottom: 24px;
@@ -93,4 +93,15 @@
   height: 2px;
   background-color: #000;
   transform: translateY(200%);
+}
+
+
+/* 신규 코믹스 - 신작 연재 */
+#new-webtoon .works-list-items{
+  width: calc((100% - 32px) / 2);
+}
+
+#new-webtoon .works-title{
+  font-size: 16px;
+  line-height: 24px;
 }
