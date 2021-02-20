@@ -85,6 +85,7 @@ let saleDataArray = state.장르별코믹스.SALE;
 function createSaleList () {
   for (let i=0; i<saleDataArray.length; i++) {
     let saleLi = document.createElement("li");
+    saleLi.setAttribute("class", "sale-list-items");
     saleLi.setAttribute("aria-label", saleDataArray[i].altValue);
     saleOl.appendChild(saleLi);
 
@@ -95,7 +96,7 @@ function createSaleList () {
 
     let saleThumbnail = document.createElement("img");
     saleThumbnail.setAttribute("class", "sale-thumbnail");
-    saleThumbnail.setAttribute("src", "../assets/images/썸네일-공통.png");
+    saleThumbnail.setAttribute("src", "../assets/images/썸네일-세일.png");
     saleThumbnail.setAttribute("alt", saleDataArray[i].altValue);
     saleAnchor.appendChild(saleThumbnail);
   }
