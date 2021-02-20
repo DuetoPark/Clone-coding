@@ -1,13 +1,13 @@
 /* >= 640px (tablet) */
 @media screen and (min-width: 640px) {
-  /* Main - Banner */
+  /* Banner */
   #banner{
     padding: 0 16px;
     margin-bottom: 32px;
   }
 
 
-  /* Main - Ranking */
+  /* Ranking */
   .section-title{
     padding: 0 16px;
   }
@@ -15,27 +15,51 @@
   #ranking-option{
     padding: 0 16px;
   }
+
+
+  /* 신규 코믹스 - 신작 연재 */
+  #new-webtoon .works-list-items{
+    width: calc((100% - 64px) / 4);
+  }
 }
 
 /* > 960px (tablet) */
 @media screen and (min-width: 960px) {
-  /* Main - Banner */
+  /* Banner */
   #banner{
     margin-bottom: 44px;
   }
 
 
-  /* Main - Ranking */
+  /* Ranking */
   .section-title{
+    padding: 0;
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 28px;
+  }
+
+  #ranking-option{
+    padding: 0;
+  }
+
+
+  /* 신규 코믹스 - 신작 연재 */
+  #new-webtoon .works-list-items{
+    width: calc((100% - 48px) / 4);
+  }
+
+  #new-webtoon .works-title{
+    padding-top: 12px;
+    margin-bottom: 16px;
   }
 }
 
 
 /* >= 1280px (wide desktop) */
 @media screen and (min-width: 1280px) {
-  
-
+  /* 신규 코믹스 - 신작 연재 */
+  #new-webtoon .works-list-items{
+    width: calc((100% - 72px) / 4);
+  }
 }

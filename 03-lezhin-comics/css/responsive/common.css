@@ -1,5 +1,22 @@
 /* >= 640px (tablet) */
 @media screen and (min-width: 640px) {
+  /* 작품목록 */
+  .article-title{
+    padding: 0 16px;
+  }
+
+  .works-list{
+    padding: 8px 16px;
+    padding-top: 0;
+    overflow-x: auto;
+  }
+
+  .works-list-items{
+    width: calc((100% - 96px) / 6);
+    margin-right: 16px;
+  }
+
+
   /* header */
   #header{
     padding: 0 16px;
@@ -21,9 +38,9 @@
 
 /* > 960px (tablet) */
 @media screen and (min-width: 960px) {
-  /* 옵션 선택 CSS */
+  /* 여러개 중 하나 선택 CSS */
   .select-container{
-    padding: 8px 16px;
+    padding: 8px 0;
     white-space: normal;
   }
 
@@ -33,6 +50,33 @@
     padding: 0 16px;
     margin: 8px;
     font-size: 14px;
+  }
+
+  /* 작품목록 */
+  .works-article{
+    padding-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .article-title{
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .works-list{
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .works-list-items{
+    width: calc((100% - 80px) / 6);
+  }
+
+  .works-title{
+    font-size: 16px;
+    line-height: 24px;
   }
 
 
@@ -82,8 +126,14 @@
 
 /* >= 1280px (wide desktop) */
 @media screen and (min-width: 1280px) {
-  /* 옵션 선택 CSS */
+  /* 여러개 중 하나 선택 CSS */
   .select-content{
     font-size: 16px;
+  }
+
+/* 작품목록 */
+  .works-list-items{
+    width: calc((100% - 120px) / 6);
+    margin-right: 24px;
   }
 }
