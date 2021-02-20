@@ -27,9 +27,21 @@
   #point{
     padding: 8px 16px;
   }
+
+
+  /* 장르별 코믹스 - Aside (세일) */
+  #sale-list{
+    padding: 8px 16px;
+    padding-top: 0;
+  }
+
+  .sale-list-items{
+    margin-right: 16px;
+    width: 320px;
+  }
 }
 
-/* > 960px (tablet) */
+/* >= 960px (tablet) */
 @media screen and (min-width: 960px) {
   /* Banner */
   #banner{
@@ -76,6 +88,21 @@
     width: 100%;
     height: auto;
   }
+
+
+  /* 장르별 코믹스 - Aside (세일) */
+  #sale{
+    margin-bottom: 8px;
+  }
+
+  #sale-list{
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .sale-list-items{
+    width: calc((100% - 32px) / 3);
+  }
 }
 
 
@@ -84,5 +111,12 @@
   /* 신규 코믹스 - 신작 연재 */
   #new-webtoon .works-list-items{
     width: calc((100% - 72px) / 4);
+  }
+
+
+  /* 장르별 코믹스 - Aside (세일) */
+  .sale-list-items{
+    margin-right: 24px;
+    width: calc((100% - 48px) / 3);
   }
 }
