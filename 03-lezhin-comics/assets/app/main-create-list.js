@@ -27,28 +27,29 @@ createBanner();
 
 
 // 웹툰 목록 생성하는 생성자
-function Create(domOl, dataArray, name) {
+function Create(domOl, dataArray) {
   this.domOl =  document.querySelector(domOl);
   this.dataArray = dataArray;
 
   this.createList = function () {
     for (let i=0; i<this.dataArray.length; i++) {
       let createLi = document.createElement("li");
+      createLi.setAttribute("class","works-list-items");
       createLi.setAttribute("aria-label", this.dataArray[i].name);
       this.domOl.appendChild(createLi);
 
       let createAnchor = document.createElement("a");
-      createAnchor.setAttribute("class", name+"-anchor");
+      createAnchor.setAttribute("class", "works-anchor");
       createAnchor.setAttribute("href", "#");
       createLi.appendChild(createAnchor);
 
       let createTitle = document.createElement("strong");
-      createTitle.setAttribute("class", name+"-title");
+      createTitle.setAttribute("class", "works-title");
       createTitle.innerHTML = this.dataArray[i].name;
       createAnchor.appendChild(createTitle);
 
       let createThumnail = document.createElement("img");
-      createThumnail.setAttribute("class", name+"-thumbnail");
+      createThumnail.setAttribute("class", "works-thumbnail");
       createThumnail.setAttribute("src", "../assets/images/썸네일-공통.png");
       createThumnail.setAttribute("alt", this.dataArray[i].name);
       createAnchor.appendChild(createThumnail);
@@ -56,15 +57,15 @@ function Create(domOl, dataArray, name) {
   };
 }
 
-let newWebtoon = new Create("#new-webtoon-list", state.신규코믹스.신작연재, "new-webtoon");
-let newCartoon = new Create("#new-cartoon-list", state.신규코믹스.신규만화, "new-cartoon");
-let adultEdit = new Create("#adult-edit-list", state.장르별코믹스.개정판, "adult-edit");
-let adult = new Create("#adult-list", state.장르별코믹스.성인물, "adult");
-let bl = new Create("#bl-list", state.장르별코믹스.BL, "bl");
-let school = new Create("#school-list", state.장르별코믹스.학원, "school");
-let romance = new Create("#romance-list", state.장르별코믹스.로맨스, "romance");
-let gag = new Create("#gag-list", state.장르별코믹스.개그, "gag");
-let fantasy = new Create("#fantasy-list", state.장르별코믹스.판타지, "fantasy");
+let newWebtoon = new Create("#new-webtoon-list", state.신규코믹스.신작연재);
+let newCartoon = new Create("#new-cartoon-list", state.신규코믹스.신규만화);
+let adultEdit = new Create("#adult-edit-list", state.장르별코믹스.개정판);
+let adult = new Create("#adult-list", state.장르별코믹스.성인물);
+let bl = new Create("#bl-list", state.장르별코믹스.BL);
+let school = new Create("#school-list", state.장르별코믹스.학원);
+let romance = new Create("#romance-list", state.장르별코믹스.로맨스);
+let gag = new Create("#gag-list", state.장르별코믹스.개그);
+let fantasy = new Create("#fantasy-list", state.장르별코믹스.판타지);
 
 newWebtoon.createList();
 newCartoon.createList();
