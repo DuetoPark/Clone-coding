@@ -116,3 +116,56 @@ function createGoodsList () {
   }
 }
 createGoodsList();
+
+
+// Footer 생성자
+function FooterElement (selectedElement, dataArray) {
+  this.selectedElement =  document.querySelector(selectedElement);
+  this.dataArray = dataArray;
+
+  this.createList = function () {
+    for (let i=0; i<this.dataArray.length; i++) {
+      let createLi = document.createElement("li");
+      createLi.setAttribute("class","footer-list-items");
+      this.selectedElement.appendChild(createLi);
+
+      let createAnchor = document.createElement("a");
+      createAnchor.setAttribute("class","footer-anchor");
+      createAnchor.setAttribute("href", "#");
+      createAnchor.innerHTML = this.dataArray[i].value;
+      createLi.appendChild(createAnchor);
+    }
+  };
+
+  this.createElement = function (element) {
+    for (let i=0; i<this.dataArray.length; i++) {
+      let contactElement = document.createElement(element);
+      contactElement.setAttribute("class", "contact-"+element);
+      this.selectedElement.appendChild(contactElement);
+    }
+  }
+
+  this.createChild = function (parents, child, key) {
+    let selectParents = document.querySelectorAll(".contact-"+parents);
+    for (let i=0; i<this.dataArray.length; i++) {
+      let contactChild = document.createElement(child);
+      contactChild.setAttribute("class", "contact-"+child);
+      if (key === "term") {
+        contactChild.innerHTML = this.dataArray[i].term;
+      } else if (key === "desc") {
+        contactChild.innerHTML = this.dataArray[i].desc;
+      }
+      selectParents[i].appendChild(contactChild);
+    }
+  }
+}
+
+let info = new FooterElement("#lezhin-info", state.footer.info);
+let sns = new FooterElement("#lezhin-sns", state.footer.sns);
+let contact = new FooterElement("#lezhin-contact", state.footer.contact);
+
+info.createList();
+sns.createList();
+contact.createElement("div");
+contact.createChild("div", "dt", "term");
+contact.createChild("div", "dd", "desc");
