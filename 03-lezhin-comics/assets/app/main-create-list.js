@@ -26,7 +26,7 @@ function createBanner () {
 createBanner();
 
 
-// 웹툰 목록 생성하는 생성자
+// 목록 만드는 생성자
 function Create(domOl, dataArray) {
   this.domOl =  document.querySelector(domOl);
   this.dataArray = dataArray;
@@ -66,6 +66,7 @@ let school = new Create("#school-list", state.장르별코믹스.학원);
 let romance = new Create("#romance-list", state.장르별코믹스.로맨스);
 let gag = new Create("#gag-list", state.장르별코믹스.개그);
 let fantasy = new Create("#fantasy-list", state.장르별코믹스.판타지);
+let goods = new Create("#goods-list", state.굿즈);
 
 newWebtoon.createList();
 newCartoon.createList();
@@ -76,6 +77,7 @@ school.createList();
 romance.createList();
 gag.createList();
 fantasy.createList();
+goods.createList();
 
 
 // 세일 목록 생성
@@ -104,35 +106,13 @@ function createSaleList () {
 createSaleList();
 
 
-// 레진굿즈샵 목록 생성
-const goodsOl =  document.querySelector("#goods-list");
-let goodsDataArray = state.굿즈;
-
+// 레진굿즈샵 가격 생성
 function createGoodsList () {
-  for (let i=0; i<goodsDataArray.length; i++) {
-    let goodsLi = document.createElement("li");
-    goodsOl.appendChild(goodsLi);
-
-    let goodsAnchor = document.createElement("a");
-    goodsAnchor.setAttribute("href","#");
-    goodsAnchor.setAttribute("class", "goods-anchor");
-    goodsLi.appendChild(goodsAnchor);
-
-    let goodsTitle = document.createElement("strong");
-    goodsTitle.setAttribute("class", "goods-title");
-    goodsTitle.innerHTML = goodsDataArray[i].name;
-    goodsAnchor.appendChild(goodsTitle);
-
+  for (let i=0; i<goods.dataArray.length; i++) {
     let goodsPrice = document.createElement("strong");
     goodsPrice.setAttribute("class", "goods-price");
-    goodsPrice.innerHTML = goodsDataArray[i].price;
-    goodsAnchor.appendChild(goodsPrice);
-
-    let goodsThumbnail = document.createElement("img");
-    goodsThumbnail.setAttribute("class", "goods-thumbnail");
-    goodsThumbnail.setAttribute("src", "../assets/images/썸네일-공통.png");
-    goodsThumbnail.setAttribute("alt", goodsDataArray[i].name);
-    goodsAnchor.appendChild(goodsThumbnail);
+    goodsPrice.innerHTML = goods.dataArray[i].price;
+    document.querySelectorAll("#goods .works-anchor")[i].appendChild(goodsPrice);
   }
 }
 createGoodsList();
