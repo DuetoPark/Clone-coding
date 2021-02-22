@@ -223,3 +223,23 @@
   text-overflow: ellipsis;
   color: #333;
 }
+
+
+/* 레진챌린지 */
+#challenge{
+  padding: 8px;
+}
+
+#challenge-anchor{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  background-color: #A02533;
+}
+
+#challenge-image{
+  display: block;
+  width: auto;
+  height: 100px;
+}
