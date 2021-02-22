@@ -39,12 +39,20 @@
     margin-right: 16px;
     width: 320px;
   }
+
+
+  /* 굿즈 */
+  #goods-list{
+    padding: 8px 16px;
+    padding-top: 0;
+  }
 }
 
 /* >= 960px (tablet) */
 @media screen and (min-width: 960px) {
   /* Banner */
   #banner{
+    padding: 0;
     margin-bottom: 44px;
   }
 
@@ -102,6 +110,18 @@
 
   .sale-list-items{
     width: calc((100% - 32px) / 3);
+  }
+
+
+  /* 굿즈 */
+  #goods{
+    padding-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  #goods-list{
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 
