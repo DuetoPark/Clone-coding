@@ -23,12 +23,6 @@
   }
 
 
-  /* 장르별 코믹스 - Aside (제휴) */
-  #point{
-    padding: 8px 16px;
-  }
-
-
   /* 장르별 코믹스 - Aside (세일) */
   #sale-list{
     padding: 8px 16px;
@@ -48,8 +42,10 @@
   }
 
 
-  /* 레진챌린지 */
-  #challenge{
+  /* 중간배너
+  - 장르별 코믹스 - Aside (제휴)
+  - 레진챌린지 */
+  .mid-banner{
     padding: 8px 16px;
   }
 }
@@ -87,23 +83,6 @@
   }
 
 
-  /* 장르별 코믹스 - Aside (제휴) */
-  #point{
-    padding: 0;
-    padding-top: 24px;
-    margin-bottom: 48px;
-  }
-
-  #point-anchor{
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  #point-image{
-    width: 100%;
-    height: auto;
-  }
-
-
   /* 장르별 코믹스 - Aside (세일) */
   #sale{
     margin-bottom: 8px;
@@ -131,18 +110,20 @@
   }
 
 
-  /* 레진챌린지 */
-  #challenge{
+  /* 중간배너
+  - 장르별 코믹스 - Aside (제휴)
+  - 레진챌린지 */
+  .mid-banner{
     padding: 0;
     padding-top: 24px;
     margin-bottom: 48px;
   }
 
-  #challenge-anchor{
+  .mid-banner-anchor{
     background-color: rgba(0, 0, 0, 0);
   }
 
-  #challenge-image{
+  .mid-banner-image{
     width: 100%;
     height: auto;
   }

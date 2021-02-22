@@ -149,24 +149,9 @@
   order: 9;
 }
 
-
 /* 장르별 코믹스 - Aside (제휴) */
-#point{
-  padding: 8px;
-}
-
 #point-anchor{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
   background-color: #3BB6F8;
-}
-
-#point-image{
-  display: block;
-  width: auto;
-  height: 100px;
 }
 
 
@@ -226,19 +211,26 @@
 
 
 /* 레진챌린지 */
-#challenge{
+#challenge-anchor{
+  background-color: #A02533;
+}
+
+
+/* 중간배너
+- 장르별 코믹스 - Aside (제휴)
+- 레진챌린지 */
+.mid-banner{
   padding: 8px;
 }
 
-#challenge-anchor{
+.mid-banner-anchor{
   display: flex;
   justify-content: center;
   width: 100%;
   text-align: center;
-  background-color: #A02533;
 }
 
-#challenge-image{
+.mid-banner-image{
   display: block;
   width: auto;
   height: 100px;
