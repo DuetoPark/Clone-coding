@@ -668,5 +668,37 @@ let state = {
     {id: 18, name: "말할 수 없는 남매 6권", price: "10,800원"},
     {id: 19, name: "시크릿 캐릭터 드로잉", price: "12,600원"},
     {id: 20, name: "여섯자의 소년 세트", price: "35,100원"}
-  ]
+  ],
+  footer: {
+    info: [
+      {id: 1, value: "회사소개"},
+      {id: 2, value: "사업자정보확인"},
+      {id: 3, value: "이용약관"},
+      {id: 4, value: "개인정보처리방침"},
+      {id: 5, value: "청소년보호정책"},
+      {id: 6, value: "고객지원/공지사항"}
+    ],
+    sns: [
+      {id: 1, value: "블로그"},
+      {id: 2, value: "페이스북"},
+      {id: 3, value: "트위터"},
+      {id: 4, value: "채용공고"},
+      {id: 5, value: "연재문의"}
+    ],
+    contact: [
+      {id: 1, term: "사업자 등록번호", desc: "114-87-00708"},
+      {id: 2, term: "통신판매업 신고번호", desc: "제2014-서울강남-00058호"},
+      {id: 3, term: "주소", desc: "서울특별시 강남구 도산대로 170 170, Dosan-daero, Gangnam-gu, Seoul, Korea"},
+      {id: 4, term: "대표번호", desc: "02-1670-9917"},
+      {id: 5, term: "팩스번호", desc: "02-517-2484"},
+      {id: 6, term: "고객문의", desc: "help@lezhin.com"},
+      {id: 7, term: "업무 제휴 문의", desc: "contact@lezhin.com"}
+    ],
+    prize: [
+      {id: 1, award: "제 9회 대한민국 인터넷대상 국무총리상"},
+      {id: 2, award: "글로벌K-스타트업 2013 최우수상"},
+      {id: 3, award: "벤처기업 인증"},
+      {id: 4, award: "저작권OK"}
+    ]
+  }
 };
