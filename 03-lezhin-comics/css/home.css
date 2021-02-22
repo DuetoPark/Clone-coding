@@ -107,6 +107,49 @@
 }
 
 
+/* 장르별 코믹스 */
+#comics-type{
+  display: flex;
+  flex-direction: column;
+}
+
+#adult-edit{
+  order: 1;
+}
+
+#adult{
+  order: 2;
+}
+
+#point{
+  order: 3;
+}
+
+#sale{
+  order: 4;
+}
+
+#bl{
+  order:5;
+}
+
+#school{
+  order: 6;
+}
+
+#romance{
+  order: 7;
+}
+
+#gag{
+  order: 8;
+}
+
+#fantasy{
+  order: 9;
+}
+
+
 /* 장르별 코믹스 - Aside (제휴) */
 #point{
   padding: 8px;
