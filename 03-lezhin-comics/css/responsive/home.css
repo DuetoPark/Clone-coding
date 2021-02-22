@@ -48,6 +48,12 @@
   .mid-banner{
     padding: 8px 16px;
   }
+
+
+  /* Aside */
+  #aside{
+    padding: 16px 16px 0 16px;
+  }
 }
 
 /* >= 960px (tablet) */
@@ -127,6 +133,49 @@
     width: 100%;
     height: auto;
   }
+
+
+  /* Aside */
+  #aside{
+    padding: 40px 16px 0 16px;
+    margin-bottom: 60px;
+  }
+
+  #aside-title{
+    line-height: 100px;
+  }
+
+  #aside-image{
+    height: 32px;
+  }
+
+  #app .app-anchor{
+    width: calc((100% - 32px) / 3);
+  }
+
+  .app-anchor:first-child{
+    margin-bottom: 0;
+  }
+
+  .app-anchor:nth-child(2){
+    order: 3;
+  }
+
+  .app-anchor:nth-child(3){
+    order: 2;
+  }
+}
+
+
+/* >= 1054px (desktop) */
+@media screen and (min-width: 1054px) {
+  /* Aside */
+  #aside{
+    max-width: 1036px;
+    padding: 0;
+    padding-top: 40px;
+    margin: 0 auto 60px auto;
+  }
 }
 
 
@@ -141,6 +190,16 @@
   /* 장르별 코믹스 - Aside (세일) */
   .sale-list-items{
     margin-right: 24px;
+    width: calc((100% - 48px) / 3);
+  }
+
+
+  /* Aside */
+  #aside{
+    max-width: 1212px;
+  }
+
+  #app .app-anchor{
     width: calc((100% - 48px) / 3);
   }
 }
