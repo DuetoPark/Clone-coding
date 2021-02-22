@@ -84,7 +84,7 @@
   /* header */
   #header{
     align-items: center;
-    padding: 0;
+    padding: 0 16px;
     margin: 24px 0;
   }
 
@@ -118,14 +118,35 @@
 
   #search-group{
     order: 3;
-    margin-right: 0;
   }
 
   .all{
     margin-right: 14px;
   }
+
+
+  /* Main */
+  #main{
+    padding: 0 16px;
+  }
 }
 
+
+/* >= 1054px (desktop) */
+@media screen and (min-width: 1054px) {
+  /* Header */
+  #header{
+    max-width: 1036px;
+    margin: 24px auto;
+  }
+
+
+  /* Main */
+  #main{
+    max-width: 1036px;
+    margin: 0 auto 48px auto;
+  }
+}
 
 /* >= 1280px (wide desktop) */
 @media screen and (min-width: 1280px) {
@@ -176,8 +197,8 @@
   /* header */
   #header{
     align-items: center;
+    max-width: 1212px;
     padding: 0;
-    margin: 24px 0;
   }
 
   #logo{
@@ -210,5 +231,15 @@
 
   #search-group{
     order: 3;
+  }
+
+  .all{
+    margin-right: 14px;
+  }
+
+
+  /* Main */
+  #main{
+    max-width: 1212px;
   }
 }

@@ -199,3 +199,10 @@
   width: 18px;
   height: auto;
 }
+
+
+/* Main */
+#main{
+  display: block;
+  margin-bottom: 48px;
+}
