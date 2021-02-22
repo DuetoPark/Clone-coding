@@ -46,6 +46,12 @@
     padding: 8px 16px;
     padding-top: 0;
   }
+
+
+  /* 레진챌린지 */
+  #challenge{
+    padding: 8px 16px;
+  }
 }
 
 /* >= 960px (tablet) */
@@ -122,6 +128,23 @@
   #goods-list{
     padding: 0;
     overflow-x: hidden;
+  }
+
+
+  /* 레진챌린지 */
+  #challenge{
+    padding: 0;
+    padding-top: 24px;
+    margin-bottom: 48px;
+  }
+
+  #challenge-anchor{
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #challenge-image{
+    width: 100%;
+    height: auto;
   }
 }
 
