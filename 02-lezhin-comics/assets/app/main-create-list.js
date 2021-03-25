@@ -150,12 +150,12 @@ function FooterElement (selectedElement, dataArray) {
     for (let i=0; i<this.dataArray.length; i++) {
       let contactChild = document.createElement(child);
       contactChild.setAttribute("class", "contact-"+child);
+      selectParents[i].appendChild(contactChild);
       if (key === "term") {
         contactChild.innerHTML = this.dataArray[i].term;
       } else if (key === "desc") {
         contactChild.innerHTML = this.dataArray[i].desc;
       }
-      selectParents[i].appendChild(contactChild);
     }
   }
 }
