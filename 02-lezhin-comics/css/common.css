@@ -130,25 +130,15 @@
 }
 
 #nav-menu{
-  display: flex;
-  flex-shrink: 1;
+  height: 100%;
   padding: 0 2%;
 }
 
-.menu-list-items{
-  flex-grow: 1;
-  margin-right: 4px;
-}
-
-.menu-list-items:last-child{
-  margin-right: 0;
-}
-
 .menu-anchor{
-  padding: 0 8px;
+  padding: 14px 8px;
   margin: 0 auto;
   font-weight: 500;
-  line-height: 48px;
+  line-height: 3.428571428571429;
 }
 
 #search-group{
