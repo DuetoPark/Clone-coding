@@ -5,16 +5,22 @@ let bannerArray = state.배너;
 function createBanner () {
   for (let i=0; i<bannerArray.length; i++) {
     let bannerAnchor = document.createElement("a");
-    bannerAnchor.setAttribute("href", "#");
+    bannerAnchor.className = "banner-anchor";
+    bannerAnchor.setAttribute("href", bannerArray[0].path);
     bannerSection.appendChild(bannerAnchor);
 
     let bannerPicture = document.createElement("picture");
-    bannerAnchor.appendChild(bannerPicture);
+    bannerSection.appendChild(bannerPicture);
 
-    let bannerSource = document.createElement("source");
-    bannerSource.setAttribute("media", "(max-width: 640px)");
-    bannerSource.setAttribute("srcset", "../assets/images/배너-모바일.png");
-    bannerPicture.appendChild(bannerSource);
+    let bannerSourceMobile = document.createElement("source");
+    bannerSourceMobile.setAttribute("media", "(max-width: 640px)");
+    bannerSourceMobile.setAttribute("srcset", "../assets/images/배너-모바일.png");
+    bannerPicture.appendChild(bannerSourceMobile);
+
+    let bannerSourceDesktop = document.createElement("source");
+    bannerSourceDesktop.setAttribute("media", "(min-width: 641px)");
+    bannerSourceDesktop.setAttribute("srcset", "../assets/images/배너-데스크탑.png");
+    bannerPicture.appendChild(bannerSourceDesktop);
 
     let bannerImg = document.createElement("img");
     bannerImg.setAttribute("class","banner-image");
