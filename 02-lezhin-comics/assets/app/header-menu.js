@@ -12,6 +12,7 @@ function createMenu () {
 
     let menuItem = document.createElement("a");
     menuItem.setAttribute("class", "menu-anchor");
+    menuItem.setAttribute("href", "./comics.html");
     menuItem.setAttribute("role", "menuitem");
     menuItem.innerHTML = menuKeys[i];
     menuList.appendChild(menuItem);
