@@ -1,16 +1,21 @@
 //메인 베너 목록 생성
-const bannerSection = document.querySelector("#banner-slider");
+const bannerDiv = document.querySelector("#banner-slider");
 let bannerArray = state.배너;
 
 function createBanner () {
   for (let i=0; i<bannerArray.length; i++) {
+    let bannerArticle = document.createElement("article");
+    bannerArticle.className = 'banner-article';
+    bannerArticle.innerHTML = `<h5 class='hidden'>${bannerArray[i].altValue}</h5>`;
+    bannerDiv.appendChild(bannerArticle);
+
     let bannerAnchor = document.createElement("a");
     bannerAnchor.className = "banner-anchor";
-    bannerAnchor.setAttribute("href", bannerArray[0].path);
-    bannerSection.appendChild(bannerAnchor);
+    bannerAnchor.setAttribute("href", bannerArray[i].path);
+    bannerArticle.appendChild(bannerAnchor);
 
     let bannerPicture = document.createElement("picture");
-    bannerSection.appendChild(bannerPicture);
+    bannerArticle.appendChild(bannerPicture);
 
     let bannerSourceMobile = document.createElement("source");
     bannerSourceMobile.setAttribute("media", "(max-width: 640px)");
