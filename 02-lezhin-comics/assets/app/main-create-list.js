@@ -37,7 +37,7 @@ function createBanner () {
 createBanner();
 
 
-//랭킹 장르 선택 클릭 이벤트
+//랭킹 - 장르 클릭 이벤트
 const rankingList = document.querySelector('#ranking-list');
 const rankingDommy = document.querySelector('#ranking-list-dommy');
 
@@ -48,7 +48,6 @@ let genre = "";
 let option = "";
 
 function createRankingList(dataArray = [], index, genre, option) {
-  //랭킹 목록 생성
   const rankingListItem = rankingDommy.querySelector('li').cloneNode(true);
   const listTitle = rankingListItem.querySelector('h3');
   const listAnchor = rankingListItem.querySelector('a');
@@ -58,7 +57,6 @@ function createRankingList(dataArray = [], index, genre, option) {
   const listOption = rankingListItem.querySelector('.rank-webtoon-option');
 
   rankingListItem.classList.remove('hidden');
-  rankingListItem.setAttribute('role', 'tabpanel');
   listTitle.textContent = dataArray.name;
   listAnchor.textContent = dataArray.name;
   listAnchor.setAttribute('tabindex', 0);
@@ -77,7 +75,7 @@ function rankingInit() {
   });
 }
 
-function changeGenreOrOption(elem) { // 데이터 장르/옵션 변경
+function changeGenreOrOption(elem) {
   const isClicked = elem.dataset.name;
 
   if (isClicked === "option") {
