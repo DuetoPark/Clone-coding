@@ -37,6 +37,88 @@ function createBanner () {
 createBanner();
 
 
+//랭킹 장르 선택 클릭 이벤트
+const rankingList = document.querySelector('#ranking-list');
+const rankingDommy = document.querySelector('#ranking-list-dommy');
+
+const sectionOfSelectGenre = document.querySelector('#select-genre');
+const sectionOfSelectOption = document.querySelector('#ranking-option');
+
+let genre = "";
+let option = "";
+
+function createRankingList(dataArray = [], index, genre, option) {
+  //랭킹 목록 생성
+  const rankingListItem = rankingDommy.querySelector('li').cloneNode(true);
+  const listTitle = rankingListItem.querySelector('h3');
+  const listAnchor = rankingListItem.querySelector('a');
+  const listRank = rankingListItem.querySelector('.rank');
+  const listName = rankingListItem.querySelector('.rank-webtoon-name strong');
+  const listAuthor = rankingListItem.querySelector('.rank-webtoon-author strong');
+  const listOption = rankingListItem.querySelector('.rank-webtoon-option');
+
+  rankingListItem.classList.remove('hidden');
+  rankingListItem.setAttribute('role', 'tabpanel');
+  listTitle.textContent = dataArray.name;
+  listAnchor.textContent = dataArray.name;
+  listAnchor.setAttribute('tabindex', 0);
+  listRank.textContent = index + 1;
+  listName.textContent = dataArray.name;
+  listAuthor.textContent = dataArray.author;
+  listOption.textContent = dataArray.option;
+  rankingList.appendChild(rankingListItem);
+}
+
+function rankingInit() {
+  genre = "전체";
+  option = "실시간";
+  state.랭킹[genre][option].forEach((list, index) => {
+    createRankingList(list, index, genre, option);
+  });
+}
+
+function changeGenreOrOption(elem) { // 데이터 장르/옵션 변경
+  const isClicked = elem.dataset.name;
+
+  if (isClicked === "option") {
+    option = elem.dataset.option;
+  } else if (isClicked === "genre") {
+    genre = elem.dataset.genre;
+    // .select-active 적용대상 변경
+    const genreButtons = document.querySelectorAll('.select-content');
+    genreButtons.forEach(button => button.classList.remove('select-active'));
+    elem.classList.add('select-active');
+  }
+}
+
+function ouputRankList() {
+  const doesExistData = state.랭킹[genre][option].length;
+
+  if (!doesExistData) {
+    rankingList.innerHTML = `
+      <li>
+        <div>작품을 준비 중입니다.</div>
+      </li>
+    `;
+  } else {
+    state.랭킹[genre][option].forEach((list, index) => {
+      createRankingList(list, index, genre, option);
+    });
+  }
+}
+
+function rankClickHandler(e) {
+  changeGenreOrOption(e.target);
+  rankingList.innerHTML = "";
+  ouputRankList();
+}
+
+rankingInit();
+
+sectionOfSelectGenre.addEventListener('click', rankClickHandler);
+sectionOfSelectOption.addEventListener('click', rankClickHandler);
+
+
 // 목록 만드는 생성자
 function Create(domOl, dataArray) {
   this.domOl =  document.querySelector(domOl);

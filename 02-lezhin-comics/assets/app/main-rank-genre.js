@@ -3,18 +3,18 @@
 const selectGenre = document.querySelector("#select-genre");
 let rankingKeys = Object.keys(state.랭킹);
 
-function createGenre () {
-  for (let i=0; i<rankingKeys.length; i++) {
-    let genreButton = document.createElement("button");
-    genreButton.setAttribute("type", "button");
-    genreButton.setAttribute("id", rankingKeys[i]+"-button");
-    genreButton.setAttribute("class", "select-content");
-    genreButton.setAttribute("value", rankingKeys[i]);
-    genreButton.setAttribute("role", "tab");
-    genreButton.setAttribute("aria-controls", rankingKeys[i]+"-rank");
-    genreButton.innerHTML = rankingKeys[i];
-    selectGenre.appendChild(genreButton);
-  }
-};
+rankingKeys.forEach((key, index) => {
+  let genreButton = document.createElement("button");
+  genreButton.setAttribute("type", "button");
+  genreButton.className = "select-content";
+  genreButton.setAttribute("role", "tab");
+  genreButton.setAttribute("aria-controls", "ranking-list-item");
+  genreButton.setAttribute("data-name", "genre");
+  genreButton.setAttribute("data-genre", key);
+  genreButton.textContent = key;
+  selectGenre.appendChild(genreButton);
 
-createGenre();
+  if (index === 0) { // 페이지 로드시 '전체'에 .select-active 적용
+    genreButton.classList.add('select-active');
+  }
+});

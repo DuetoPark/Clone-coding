@@ -304,7 +304,7 @@ let state = {
           author: "귀귀",
           option: "10화 무료",
           event: 0, new: 0, up: 0, price: 0, rest: 0, free: 0}],
-      신작: "작품을 준비 중입니다",
+      신작: "",
       이벤트: [
         {id: 1,
           name: "내 학생이 싸이코패스일 리가 없어",
@@ -380,7 +380,7 @@ let state = {
           author: "연주",
           option: "3화 무료",
           event: 0, new: 0, up: 0, price: 0, rest: 0, free: 0}],
-      이벤트: "작품을 준비 중입니다."
+      이벤트: ""
     },
     미스터리: {
       실시간: [
@@ -440,7 +440,7 @@ let state = {
           author: "박지",
           option: "58화 무료",
           event: 0, new: 1, up: 0, price: 0, rest: 0, free: 1}],
-      이벤트: "작품을 준비 중입니다."
+      이벤트: ""
     },
     백합: {
       실시간: [
