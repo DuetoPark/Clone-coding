@@ -9,6 +9,7 @@ rankingKeys.forEach((key, index) => {
   genreButton.className = "select-content";
   genreButton.setAttribute("role", "tab");
   genreButton.setAttribute("aria-controls", "ranking-list-item");
+  genreButton.setAttribute('aria-selected', false);
   genreButton.setAttribute("data-name", "genre");
   genreButton.setAttribute("data-genre", key);
   genreButton.textContent = key;
@@ -16,5 +17,6 @@ rankingKeys.forEach((key, index) => {
 
   if (index === 0) { // 페이지 로드시 '전체'에 .select-active 적용
     genreButton.classList.add('select-active');
+    genreButton.setAttribute('aria-selected', true);
   }
 });
