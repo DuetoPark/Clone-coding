@@ -43,27 +43,29 @@ const rankingDommy = document.querySelector('#ranking-list-dommy');
 
 const sectionOfSelectGenre = document.querySelector('#select-genre');
 const sectionOfSelectOption = document.querySelector('#ranking-option');
+const optionButtons = sectionOfSelectOption.querySelectorAll('.ranking-option-button');
+const genreButtons = sectionOfSelectGenre.querySelectorAll('.select-content');
 
 let genre = "";
 let option = "";
 
 function createRankingList(dataArray = [], index, genre, option) {
   const rankingListItem = rankingDommy.querySelector('li').cloneNode(true);
-  const listTitle = rankingListItem.querySelector('h3');
   const listAnchor = rankingListItem.querySelector('a');
   const listRank = rankingListItem.querySelector('.rank');
   const listName = rankingListItem.querySelector('.rank-webtoon-name strong');
   const listAuthor = rankingListItem.querySelector('.rank-webtoon-author strong');
   const listOption = rankingListItem.querySelector('.rank-webtoon-option');
+  const listThumbnail = rankingListItem.querySelector('.rank-thumbnail');
 
   rankingListItem.classList.remove('hidden');
-  listTitle.textContent = dataArray.name;
-  listAnchor.textContent = dataArray.name;
+  listAnchor.setAttribute('aria-label', dataArray.name);
   listAnchor.setAttribute('tabindex', 0);
   listRank.textContent = index + 1;
   listName.textContent = dataArray.name;
   listAuthor.textContent = dataArray.author;
   listOption.textContent = dataArray.option;
+  listThumbnail.setAttribute('alt', dataArray.name);
   rankingList.appendChild(rankingListItem);
 }
 
@@ -80,13 +82,18 @@ function changeGenreOrOption(elem) {
 
   if (isClicked === "option") {
     option = elem.dataset.option;
+    optionButtons.forEach(button => button.setAttribute('aria-selected', false));
   } else if (isClicked === "genre") {
     genre = elem.dataset.genre;
-    // .select-active 적용대상 변경
-    const genreButtons = document.querySelectorAll('.select-content');
-    genreButtons.forEach(button => button.classList.remove('select-active'));
+    genreButtons.forEach(button => {
+      button.classList.remove('select-active');
+      button.setAttribute('aria-selected', false);
+    });
+    // 클릭한 장르 버튼에 클래스(.select-active) 적용
     elem.classList.add('select-active');
   }
+  // 클릭한 버튼에 aria-selected='true' 적용
+  elem.setAttribute('aria-selected', true);
 }
 
 function ouputRankList() {
