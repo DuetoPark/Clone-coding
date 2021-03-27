@@ -119,101 +119,130 @@ function rankClickHandler(e) {
 }
 
 rankingInit();
-
 sectionOfSelectGenre.addEventListener('click', rankClickHandler);
 sectionOfSelectOption.addEventListener('click', rankClickHandler);
 
 
-// 목록 만드는 생성자
-function Create(domOl, dataArray) {
+
+// 목록 버튼 조작 이벤트
+const webtoonLists = document.querySelectorAll('[data-name="webtoon-list"]');
+
+let allLists = [];
+let allCategorys = [];
+
+function Create(domOl, dataArray, category) {
   this.domOl =  document.querySelector(domOl);
+  this.address = domOl;
   this.dataArray = dataArray;
+  this.category = category;
+  this.currentCount = 1;
+  if (this.category === 'newWebtoon') {
+    this.toShow = 4;
+  } else if (this.category === 'sale') {
+    this.toShow = 3;
+  } else {
+    this.toShow = 6;
+  }
+  this.limit = Math.floor(dataArray.length / this.toShow);
+  this.currentData = [];
 
-  this.createList = function () {
-    for (let i=0; i<this.dataArray.length; i++) {
-      let createLi = document.createElement("li");
+  dataArray.forEach(item => {
+    let createLi = document.createElement("li");
+    if (this.category === 'sale') {
+      createLi.setAttribute("class", "sale-list-items");
+      createLi.setAttribute("aria-label", item.altValue);
+    } else {
       createLi.setAttribute("class","works-list-items");
-      createLi.setAttribute("aria-label", this.dataArray[i].name);
-      this.domOl.appendChild(createLi);
+      createLi.setAttribute("aria-label", item.name);
+    }
+    this.domOl.appendChild(createLi);
 
-      let createAnchor = document.createElement("a");
-      createAnchor.setAttribute("class", "works-anchor");
-      createAnchor.setAttribute("href", "#");
-      createLi.appendChild(createAnchor);
+    let createAnchor = document.createElement("a");
+    createAnchor.setAttribute("class", "works-anchor");
+    createAnchor.setAttribute("href", "#");
+    createLi.appendChild(createAnchor);
 
+    if (item.name) {
       let createTitle = document.createElement("strong");
       createTitle.setAttribute("class", "works-title");
-      createTitle.innerHTML = this.dataArray[i].name;
+      createTitle.innerHTML = item.name;
       createAnchor.appendChild(createTitle);
 
       let createThumnail = document.createElement("img");
       createThumnail.setAttribute("class", "works-thumbnail");
       createThumnail.setAttribute("src", "../assets/images/썸네일-공통.png");
-      createThumnail.setAttribute("alt", this.dataArray[i].name);
+      createThumnail.setAttribute("alt", item.name);
       createAnchor.appendChild(createThumnail);
     }
-  };
+
+    if (item.altValue) {
+      let createThumnail = document.createElement("img");
+      createThumnail.setAttribute("class", "sale-thumbnail");
+      createThumnail.setAttribute("src", "../assets/images/썸네일-세일.png");
+      createThumnail.setAttribute("alt", item.altValue);
+      createAnchor.appendChild(createThumnail);
+    }
+
+    if (item.price) {
+      let goodsPrice = document.createElement("strong");
+      goodsPrice.setAttribute("class", "goods-price");
+      goodsPrice.innerHTML = item.price;
+      createAnchor.appendChild(goodsPrice);
+    }
+  });
+
+  allLists.push(this);
+  allCategorys.push(this.category);
 }
 
-let newWebtoon = new Create("#new-webtoon-list", state.신규코믹스.신작연재);
-let newCartoon = new Create("#new-cartoon-list", state.신규코믹스.신규만화);
-let adultEdit = new Create("#adult-edit-list", state.장르별코믹스.개정판);
-let adult = new Create("#adult-list", state.장르별코믹스.성인물);
-let bl = new Create("#bl-list", state.장르별코믹스.BL);
-let school = new Create("#school-list", state.장르별코믹스.학원);
-let romance = new Create("#romance-list", state.장르별코믹스.로맨스);
-let gag = new Create("#gag-list", state.장르별코믹스.개그);
-let fantasy = new Create("#fantasy-list", state.장르별코믹스.판타지);
-let goods = new Create("#goods-list", state.굿즈);
+function listFactory(domOl, dataArray, category) {
+  return new Create(domOl, dataArray, category);
+}
 
-newWebtoon.createList();
-newCartoon.createList();
-adultEdit.createList();
-adult.createList();
-bl.createList();
-school.createList();
-romance.createList();
-gag.createList();
-fantasy.createList();
-goods.createList();
+function listControlInit() {
+  listFactory("#new-webtoon-list", state.신규코믹스.신작연재, 'newWebtoon');
+  listFactory("#new-cartoon-list", state.신규코믹스.신규만화, 'newCartoon');
+  listFactory("#adult-edit-list", state.장르별코믹스.개정판, 'adultEdit');
+  listFactory("#adult-list", state.장르별코믹스.성인물, 'adult');
+  listFactory("#bl-list", state.장르별코믹스.BL, 'bl');
+  listFactory("#school-list", state.장르별코믹스.학원, 'school');
+  listFactory("#romance-list", state.장르별코믹스.로맨스, 'romance');
+  listFactory("#gag-list", state.장르별코믹스.개그, 'gag');
+  listFactory("#fantasy-list", state.장르별코믹스.판타지, 'fantasy');
+  listFactory("#goods-list", state.굿즈, 'goods');
+  listFactory("#sale-list", state.장르별코믹스.SALE, 'sale');
+}
 
+function updateList(object) {
+  object.domOl.innerHTML = '';
+  object.currentData = object.dataArray.filter(item => {
+    return item.id <= (object.toShow * object.currentCount) && item.id > (object.toShow * (object.currentCount - 1));
+  });
+  listFactory(object.address, object.currentData, object.category);
+  allLists.splice(-1, 1);
+  allCategorys.splice(-1, 1);
+}
 
-// 세일 목록 생성
-const saleOl =  document.querySelector("#sale-list");
-let saleDataArray = state.장르별코믹스.SALE;
+function listHandler(e) {
+  const thisCategory = this.dataset.category;
+  const index = allCategorys.indexOf(thisCategory);
+  const thisObject = allLists[index];
+  const arrow = e.target.dataset.arrow;
 
-function createSaleList () {
-  for (let i=0; i<saleDataArray.length; i++) {
-    let saleLi = document.createElement("li");
-    saleLi.setAttribute("class", "sale-list-items");
-    saleLi.setAttribute("aria-label", saleDataArray[i].altValue);
-    saleOl.appendChild(saleLi);
+  thisObject.currentData = []; // 현 데이터 초기화
 
-    let saleAnchor = document.createElement("a");
-    saleAnchor.setAttribute("href","#");
-    saleAnchor.setAttribute("class", "sale-anchor");
-    saleLi.appendChild(saleAnchor);
-
-    let saleThumbnail = document.createElement("img");
-    saleThumbnail.setAttribute("class", "sale-thumbnail");
-    saleThumbnail.setAttribute("src", "../assets/images/썸네일-세일.png");
-    saleThumbnail.setAttribute("alt", saleDataArray[i].altValue);
-    saleAnchor.appendChild(saleThumbnail);
+  if (arrow === "pre" && thisObject.currentCount > 1) {
+    thisObject.currentCount -= 1;
+    updateList(thisObject);
+  } else if (arrow === "next" && thisObject.currentCount <= thisObject.limit) {
+    thisObject.currentCount += 1;
+    updateList(thisObject);
   }
 }
-createSaleList();
 
+listControlInit();
+webtoonLists.forEach(article => article.addEventListener('click', listHandler));
 
-// 레진굿즈샵 가격 생성
-function createGoodsList () {
-  for (let i=0; i<goods.dataArray.length; i++) {
-    let goodsPrice = document.createElement("strong");
-    goodsPrice.setAttribute("class", "goods-price");
-    goodsPrice.innerHTML = goods.dataArray[i].price;
-    document.querySelectorAll("#goods .works-anchor")[i].appendChild(goodsPrice);
-  }
-}
-createGoodsList();
 
 
 // Footer 생성자
