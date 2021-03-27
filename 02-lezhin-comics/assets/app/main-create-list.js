@@ -126,8 +126,14 @@ sectionOfSelectOption.addEventListener('click', rankClickHandler);
 
 // 목록 버튼 조작 이벤트
 const webtoonLists = document.querySelectorAll('[data-name="webtoon-list"]');
+const listControlGroups = document.querySelectorAll('.list-control-group');
+let screenWidth = window.innerWidth;
 let allLists = [];
 let allCategories = [];
+
+if (screenWidth >= 960) {
+  listControlGroups.forEach(group => group.classList.remove('hidden'));
+}
 
 function Create(domOl, dataArray, category) {
   this.domOl =  document.querySelector(domOl);
@@ -255,7 +261,7 @@ function debounce(func, wait = 100, immediate = true) {
 }
 
 function resizeHandler(e) {
-  const screenWidth = e.target.innerWidth;
+  screenWidth = e.target.innerWidth;
   console.log(screenWidth);
   if (screenWidth < 960) {
     allLists.forEach(item => {
@@ -265,6 +271,7 @@ function resizeHandler(e) {
     allLists = [];
     allCategories = [];
     listControlInit();
+    listControlGroups.forEach(group => group.classList.add('hidden'));
   } else {
     allLists.forEach(item => {
       item.currentCount = 1;
@@ -273,6 +280,7 @@ function resizeHandler(e) {
     allLists = [];
     allCategories = [];
     listControlInit();
+    listControlGroups.forEach(group => group.classList.remove('hidden'));
   }
 }
 
