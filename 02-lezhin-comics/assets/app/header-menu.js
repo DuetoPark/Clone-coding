@@ -7,8 +7,7 @@ function createMenu () {
   for (let i=0; i<menuKeys.length; i++) {
     let menuItem = document.createElement("a");
     menuItem.setAttribute("class", "menu-anchor");
-    menuItem.setAttribute("href", "./comics.html");
-    menuItem.setAttribute("role", "menuitem");
+    menuItem.setAttribute("href", "./lezhin-comics.html");
     menuItem.innerHTML = menuKeys[i];
     menuDiv.appendChild(menuItem);
   }
