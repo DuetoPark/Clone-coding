@@ -126,9 +126,8 @@ sectionOfSelectOption.addEventListener('click', rankClickHandler);
 
 // 목록 버튼 조작 이벤트
 const webtoonLists = document.querySelectorAll('[data-name="webtoon-list"]');
-
 let allLists = [];
-let allCategorys = [];
+let allCategories = [];
 
 function Create(domOl, dataArray, category) {
   this.domOl =  document.querySelector(domOl);
@@ -192,7 +191,7 @@ function Create(domOl, dataArray, category) {
   });
 
   allLists.push(this);
-  allCategorys.push(this.category);
+  allCategories.push(this.category);
 }
 
 function listFactory(domOl, dataArray, category) {
@@ -220,12 +219,12 @@ function updateList(object) {
   });
   listFactory(object.address, object.currentData, object.category);
   allLists.splice(-1, 1);
-  allCategorys.splice(-1, 1);
+  allCategories.splice(-1, 1);
 }
 
 function listHandler(e) {
   const thisCategory = this.dataset.category;
-  const index = allCategorys.indexOf(thisCategory);
+  const index = allCategories.indexOf(thisCategory);
   const thisObject = allLists[index];
   const arrow = e.target.dataset.arrow;
 
@@ -240,8 +239,46 @@ function listHandler(e) {
   }
 }
 
+function debounce(func, wait = 100, immediate = true) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+function resizeHandler(e) {
+  const screenWidth = e.target.innerWidth;
+  console.log(screenWidth);
+  if (screenWidth < 960) {
+    allLists.forEach(item => {
+      item.currentCount = 1;
+      item.domOl.innerHTML = '';
+    });
+    allLists = [];
+    allCategories = [];
+    listControlInit();
+  } else {
+    allLists.forEach(item => {
+      item.currentCount = 1;
+      item.domOl.innerHTML = '';
+    });
+    allLists = [];
+    allCategories = [];
+    listControlInit();
+  }
+}
+
 listControlInit();
 webtoonLists.forEach(article => article.addEventListener('click', listHandler));
+window.addEventListener('resize', debounce(resizeHandler));
 
 
 
