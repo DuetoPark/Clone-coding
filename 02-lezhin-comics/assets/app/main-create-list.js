@@ -131,10 +131,6 @@ let screenWidth = window.innerWidth;
 let allLists = [];
 let allCategories = [];
 
-if (screenWidth >= 960) {
-  listControlGroups.forEach(group => group.classList.remove('hidden'));
-}
-
 function Create(domOl, dataArray, category) {
   this.domOl =  document.querySelector(domOl);
   this.address = domOl;
@@ -204,7 +200,7 @@ function listFactory(domOl, dataArray, category) {
   return new Create(domOl, dataArray, category);
 }
 
-function listControlInit() {
+function createLists() {
   listFactory("#new-webtoon-list", state.신규코믹스.신작연재, 'newWebtoon');
   listFactory("#new-cartoon-list", state.신규코믹스.신규만화, 'newCartoon');
   listFactory("#adult-edit-list", state.장르별코믹스.개정판, 'adultEdit');
@@ -216,6 +212,16 @@ function listControlInit() {
   listFactory("#fantasy-list", state.장르별코믹스.판타지, 'fantasy');
   listFactory("#goods-list", state.굿즈, 'goods');
   listFactory("#sale-list", state.장르별코믹스.SALE, 'sale');
+}
+
+function listControlInit() {
+  if (screenWidth >= 960) {
+    listControlGroups.forEach(group => group.classList.remove('hidden'));
+    createLists();
+    allLists.forEach(object => updateList(object));
+  } else {
+    createLists();
+  }
 }
 
 function updateList(object) {
@@ -270,7 +276,7 @@ function resizeHandler(e) {
     });
     allLists = [];
     allCategories = [];
-    listControlInit();
+    createLists();
     listControlGroups.forEach(group => group.classList.add('hidden'));
   } else {
     allLists.forEach(item => {
@@ -279,7 +285,7 @@ function resizeHandler(e) {
     });
     allLists = [];
     allCategories = [];
-    listControlInit();
+    createLists();
     listControlGroups.forEach(group => group.classList.remove('hidden'));
   }
 }
