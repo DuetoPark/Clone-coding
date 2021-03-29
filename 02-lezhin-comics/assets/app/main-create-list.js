@@ -174,6 +174,7 @@ function Create(domOl, dataArray, category) {
   }
   this.limit = Math.floor(dataArray.length / this.toShow);
   this.currentData = [];
+  this.nextData = [];
 
   dataArray.forEach(item => {
     let createLi = document.createElement("li");
@@ -260,6 +261,10 @@ function updateList(object) {
   listFactory(object.address, object.currentData, object.category);
   allLists.splice(-1, 1);
   allCategories.splice(-1, 1);
+
+  object.nextData = object.dataArray.filter(item => {
+    return item.id <= (object.toShow * (object.currentCount + 1)) && item.id > (object.toShow * (object.currentCount));
+  });
 }
 
 function listHandler(e) {
@@ -274,6 +279,9 @@ function listHandler(e) {
     thisObject.currentCount -= 1;
     updateList(thisObject);
   } else if (arrow === "next" && thisObject.currentCount <= thisObject.limit) {
+    // (데이터 개수) / (보여줄 목록 개수) 나머지가 0개면,
+    if (!thisObject.nextData.length) return;
+    // (데이터 개수) / (보여줄 목록 개수) 나머지가 1개 이상이면,
     thisObject.currentCount += 1;
     updateList(thisObject);
   }
