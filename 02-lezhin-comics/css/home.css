@@ -118,6 +118,7 @@
 
 .rank{
   order: 2;
+  flex-shrink: 0;
   width: 40px;
   padding-top: 4px;
   text-align: center;
@@ -129,11 +130,21 @@
 
 .rank-webtoon-info{
   order: 3;
+  flex-grow: 1;
+  min-width: 30px;
   padding-top: 4px;
+  white-space: nowrap;
 }
 
 .rank-webtoon-name{
+  display: flex;
   margin-bottom: 8px;
+}
+
+.rank-webtoon-name strong{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 i[class*=icon]{
@@ -154,10 +165,17 @@ i[class*=icon]{
 }
 
 .rank-webtoon-author{
+  display: flex;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.333333333333333;
   color: #333;
+}
+
+.rank-webtoon-author strong{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .rank-webtoon-option{
@@ -167,6 +185,7 @@ i[class*=icon]{
 
 .rank-webtoon-thumbnail{
   order: 1;
+  flex-shrink: 0;
   position: relative;
   width: 72px;
   height: 72px;
