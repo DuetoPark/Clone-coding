@@ -49,10 +49,13 @@ const genreButtons = sectionOfSelectGenre.querySelectorAll('.select-content');
 let genre = "";
 let option = "";
 
+const icons = ['event', 'new', 'up', 'award', 'rest', 'free'];
+
 function createRankingList(dataArray = [], index, genre, option) {
   const rankingListItem = rankingDommy.querySelector('li').cloneNode(true);
   const listAnchor = rankingListItem.querySelector('a');
   const listRank = rankingListItem.querySelector('.rank');
+  const listNameWrapper = rankingListItem.querySelector('.rank-webtoon-name');
   const listName = rankingListItem.querySelector('.rank-webtoon-name strong');
   const listAuthor = rankingListItem.querySelector('.rank-webtoon-author strong');
   const listOption = rankingListItem.querySelector('.rank-webtoon-option');
@@ -67,14 +70,23 @@ function createRankingList(dataArray = [], index, genre, option) {
   listOption.textContent = dataArray.option;
   listThumbnail.setAttribute('alt', dataArray.name);
   rankingList.appendChild(rankingListItem);
+
+  icons.forEach(icon => {
+    outputIcon(dataArray, icon, listNameWrapper, listName);
+  });
 }
 
-function rankingInit() {
-  genre = "전체";
-  option = "실시간";
-  state.랭킹[genre][option].forEach((list, index) => {
-    createRankingList(list, index, genre, option);
-  });
+function outputIcon(dataArray, icon, parentElement, childElement) {
+  if (!dataArray[icon]) {
+    return;
+  } else {
+    const iconTag = document.createElement('i');
+    parentElement.insertBefore(iconTag, childElement);
+
+    const listIcon = parentElement.querySelector('i');
+    iconTag.className = `icon-${icon}`;
+    iconTag.innerHTML = `<img src='../assets/images/icon-${icon}.svg' alt='${icon}'/> `;
+  }
 }
 
 function changeGenreOrOption(elem) {
