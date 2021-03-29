@@ -115,12 +115,12 @@ function changeGenreOrOption(elem) {
   elem.setAttribute('aria-selected', true);
 }
 
-function ouputRankList() {
+function outputRankList() {
   const doesExistData = state.랭킹[genre][option].length;
 
   if (!doesExistData) {
     rankingList.innerHTML = `
-      <li>
+      <li class='no-webtoon'>
         <div>작품을 준비 중입니다.</div>
       </li>
     `;
@@ -131,10 +131,19 @@ function ouputRankList() {
   }
 }
 
+
+function rankingInit() {
+  genre = "전체";
+  option = "실시간";
+  state.랭킹[genre][option].forEach((data, index) => {
+    createRankingList(data, index, genre, option);
+  });
+}
+
 function rankClickHandler(e) {
   changeGenreOrOption(e.target);
   rankingList.innerHTML = "";
-  ouputRankList();
+  outputRankList();
 }
 
 rankingInit();
