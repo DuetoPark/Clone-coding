@@ -123,6 +123,23 @@
   margin-bottom: 8px;
 }
 
+i[class*=icon]{
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.icon-free{
+  position: absolute;
+  left: 4px; top: 4px;
+  z-index: 2;
+  margin: 0;
+}
+
+.icon-free img{
+  width: 24px;
+  height: 24px;
+}
+
 .rank-webtoon-author{
   margin-bottom: 4px;
   font-size: 12px;
