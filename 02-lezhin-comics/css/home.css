@@ -69,26 +69,85 @@
   line-height: 24px;
 }
 
+#ranking-content{
+  position: relative;
+}
+
 #ranking-option{
   display: flex;
   padding: 0 8px;
 }
 
-.ranking-more{
-  order: 2;
+.ranking-option-active::after{
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #000;
+  transform: translateY(200%);
 }
 
-.ranking-option-group{
-  order: 1;
-  margin-right: auto;
-}
-
-.ranking-more-anchor{
-  display: inline-block;
+#ranking-list{
   padding: 0 8px;
+  padding-top: 8px;
+}
+
+.ranking-list-item{
+  margin-bottom: 16px;
+}
+
+.ranking-list-item:last-child{
+  margin-bottom: 0;
+}
+
+.rank-webtoon-anchor{
+  display: flex;
+}
+
+.rank{
+  order: 2;
+  width: 40px;
+  padding-top: 4px;
+  text-align: center;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.rank-webtoon-info{
+  order: 3;
+  padding-top: 4px;
+}
+
+.rank-webtoon-name{
+  margin-bottom: 8px;
+}
+
+.rank-webtoon-author{
+  margin-bottom: 4px;
   font-size: 12px;
-  line-height: 48px;
-  color: #5A719A;
+  line-height: 1.333333333333333;
+  color: #333;
+}
+
+.rank-webtoon-option{
+  font-size: 12px;
+  color: #707070;
+}
+
+.rank-webtoon-thumbnail{
+  order: 1;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rank-thumbnail{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ranking-option-button{
@@ -100,13 +159,29 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-.ranking-option-active::after{
-  content: "";
-  display: block;
-  height: 2px;
-  background-color: #000;
-  transform: translateY(200%);
+.ranking-more{
+  position: absolute;
+  right: 0; top: 0;
+  transform: translateX(-8px);
 }
+
+.ranking-more-anchor{
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 12px;
+  line-height: 48px;
+  color: #5A719A;
+}
+
+
+
+
+/* 공통 - list-control */
+.list-control{
+  width: 36px;
+  height: 36px;
+}
+
 
 
 /* 신규 코믹스 - 신작 연재 */
