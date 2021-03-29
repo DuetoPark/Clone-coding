@@ -16,6 +16,15 @@
     padding: 0 16px;
   }
 
+  #ranking-list{
+    padding: 0 16px;
+    padding-top: 16px;
+  }
+
+  .ranking-more{
+    transform: translateX(-16px);
+  }
+
 
   /* 신규 코믹스 - 신작 연재 */
   #new-webtoon .works-list-items{
@@ -73,8 +82,25 @@
     line-height: 28px;
   }
 
+  #ranking-content{
+    padding: 0 8px;
+  }
+
   #ranking-option{
     padding: 0;
+  }
+
+  #ranking-list{
+    padding: 0;
+    padding-top: 8px;
+  }
+
+  .ranking-more{
+    transform: translateX(0);
+  }
+
+  .ranking-option-active::after{
+    height: 0;
   }
 
 
