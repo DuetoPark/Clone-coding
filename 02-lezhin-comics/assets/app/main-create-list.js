@@ -58,6 +58,7 @@ function createRankingList(dataArray = [], index, genre, option) {
   const listNameWrapper = rankingListItem.querySelector('.rank-webtoon-name');
   const listName = rankingListItem.querySelector('.rank-webtoon-name strong');
   const listAuthor = rankingListItem.querySelector('.rank-webtoon-author strong');
+  const listGenre = rankingListItem.querySelector('.rank-webtoon-author span');
   const listOption = rankingListItem.querySelector('.rank-webtoon-option');
   const listThumbnail = rankingListItem.querySelector('.rank-thumbnail');
 
@@ -67,6 +68,7 @@ function createRankingList(dataArray = [], index, genre, option) {
   listRank.textContent = index + 1;
   listName.textContent = dataArray.name;
   listAuthor.textContent = dataArray.author;
+  listGenre.textContent = dataArray.genre || genre;
   listOption.textContent = dataArray.option;
   listThumbnail.setAttribute('alt', dataArray.name);
   rankingList.appendChild(rankingListItem);
