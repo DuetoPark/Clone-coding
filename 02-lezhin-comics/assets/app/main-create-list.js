@@ -37,7 +37,7 @@ function createBanner () {
 createBanner();
 
 
-//랭킹 - 장르 클릭 이벤트
+//랭킹 - 탭 클릭 이벤트
 const rankingList = document.querySelector('#ranking-list');
 const rankingDommy = document.querySelector('#ranking-list-dommy');
 
@@ -82,7 +82,12 @@ function changeGenreOrOption(elem) {
 
   if (isClicked === "option") {
     option = elem.dataset.option;
-    optionButtons.forEach(button => button.setAttribute('aria-selected', false));
+    optionButtons.forEach(button => {
+      button.setAttribute('aria-selected', false)
+      button.classList.remove('ranking-option-active');
+    });
+    // 클릭한 목록에 클래스(.ranking-option-active) 적용
+    elem.classList.add('ranking-option-active');
   } else if (isClicked === "genre") {
     genre = elem.dataset.genre;
     genreButtons.forEach(button => {
