@@ -87,11 +87,13 @@
 }
 
 #ranking-list{
+  min-height: 272px;
   padding: 0 8px;
   padding-top: 8px;
 }
 
 .ranking-list-item{
+  min-height: 75px;
   margin-bottom: 16px;
 }
 
@@ -99,8 +101,19 @@
   margin-bottom: 0;
 }
 
+.no-webtoon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 264px;
+  margin: 0;
+  font-weight: 500;
+  color: #585858;
+}
+
 .rank-webtoon-anchor{
   display: flex;
+  position: relative;
 }
 
 .rank{

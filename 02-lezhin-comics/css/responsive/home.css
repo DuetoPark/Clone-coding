@@ -91,8 +91,31 @@
   }
 
   #ranking-list{
+    min-height: 308px;
     padding: 0;
     padding-top: 8px;
+  }
+
+  .no-webtoon{
+    min-height: 300px;
+  }
+
+  .rank{
+    padding-top: 10px;
+    width: 48px;
+  }
+
+  .rank-webtoon-info{
+    padding-top: 8px;
+  }
+
+  .rank-webtoon-name{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  i[class*=icon]{
+    vertical-align: top;
   }
 
   .ranking-more{
@@ -101,6 +124,11 @@
 
   .ranking-option-active::after{
     height: 0;
+  }
+
+  .rank-webtoon-thumbnail{
+    width: 84px;
+    height: 84px;
   }
 
 
