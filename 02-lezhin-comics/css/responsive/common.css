@@ -116,6 +116,21 @@
     padding: 0;
   }
 
+  .menu-anchor{
+    position: relative;
+  }
+
+  .menu-anchor:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: calc(100% - 16px);
+    height: 2px;
+    transform: translate(-50%, -400%);
+    background-color: #000;
+  }
+
   #search-group{
     order: 3;
   }
