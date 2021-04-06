@@ -304,7 +304,6 @@ function debounce(func, wait = 100, immediate = true) {
 
 function resizeHandler(e) {
   screenWidth = e.target.innerWidth;
-  console.log(screenWidth);
   if (screenWidth < 960) {
     allLists.forEach(item => {
       item.currentCount = 1;
