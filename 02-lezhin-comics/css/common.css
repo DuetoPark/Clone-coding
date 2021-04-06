@@ -130,8 +130,14 @@
 }
 
 #nav-menu{
+  display: flex;
   height: 100%;
   padding: 0 2%;
+}
+
+.menu-list-items{
+  flex-grow: 1;
+  text-align: center;
 }
 
 .menu-anchor{
