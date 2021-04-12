@@ -1,423 +1,279 @@
-/* common - form(input[type=checkbox]) */
-.signup-form-input-checkbox,
-.signup-form-input-radio{
-  position: absolute; top: 10px; left: 10px;
-  width: 1px;
-  height: 1px;
+:root {
+  /* color */
+  --red: #ff2e4b;
+  --darkblue: #5A719A;
+  --gray: #707070;
+  --lightgray: #adadad;
+  --darkgray: #333333;
+  --transparent: rgba(0, 0, 0, 0);
+  --black: #000;
+  --hr: #dbdee3;
+  --error: #eb0026;
+
+  --borderGray: #c5cbd3;
+
+  /* background */
+  --bgGreen: #00c73c;
+  --bgBlue: #1877f2;
+
+  /* button */
+  --inactiveBorder: #c6cbd4;
+  --inactiveBackground: #dbdee3;
+  --font: #585858;
+  --active: #eb0026;
 }
 
-.signup-form-input-checkbox::before{
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  z-index: 1;
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 2px;
-  border: 2px solid rgba(112, 112, 112, 0.54);
-  background-color: #FFF;
-}
-
-.signup-form-input-checkbox:checked::before{
-  border: none;
-  background-color: #FF2E4B;
-  background-image: url("../../assets/images/icon-check-white.svg");
-  background-repeat: no-repeat;
-  background-position: top 0 left 50%;
-  background-size: 14px;
-}
-
-.signup-form-input-checkbox + label{
-  z-index: 2;
-  padding-left: 26px;
-  white-space: normal;
-}
-
-.signup-form-input-checkbox:hover + label{
-  color: #333;
-}
-
-.signup-form-input-checkbox:checked + label,
-.signup-form-input-radio:checked + label{
-  color: #333;
-}
-
-
-/* common - form(input[type=radio]) */
-.signup-form-input-radio:checked::before{
-  border-color: #FF2E4B;
-}
-
-.signup-form-input-radio:checked::after{
-  content: '';
-  position: absolute; top: 0; left: 0;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #FF2E4B;
-}
-
-
-/* common - form(input[type=text]) */
-.signup-form-input-text{
-  width: 100%;
-  padding: 0 2px;
-  padding-top: 16px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2;
-  border-bottom: 1px solid #C5CBD3;
-}
-
-.signup-form-input-text-label{
-  position: absolute;
-  left: 0;
-  top: calc((100% - 24px) / 2 + 16px);
-  transform: translateY(-50%);
-  padding: 0 2px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.142857142857143;
-  color: #5A719A;
-  transition: all 250ms ease-in-out;
-}
-
-.signup-form-input-text-active{
-  transform: translateY(calc(-100% - 16px));
-  font-size: 12px;
-  font-weight: 400;
-}
-
-/* common - message */
-.form-input-message{
-  display: none;
-  font-size: 12px;
-  line-height: 1.333333333333333;
-  white-space: normal;
-  color: #333333;
-}
-
-.form-input-message:first-child{
-  display: block;
-}
-
-.emphasize-message{
-  color: #EB0026;
-}
-
-/* common - 상세보기 */
-.agreement-form-detail{
-  margin-left: auto;
-}
-
-
-
-
-/* Main */
-.sign-up-main{
+.sign-up {
   padding: 16px;
-  margin: 0;
 }
 
-/* Section - lezhin-section-sign-up */
-.lezhin-section-sign-up{
-  margin: 0 auto;
+.sign-up-agree {
+  width: 100%;
 }
 
-.lezhin-section-sign-up-title{
+.sign-up-title{
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.75;
   text-align: center;
+  line-height: 1.75;
 }
 
-/* Article - lezhin-article-agreement */
+/*
+  Form
+  #accept-terms-form
+*/
+hr{
+  margin: 6px 0;
+  border-top: 1px solid var(--border);
+}
 
-/* form */
-.agreement-form-div{
-  position: relative; top: 0; left: 0;
+.required-checkbox{
   display: flex;
-  margin-bottom: 12px;
-  color: #707070;
-}
-
-.agreement-form-div:last-child{
-  margin-bottom: 0;
-}
-
-.agreement-form-div:first-child .agreement-form-label,
-.agreement-form-div:last-child .agreement-form-label{
-  font-weight: 500;
-  color: #333333;
-}
-
-.agreement-form-div:hover .signup-form-input-checkbox::before{
-  border-color: rgba(1, 1, 1, 0.54);
-}
-
-/* anchor */
-.agreement-form-detail{
-  text-decoration: underline;
-  color: #5A719A;
-}
-
-/* 필수 */
-.essential{
-  color: #EB0026;
-}
-
-/* hr */
-.agreement-form-hr{
-  margin: 13px 0;
-  border: none;
-  border-bottom: 1px solid #DBDEE3;
-}
-
-/* button */
-.agreement-form-fieldset:last-of-type{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0;
-}
-
-.sign-up-button{
-  width: 100%;
-  height: 48px;
-  margin-right: 2%;
-  border-radius: 2px;
-  border: 1px solid #C6CBD4;
-  background-color: #FFF;
-  color: #585858;
-}
-
-.sign-up-cancle{
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.sign-up-agreement{
-  margin-right: 0;
-  border: none;
-  background-color: #DBDEE3;
-  color: #FFF;
+#accept-terms-form label{
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 6px solid var(--transparent);
+  border-bottom: 6px solid var(--transparent);
+  color: var(--gray);
+}
+
+#accept-terms-form label.bold{
+  font-weight: 500;
+  color: var(--darkgray);
+}
+
+#accept-terms-form input{
+  position: relative;
+  width: auto;
+  margin-right: 15px;
+}
+
+/* custom checkbox */
+#accept-terms-form input::before{
+  content: '';
+  position: absolute;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--lightgray);
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+#accept-terms-form input::after{
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-30%, -75%) rotate(-45deg);
+  display: inline-block;
+  width: 10px;
+  height: 4px;
+  border-left: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  border-radius: 2px;
+}
+
+.details{
+  margin-left: auto;
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+/* (필수)/(선택) 표현 */
+#accept-terms-form input[data-type="required"] + span::after{
+  content:'(필수)';
+  color: var(--red);
+  font-weight: 400;
+}
+
+#accept-terms-form input[data-type="choice"] + span::after{
+  content:'(선택)';
+}
+
+/* Checked & hover CSS */
+#accept-terms-form input:hover::before,
+#accept-terms-form input:hover + *{
+  border-color: var(--gray);
+  color: var(--darkgray);
+}
+
+#accept-terms-form input:checked::before{
+  border-color: var(--red);
+  background-color: var(--red);
+}
+
+#accept-terms-form input:checked:hover::before{
+  border-color: var(--red);
+}
+
+#accept-terms-form input:checked + *{
+  color: var(--darkgray);
+}
+
+
+.button-group{
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.form-button{
+  flex: 1;
+  border: 1px solid var(--inactiveBorder);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 3.428571428571429;
+  background-color: #FFF;
+  color: var(--font);
   transition: background-color 250ms ease-in-out;
 }
 
-/* Aside - sign-up-help */
-.sign-up-help{
-  border-top: 40px solid rgba(0, 0, 0, 0);
-  border-bottom: 40px solid rgba(0, 0, 0, 0);
+.cancle{
+  margin-right: 2%;
+  cursor: default;
 }
 
-.sign-up-help > p,
-.sign-up-help a{
-  white-space: normal;
+.full-button{
+  border: none;
+  background-color: var(--inactiveBackground);
+  color: #fff;
+  pointer-events: none;
+}
+
+.button-active{
+  background-color: var(--active);
+  pointer-events:inherit;
+}
+
+
+.contact{
+  margin: 40px 0;
   font-size: 12px;
-  color: #707070;
+  color: var(--gray);
 }
 
+.contact a{
+  text-decoration: underline;
+}
 
-/* Article - lezhin-article-authentication */
-.lezhin-article-authentication,
-.lezhin-article-privacy{
-  max-width: 300px;
+/*
+  Form
+  #email-form
+*/
+#email-form{
+  width: 300px;
   margin: 0 auto;
 }
 
-/* form */
-#authentication-email:active .form-input-message:first-child,
-#authentication-email:focus .form-input-message:first-child{
-  display: none;
+#email-form label{
+  position: relative;
+  line-height: 2;
+  padding: 5px 0;
 }
 
-#authentication-email:active .form-input-message:nth-child(2),
-#authentication-email:focus .form-input-message:nth-child(2){
-  display: block;
+.email-label{
+  position: absolute;
+  left: 0; top: 0;
+  font-weight: 500;
+  color: var(--darkblue);
+  transition: all 250ms ease-in-out;
 }
 
-.authentication-email,
-.authentication-number{
-  padding: 0;
-  border: none;
+.email-label.focus{
+  font-size: 12px;
+  transform: translateY(-100%);
 }
 
-.authentication-email:first-of-type{
-  margin-bottom: 0;
-}
-
-.authentication-number{
-  margin-top: 24px;
-}
-
-.authentication-form-div{
-  margin-bottom: 24px;
-}
-
-/* button */
-.authentication-button{
+#email-form input[name="email"]{
   width: 100%;
-  height: 48px;
-  border-radius: 2px;
-  background-color: #DBDEE3;
-  color: #FFF;
-  transition: background-color 250ms ease-in-out;
+  padding: 0 2px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--borderGray);
+  font-size: 16px;
+  line-height: 2;
 }
 
-.authentication-button-active{
-  background-color: #EB0026;
+.info{
+  font-size: 12px;
+  line-height: 1.333333333333333;
+  color: var(--darkgray);
 }
 
-.resend-email{
-  border: 1px solid #DBDEE3;
-  background-color: #FFF;
-  color: #DBDEE3;
-  transition: border 250ms ease-in-out, color 250ms ease-in-out;
+.info .error{
+ color: var(--error);
 }
 
-.resend-email-active{
-  border: 1px solid #5A719A;
-  color: #5A719A;
+button[name='sendEmail']{
+  width: 100%;
+  margin: 24px 0;
 }
 
-/* div */
-.another-account-div{
-  padding: 0;
-  padding-top: 48px;
-  margin-bottom: 0;
+.sns-button-group{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.another-account-subtitle{
+.sns-title{
+  flex-basis: 100%;
+  margin-bottom: 16px;
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.75;
-  margin-bottom: 16px;
-  text-align: center;
 }
 
-
-/* Article - lezhin-article-privacy */
-.lezhin-article-privacy{
-  margin-bottom: px;
-}
-
-.finish-email-check{
-  font-weight: 500;
-}
-
-/* div - privacy-options */
-.privacy-options{
-  margin-bottom: 16px;
-  color: #333333;
-}
-
-.privacy-options-title{
-  font-weight: 500;
-  line-height: 1.142857142857143;
-  margin-bottom: 12px;
-}
-
-.privacy-options > div{
-  background-color: #F3F5F8;
-  padding: 8px 16px 16px 16px;
-}
-
-.form-fieldset-legend{
-  padding: 0;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 2.461538461538462;
-}
-
-/* fieldset - privacy-gender */
-.privacy-gender{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
-
-.privacy-gender .form-fieldset-legend{
-  width: 100%;
-}
-
-.privacy-gender-div{
-  color: #707070;
-}
-
-.privacy-gender-div:hover{
-  color: #333333;
-}
-
-.radio-active:hover .signup-form-input-radio::before{
-  border-color: #FF2E4B;
-}
-
-.privacy-gender-div:hover .signup-form-input-radio::before{
-  border-color: rgba(1, 1, 1, 0.54);
-}
-
-.privacy-gender-div:first-of-type{
-  margin-right: 24px;
-}
-
-.signup-form-input-radio::before{
-  content: '';
-  position: absolute;
-  left: -10px;
-  top: -10px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(112, 112, 112, 0.54);
+.sns-button{
+  width: 48px;
+  height: 48px;
+  margin: 0 6px 12px 6px;
   border-radius: 50%;
-  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.signup-form-input-radio-label{
-  padding-left: 28px;
+.sns-button[name="naver"]{
+  background-color: var(--bgGreen);
+  background-image: url('../assets/images/icon-naver.svg');
+  background-size: 20px;
 }
 
-/* fieldset - privacy-birth */
-.privacy-birth{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+.sns-button[name="facebook"]{
+  background-color: var(--bgBlue);
+  background-image: url('../assets/images/icon-facebook.svg');
+  background-size: 13px;
 }
 
-.privacy-birth-select{
-  width: calc((100% - 16px) / 3);
-  height: 40px;
-  margin-right: 8px;
-  padding: 0 8px;
-  font-size: 16px;
-  /* text-align: right; */
-  border: 1px solid #DFE3E8;
-  border-radius: 2px;
-  direction: rtl;
-}
-
-.privacy-birth-select:last-child{
-  margin-right: 0;
-}
-
-/* div - privacy-agreement */
-.privacy-agreement{
-  display: flex;
-}
-
-.privacy-agreement-checkbox-label{
-  padding-left: 28px;
-  color: #ACB4BF;
-}
-
-
-/* Active */
-.agreement-active{
-  background-color: #EB0026;
+.sns-button[name="apple"]{
+  background-color: #000;
+  background-image: url('../assets/images/icon-apple.svg');
+  background-size: 19px 22px;
+  background-position: 15px 12px;
 }
