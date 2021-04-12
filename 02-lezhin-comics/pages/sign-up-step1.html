@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dueto park">
+    <meta name="keywords" content="(클론코딩, 최적화, 접근성, wai-aria) 레진코믹스, 웹툰, 만화, 연재, 로맨스, 학원, 액션, bl, 성인">
+    <meta name="description" content="(클론코딩을 하며 마크업 단계부터 최적화와 접근성에 신경쓰는 습관을 들인다.) 소문으로만 듣던 그 웹툰, 궁금하지 않아요? 일상의 즐거움과 솔직한 재미가 가득한 레진코믹스!">
+    <!-- home -->
+    <title>레진코믹스 - 소문난 웹툰 맛집</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/reset-css.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/sign-up.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive/sign-up.css">
+  </head>
+    <body>
+      <header id="header" aria-label="페이지 조작 영역입니다. 홈으로 이동, 메뉴, 검색 및 로그인 계정">
+        <!-- 로고 -->
+        <h1 id="logo" aria-label="홈으로 이동">
+          <a id="logo-anchor" href="./lezhin-home.html">
+            <img id="logo-image" src="../assets/images/로고-마스코트.svg" alt="레진코믹스"/>
+          </a>
+        </h1>
+
+        <!-- 페이지 이동 -->
+        <nav id="navigation" aria-labelledby="nav-title">
+          <h2 id="nav-title" class="hidden">연재 및 장르 선택</h2>
+          <ol id="nav-menu" aria-label="장르 선택">
+            <!-- assets/app/header-menu.js (메뉴 목록) -->
+          </ol>
+        </nav>
+
+        <!-- 버튼모음 - 성인인증, 검색, 로그인 -->
+        <section id="search-group" aria-labelledby="search-group-title">
+          <h3 id="search-group-title" class="hidden">검색 및 로그인 계정 그룹</h3>
+          <div>
+            <button class="search-group-button all" type="button">
+              <div class="hidden">성인인증</div>
+            </button>
+          </div>
+          <div>
+            <button class="search-group-button" type="button">
+              <img id="search-icon" src="../assets/images/icon-돋보기.svg" alt="검색">
+            </button>
+          </div>
+          <div>
+            <button class="search-group-button" type="button">
+              <img src="../assets/images/icon-계정.svg" alt="로그인">
+            </button>
+          </div>
+        </section>
+      </header>
+
+    <main id="main" class="sign-up">
+      <section class="sign-up-agree" aria-labelldyby='sign-up-agree-title'>
+        <h2 id="sign-up-agree-title" class="sign-up-title">이메일로 회원가입</h2>
+
+        <form id="accept-terms-form" name="acceptTermsForm"
+          action="sign-up-step1.html" method="post">
+          <label class="bold">
+            <input name="agreeAll" type="checkbox"/>
+            <span>전체동의</span>
+          </label>
+
+          <hr/>
+
+          <div class="required-checkbox">
+            <label>
+              <input type="checkbox" name="agree-tos"
+                data-type="required" data-checked=""/>
+              <span>레진코믹스 이용약관</span>
+            </label>
+            <a class="details" href="./lezhin-home.html">상세보기</a>
+
+          </div>
+
+          <div class="required-checkbox">
+            <label>
+              <input type="checkbox" name="agree-pp"
+                data-type="required" data-checked="">
+              <span>개인정보 수집 및 이용에 대한 안내</span>
+            </label>
+            <a class="details" href="./lezhin-home.html">상세보기</a>
+          </div>
+
+
+          <label>
+            <input type="checkbox" name="agree-market-email" data-type="choice"/>
+            <span>이벤트 혜택 및 마케팅 정보 이메일 알림</span>
+          </label>
+
+          <hr/>
+
+          <label class="bold">
+            <input type="checkbox" name="adult"
+              data-type="required" data-checked=""/>
+            <span>만 14세 이상입니다.</span>
+          </label>
+
+          <div class="button-group">
+            <button class="form-button cancle" name="cancle" type="button">취소</button>
+            <button class="form-button full-button" name="agree" type="button">동의</button>
+          </div>
+
+          <p class="contact">
+            이용 중 도움이 필요하시면 [<a href="./lezhin-home.html">고객지원</a>] 페이지로, 로그인에 문제가 있다면 <a href="mailto:help@lezhin.com">help@lezhin.com</a>으로 문의해 주세요.
+          </p>
+        </form>
+
+        <form id='email-form' name="emailForm"
+          action="sign-up-step3.html" method="post">
+          <label>
+            <input name="email" type="text" data-empty='1'/>
+            <strong class="email-label">이메일</strong>
+          </label>
+
+          <div class="info">
+            <p>위 이메일로 인증번호가 발송됩니다.</p>
+            <p class="error">로그인에 사용하실 이메일을 입력해주세요.</p>
+            <p class="error">이메일을 정확하게 입력해주세요.</p>
+          </div>
+
+          <button class="form-button full-button" type="button" name="sendEmail">
+            인증메일 발송
+          </button>
+
+          <div class="sns-button-group">
+            <h3 class="sns-title">SNS 계정으로 로그인 / 가입</h3>
+            <button class="sns-button" type="button" name="naver"></button>
+            <button class="sns-button" type="button" name="facebook"></button>
+            <button class="sns-button" type="button" name="apple"></button>
+          </div>
+
+          <p class="contact">
+            이용 중 도움이 필요하시면 [<a href="./lezhin-home.html">고객지원</a>] 페이지로, 로그인에 문제가 있다면 <a href="mailto:help@lezhin.com">help@lezhin.com</a>으로 문의해 주세요.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- data -->
+    <script type="text/javascript" src="../assets/data-home.js"></script>
+    <!-- 동작 -->
+    <script type="text/javascript" src="../assets/app/header-menu.js"></script>
+    <script type="text/javascript" src="../assets/app/sign-up.js"></script>
+
+  </body>
+</html>
