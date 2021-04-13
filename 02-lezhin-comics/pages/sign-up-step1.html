@@ -6,8 +6,8 @@
     <meta name="author" content="dueto park">
     <meta name="keywords" content="(클론코딩, 최적화, 접근성, wai-aria) 레진코믹스, 웹툰, 만화, 연재, 로맨스, 학원, 액션, bl, 성인">
     <meta name="description" content="(클론코딩을 하며 마크업 단계부터 최적화와 접근성에 신경쓰는 습관을 들인다.) 소문으로만 듣던 그 웹툰, 궁금하지 않아요? 일상의 즐거움과 솔직한 재미가 가득한 레진코믹스!">
-    <!-- home -->
-    <title>레진코믹스 - 소문난 웹툰 맛집</title>
+    <!-- sign-up -->
+    <title>회원가입 - 레진코믹스</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -114,14 +114,15 @@
         <form id='email-form' name="emailForm"
           action="sign-up-step3.html" method="post">
           <label>
-            <input name="email" type="text" data-empty='1'/>
+            <input name="email" type="text" data-state='start'/>
             <strong class="email-label">이메일</strong>
           </label>
 
           <div class="info">
-            <p>위 이메일로 인증번호가 발송됩니다.</p>
-            <p class="error">로그인에 사용하실 이메일을 입력해주세요.</p>
-            <p class="error">이메일을 정확하게 입력해주세요.</p>
+            <p class="start">위 이메일로 인증번호가 발송됩니다.</p>
+            <p class="no-input hidden">로그인에 사용하실 이메일을 입력해주세요.</p>
+            <p class="error hidden">이메일을 정확하게 입력해주세요.</p>
+            <p class="send hidden">위 이메일로 인증번호가 발송됩니다.</p>
           </div>
 
           <button class="form-button full-button" type="button" name="sendEmail">
