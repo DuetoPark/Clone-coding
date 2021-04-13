@@ -1,6 +1,7 @@
 :root {
   /* color */
   --red: #ff2e4b;
+  --rose: #eb0026;
   --darkblue: #5A719A;
   --gray: #707070;
   --lightgray: #adadad;
@@ -8,7 +9,6 @@
   --transparent: rgba(0, 0, 0, 0);
   --black: #000;
   --hr: #dbdee3;
-  --error: #eb0026;
 
   --borderGray: #c5cbd3;
 
@@ -226,8 +226,9 @@ hr{
   color: var(--darkgray);
 }
 
-.info .error{
- color: var(--error);
+.no-input,
+.error{
+ color: var(--rose);
 }
 
 button[name='sendEmail']{
