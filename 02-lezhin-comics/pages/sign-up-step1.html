@@ -103,7 +103,7 @@
 
           <div class="button-group">
             <button class="form-button cancle" name="cancle" type="button">취소</button>
-            <button class="form-button full-button" name="agree" type="button">동의</button>
+            <button class="form-button full-button" name="agree" type="button" tabindex="-1">동의</button>
           </div>
 
           <p class="contact">
@@ -115,7 +115,7 @@
           action="sign-up-step3.html" method="post">
           <label>
             <input name="email" type="text" data-state='start'/>
-            <strong class="email-label">이메일</strong>
+            <strong class="label-strong email">이메일</strong>
           </label>
 
           <div class="info">
@@ -125,9 +125,30 @@
             <p class="send hidden">위 이메일로 인증번호가 발송됩니다.</p>
           </div>
 
-          <button class="form-button full-button" type="button" name="sendEmail">
-            인증메일 발송
-          </button>
+          <div class="mail-button-group">
+            <button class="form-button full-button" type="button" name="sendEmail"
+              tabindex="-1">
+              인증메일 발송
+            </button>
+
+            <button class="form-button hidden" type="button" name="reSend"
+              tabindex="-1">
+              재발송
+            </button>
+          </div>
+
+
+          <div class="code-number-group">
+            <label>
+              <input name="codeNumber" type="number"/>
+              <strong class="label-strong code-number">인증번호 6자리</strong>
+            </label>
+
+            <button class="form-button full-button" type="button" name="next"
+              tabindex="-1">
+              다음
+            </button>
+          </div>
 
           <div class="sns-button-group">
             <h3 class="sns-title">SNS 계정으로 로그인 / 가입</h3>
