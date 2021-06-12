@@ -19,6 +19,7 @@
   /* button */
   --inactiveBorder: #c6cbd4;
   --inactiveBackground: #dbdee3;
+  --inactiveFont: #ccc;
   --font: #585858;
   --active: #eb0026;
 }
@@ -38,6 +39,20 @@
   text-align: center;
   line-height: 1.75;
 }
+
+/* form-button: Common CSS */
+.form-button{
+  flex: 1;
+  width: 100%;
+  border: 1px solid var(--inactiveBorder);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 3.428571428571429;
+  background-color: #FFF;
+  color: var(--font);
+  transition: background-color 250ms ease-in-out;
+}
+
 
 /*
   Form
@@ -144,17 +159,6 @@ hr{
   margin: 24px 0;
 }
 
-.form-button{
-  flex: 1;
-  border: 1px solid var(--inactiveBorder);
-  border-radius: 2px;
-  font-size: 14px;
-  line-height: 3.428571428571429;
-  background-color: #FFF;
-  color: var(--font);
-  transition: background-color 250ms ease-in-out;
-}
-
 .cancle{
   margin-right: 2%;
   cursor: default;
@@ -198,7 +202,16 @@ hr{
   padding: 5px 0;
 }
 
-.email-label{
+#email-form input{
+  width: 100%;
+  padding: 0 2px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--borderGray);
+  font-size: 16px;
+  line-height: 2;
+}
+
+.label-strong{
   position: absolute;
   left: 0; top: 0;
   font-weight: 500;
@@ -206,18 +219,9 @@ hr{
   transition: all 250ms ease-in-out;
 }
 
-.email-label.focus{
+.label-strong.focus{
   font-size: 12px;
   transform: translateY(-100%);
-}
-
-#email-form input[name="email"]{
-  width: 100%;
-  padding: 0 2px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid var(--borderGray);
-  font-size: 16px;
-  line-height: 2;
 }
 
 .info{
@@ -231,9 +235,62 @@ hr{
  color: var(--rose);
 }
 
-button[name='sendEmail']{
-  width: 100%;
+.mail-button-group{
   margin: 24px 0;
+}
+
+button[name='reSend']{
+  border-color: var(--inactiveBackground);
+  color: var(--inactiveFont);
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+button[name='reSend'].active{
+  border-color: var(--darkblue);
+  color: var(--darkblue);
+  pointer-events: inherit;
+}
+
+.code-number-group{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code-number-group > *{
+  flex: 1;
+  flex-basis: 100%;
+}
+
+#email-form .code-number-group label {
+  padding: 0;
+}
+
+#email-form .code-number-group input[type=number]{
+  margin: 0;
+}
+
+
+/* input[type=number] 화살표 삭제 */
+#email-form input[type=number]::-webkit-outer-spin-button,
+#email-form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#email-form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.code-number{
+  min-width: 100px;
+}
+
+#email-form button[name=next]{
+  margin: 12px 0;
+}
+
+#email-form button[name=next].active{
+  background-color: var(--active);
 }
 
 .sns-button-group{
