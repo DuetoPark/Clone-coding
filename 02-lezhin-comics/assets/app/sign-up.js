@@ -8,9 +8,11 @@ function handleAgreeAll() {
   if (this.checked) {
     inputs.forEach(input => input.checked = true);
     agreeButton.classList.add('button-active');
+    agreeButton.setAttribute('tabindex', 0);
   } else {
     inputs.forEach(input => input.checked = false);
     agreeButton.classList.remove('button-active');
+    agreeButton.setAttribute('tabindex', -1);
   }
 }
 
@@ -27,8 +29,10 @@ function handleChange(e) {
 
     if (count === 3) {
       agreeButton.classList.add('button-active');
+      agreeButton.setAttribute('tabindex', 0);
     } else {
       agreeButton.classList.remove('button-active');
+      agreeButton.setAttribute('tabindex', -1);
     }
   }
 }
@@ -43,11 +47,12 @@ agreeButton.addEventListener('click', handleAgreeButton);
 
 
 
+
 const emailForm = document.emailForm;
 const emailInput = emailForm.email;
-const emailLabel = emailForm.querySelector('.email-label');
+const emailLabel = emailForm.querySelector('.label-strong.email');
 const info = Array.from(emailForm.querySelectorAll('.info > p'));
-const emailSendButton = emailForm.querySelector('.form-button.full-button');
+const emailSendButton = emailForm.sendEmail;
 
 function changeMessage(currentInputState, info) {
   if (!info.classList.contains('hidden')) {
@@ -72,18 +77,47 @@ function handleValidation() {
     this.dataset.state = "no-input";
     emailLabel.classList.toggle('focus');
     info.forEach(info => changeMessage('no-input', info));
+    emailSendButton.setAttribute('tabindex', -1);
   } else if (this.value) { // input에 값을 넣었을 때
     if (!validateEmail(this.value)) { // 이메일 주소가 부정확할 때
       this.dataset.state = "error";
       info.forEach(info => changeMessage('error', info));
+      emailSendButton.setAttribute('tabindex', -1);
     } else { // 이메일 주소가 정확할 때
       this.dataset.state = "send";
       info.forEach(info => changeMessage('send', info));
       emailSendButton.classList.add('button-active');
+      emailSendButton.setAttribute('tabindex', 0);
     }
   }
+}
+
+function sendEmail() {
+  const reSendButton =  emailForm.reSend;
+  // 메일 보내는 라이브러리+코드
+  this.classList.remove('button-active');
+  setTimeout(() => {
+    this.style.display = 'none';
+  }, 500);
+
+  reSendButton.classList.remove('hidden');
+  setTimeout(() => {
+    reSendButton.classList.add('active');
+  }, 10000);
 }
 
 emailInput.addEventListener('focusin', handleValidation);
 emailInput.addEventListener('focusout', handleValidation);
 emailInput.addEventListener('change', handleValidation, {once: true});
+emailSendButton.addEventListener('click', sendEmail);
+
+
+
+
+const reSendButton = emailForm.reSend;
+
+function resendEmail() {
+
+}
+
+reSendButton.addEventListener('click', resendEmail);
